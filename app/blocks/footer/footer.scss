@@ -1,0 +1,147 @@
+.footer {
+	@include parent-container();
+	font-size: 13px;
+	color: $color-2;
+	font-family: $font-2;
+	background-color: $color-6;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		padding: 38px 0 69px 0;
+	}
+}
+.footer__block {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.footer__nav {
+	display: flex;
+	max-width: 350px;
+	width: 24vw;
+	font-family: $font-1;
+	min-width: 337px;
+}
+.footer__ul {
+	margin-right: 47px;
+}
+.footer__li {
+	margin-bottom: 20px;
+}
+.footer__a {
+	color: $color-2;
+}
+.footer__a:hover {
+	color: $color-4;
+}
+.footer__text {
+	opacity: 0.5;
+	width: 201px;
+}
+.footer__site {
+	opacity: 0.5;
+	margin-right: 31px;
+	a {
+		color: $color-3;
+	}
+}
+.footer__cookie {
+	color: $color-3;
+	opacity: 0.5;
+}
+.footer__contText {
+	display: flex;
+}
+.footer__logo {
+	margin: 30px 0 23px 0;
+}
+
+.footerNavActive {
+	color: $color-4;
+}
+
+@media (max-width: 1100px) {
+	.footer {
+		font-size: 12px;
+	}
+	.footer__ul {
+		margin-right: 12px;
+	}
+	.footer__nav {
+		min-width: 270px;
+	}
+	.footer__contText {
+		flex-direction: column;
+	}
+}
+@media (max-width: 840px) {
+	.footer {
+		font-size: 10px;
+	}
+	.footer__nav {
+		min-width: 0;
+		width: auto;
+	}
+	.footer__text {
+		width: 150px;
+	}
+	.footer__logo {
+		width: 100px;
+	}
+}
+@media (max-width: 650px) {
+	.footer {
+		.container {
+			display: flex;
+			padding: 30px 0 26px 0;
+			flex-direction: column;
+			width: 87.5%;
+			.footer__block:nth-child(2) {
+				order: -1;
+			}
+			.footer__block:nth-child(1) {
+				align-items: center;
+				margin-top: 16px;
+			}
+		}
+	}
+	.footer__nav {
+		flex-direction: column;
+		min-width: 240px;
+		width: 100%;
+		max-width: 650px;
+	}
+	.footer__ul {
+		margin-right: 0;
+	}
+	.footer__li {
+		padding: 0 0 16px 20px;
+		border-bottom: solid 1px rgb(255, 255, 255, 0.1);
+		margin-bottom: 13px;
+		font-size: 18px;
+	}
+	.footer__line100vw {
+		width: 100vw;
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.1);
+		height: 1px;
+		left: 0;
+	}
+	.footer__li_last {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+	.footer__logo {
+		width: 135px;
+		margin: 21px 0;
+	}
+	.footer__contText {
+		width: 138px;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.footer__site {
+		margin-right: 0;
+	}
+}

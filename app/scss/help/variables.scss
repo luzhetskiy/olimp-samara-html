@@ -1,0 +1,27 @@
+// Переменные scss
+$breakpoints: (
+	"xl": 1920px,
+	"lg": 1280px,
+	"md": 768px,
+	"sm": 480px,
+	"xs": 460px,
+);
+
+$color-1: #000000;
+$color-2: #ffffff;
+$color-3: #6667ac;
+$color-4: #53ba14;
+$color-5: #757575;
+$color-6: #333333;
+$color-7: #337c7e;
+
+$font-1: "Manrope-Bold";
+$font-2: "Manrope-Regular";
+$font-3: "Manrope-ExtraBold";
+$font-3: "Manrope-Semibold";
+
+$transition-1: all 0.3s ease;
+$transition-2: all 0.3s ease;
+$transition-3: all 0.3s ease;
+
+$jcsb: space-between;

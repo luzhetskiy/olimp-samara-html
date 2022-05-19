@@ -1,0 +1,55 @@
+/*
+	{
+	"h2": "",
+	"text": ""
+	}
+,*/
+[
+	{
+		"h2": "Новость Первая",
+		"text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+	},
+	{
+		"h2": "Новость Вторая",
+		"text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+	},
+	{
+		"h2": "Вторая",
+		"text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+	}
+]
+[
+	// {
+	// 	"h2": "",
+	// 	"list":[
+	// 		"",
+	// 	] 
+	// },
+	{
+		"h2": "Список Первый",
+		"list": [
+			"1",
+			"2",
+			"3",
+			"4",
+		]
+	},
+	{
+		"h2": "Список Второй",
+		"list": [
+			"1",
+			"2",
+			"3",
+			"4",
+		]
+	},
+	{
+		"h2": "Список Третий",
+		"list": [
+			"1",
+			"2",
+			"3",
+			"4",
+		]
+	},
+]
