@@ -8,10 +8,10 @@
 	justify-content: $i;
 	align-items: center;
 }
-@mixin parent-container() {
+@mixin parent-container($i) {
 	width: 100vw;
 	display: flex;
-	justify-content: center;
+	justify-content: $i;
 	.container {
 		max-width: 1182px;
 		width: 85%;

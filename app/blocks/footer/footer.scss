@@ -1,7 +1,7 @@
 //----------------------------------
 // block
 .footer {
-	@include parent-container();
+	@include parent-container(center);
 	font-size: 13px;
 	color: $color-2;
 	font-family: $font-2;
