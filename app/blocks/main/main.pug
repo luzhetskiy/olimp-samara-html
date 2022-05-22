@@ -8,8 +8,8 @@ main.main
 			.infoContHome__row
 				img(src="images/icon-2.svg", alt="").infoContHome__icon
 				.infoContHome__text Продажи открыты!
-			a(href="").infoContHome__btn СМОТРЕТЬ КВАРТИРЫ
-		.infoConts.infoConts_margin 
+			a(href="").infoContHome__btn.infoContHome__mobileBtn СМОТРЕТЬ КВАРТИРЫ
+		.infoConts.infoConts_margin.infoConts_mobile
 			.infoContOlimp.infoContOlimp_infoConts
 				h2.infoContOlimp__h2 ЖК «ОЛИМП»
 				.infoContOlimp__text — уютный жилой квартал в географическом центре Самары неподалёку от парка им. Гагарина
@@ -19,10 +19,16 @@ main.main
 				<svg  class="infoContPermission__background" width="640" height="330" viewBox="0 0 640 330" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0 38L640 0V289L0 330V38Z" fill="#7576B4"/>
 				</svg>
+				<svg  class="infoContPermission__mobileBackground"  viewBox="0 0 280 249" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 40.9972L280 0V205.5L0 248.474V40.9972Z" fill="#7576B4"/>
+				</svg>
 				<svg class="infoContPermission__miniPhoto" width="640" height="330" viewBox="0 0 640 330" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0 38L640 0V289L0 330V38Z" fill="#53BA14"/>
 				</svg>
-		.infoLinks.infoLinks_margin
+				<svg class="infoContPermission__mobileMiniPhoto"  viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 8.22002L57.5 0.397217V25.4041L0 33.5923V8.22002Z" fill="#53BA14"/>
+				</svg>
+		.infoLinks.infoLinks_margin.infoLinks_mobile
 			.infoLinks__column 
 				<svg class="infoLinks__icon" cwidth="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
@@ -60,22 +66,24 @@ main.main
 				h2.news__h2 Новости
 				a(href="").news__inArchive В архив
 			.news__slider 
-				.news__slide
-					.news__time 14.03.2022
-					a(href="").news__h3 Дом сдан! Приглагаем на просмотр!
-					.news__text Для записи на просмотр квартиры обращайтесь в  офис продаж или звоните по телефону: +7 927 026-88-58
-				.news__slide
-					.news__time 14.03.2022
-					a(href="").news__h3 HOVER проект Дом 3 награждем премием “Urban Samara Eco Life 2022”
-					.news__text ЖК “Олимп” — это  новый уровень квартальной застройки Самары в доступном сегменте
-				.news__slide
-					.news__time 14.03.2022
-					a(href="").news__h3 Cообщаем о введении дома в эксплуатацию
-					.news__text Можно регистрировать право собственности на квартиру.
-			
+				.news__sliderCont 
+					.news__slide
+						.news__time 14.03.2022
+						a(href="").news__h3 Дом сдан! Приглагаем на просмотр!
+						.news__text Для записи на просмотр квартиры обращайтесь в  офис продаж или звоните по телефону: +7 927 026-88-58
+					.news__slide
+						.news__time 14.03.2022
+						a(href="").news__h3 HOVER проект Дом 3 награждем премием “Urban Samara Eco Life 2022”
+						.news__text ЖК “Олимп” — это  новый уровень квартальной застройки Самары в доступном сегменте
+					.news__slide
+						.news__time 14.03.2022
+						a(href="").news__h3 Cообщаем о введении дома в эксплуатацию
+						.news__text Можно регистрировать право собственности на квартиру.
+				.news__points
 		.layout
 			h2.layout__h2 План ЖК «ОЛИМП»
-			img(src="images/layout__img.png", alt="").layout__img
+			.layout__imgCont
+				img(src="images/layout__img.png", alt="").layout__img
 		.location 
 			h2.location__h2 Расположение и транспортная доступность
 			.location__row 
@@ -94,8 +102,9 @@ main.main
 				.location__column 
 					img(src="images/icon-11.svg", alt="").location__icon 
 					.location__text Школы и детские сады
-			img(src="images/map.png", alt="").location__img
 			.location__map
+				.location__mapCont
+					img(src="images/map.png", alt="").location__img
 		.payment.payment_margin
 			h2.payment__h2 Способы оплаты
 			p ООО Специализированный застройщик «Офис-центр» предлагает различные способы и схемы оплаты, в том числе работает с крупнейшими российскими банками. Мы можем подобрать выгодных для вас ипотечный кредит.
@@ -114,6 +123,7 @@ main.main
 					img.payment__bank(src="images/payment__bank-9.svg", alt="")
 					img.payment__bank(src="images/payment__bank-10.svg", alt="")
 	img(src="images/main__foto.jpg", alt="").main__foto
+	img(src="images/main__mobileFoto.jpg", alt="").main__foto.main__foto_mobile
 	.formQuestion 
 		img(src="images/formQuestionImg.jpg", alt="").formQuestion__img
 		.formQuestion__cont 

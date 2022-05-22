@@ -109,9 +109,9 @@
             </div>
             <div class="infoContHome__row"><img class="infoContHome__icon" src="images/icon-2.svg" alt="">
               <div class="infoContHome__text">Продажи открыты!</div>
-            </div><a class="infoContHome__btn" href="">СМОТРЕТЬ КВАРТИРЫ</a>
+            </div><a class="infoContHome__btn infoContHome__mobileBtn" href="">СМОТРЕТЬ КВАРТИРЫ</a>
           </div>
-          <div class="infoConts infoConts_margin"> 
+          <div class="infoConts infoConts_margin infoConts_mobile">
             <div class="infoContOlimp infoContOlimp_infoConts">
               <h2 class="infoContOlimp__h2">ЖК «ОЛИМП»</h2>
               <div class="infoContOlimp__text">— уютный жилой квартал в географическом центре Самары неподалёку от парка им. Гагарина</div>
@@ -121,12 +121,18 @@
               <div class="infoContPermission__text">С разрешение на ввод в экслуатацию секций 4а, 4б, 4в и 4г можно ознакомиться в разделе “Документы”</div><svg  class="infoContPermission__background" width="640" height="330" viewBox="0 0 640 330" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 38L640 0V289L0 330V38Z" fill="#7576B4"/>
 </svg>
+<svg  class="infoContPermission__mobileBackground"  viewBox="0 0 280 249" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 40.9972L280 0V205.5L0 248.474V40.9972Z" fill="#7576B4"/>
+</svg>
 <svg class="infoContPermission__miniPhoto" width="640" height="330" viewBox="0 0 640 330" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 38L640 0V289L0 330V38Z" fill="#53BA14"/>
 </svg>
+<svg class="infoContPermission__mobileMiniPhoto"  viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 8.22002L57.5 0.397217V25.4041L0 33.5923V8.22002Z" fill="#53BA14"/>
+</svg>
             </div>
           </div>
-          <div class="infoLinks infoLinks_margin">
+          <div class="infoLinks infoLinks_margin infoLinks_mobile">
             <div class="infoLinks__column">
                <svg class="infoLinks__icon" cwidth="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="20" cy="20" r="20" fill="#E5E5E5"/>
@@ -169,22 +175,26 @@
               <h2 class="news__h2">Новости</h2><a class="news__inArchive" href="">В архив</a>
             </div>
             <div class="news__slider"> 
-              <div class="news__slide">
-                <div class="news__time">14.03.2022</div><a class="news__h3" href="">Дом сдан! Приглагаем на просмотр!</a>
-                <div class="news__text">Для записи на просмотр квартиры обращайтесь в  офис продаж или звоните по телефону: +7 927 026-88-58</div>
+              <div class="news__sliderCont"> 
+                <div class="news__slide">
+                  <div class="news__time">14.03.2022</div><a class="news__h3" href="">Дом сдан! Приглагаем на просмотр!</a>
+                  <div class="news__text">Для записи на просмотр квартиры обращайтесь в  офис продаж или звоните по телефону: +7 927 026-88-58</div>
+                </div>
+                <div class="news__slide">
+                  <div class="news__time">14.03.2022</div><a class="news__h3" href="">HOVER проект Дом 3 награждем премием “Urban Samara Eco Life 2022”</a>
+                  <div class="news__text">ЖК “Олимп” — это  новый уровень квартальной застройки Самары в доступном сегменте</div>
+                </div>
+                <div class="news__slide">
+                  <div class="news__time">14.03.2022</div><a class="news__h3" href="">Cообщаем о введении дома в эксплуатацию</a>
+                  <div class="news__text">Можно регистрировать право собственности на квартиру.</div>
+                </div>
               </div>
-              <div class="news__slide">
-                <div class="news__time">14.03.2022</div><a class="news__h3" href="">HOVER проект Дом 3 награждем премием “Urban Samara Eco Life 2022”</a>
-                <div class="news__text">ЖК “Олимп” — это  новый уровень квартальной застройки Самары в доступном сегменте</div>
-              </div>
-              <div class="news__slide">
-                <div class="news__time">14.03.2022</div><a class="news__h3" href="">Cообщаем о введении дома в эксплуатацию</a>
-                <div class="news__text">Можно регистрировать право собственности на квартиру.</div>
-              </div>
+              <div class="news__points"></div>
             </div>
           </div>
           <div class="layout">
-            <h2 class="layout__h2">План ЖК «ОЛИМП»</h2><img class="layout__img" src="images/layout__img.png" alt="">
+            <h2 class="layout__h2">План ЖК «ОЛИМП»</h2>
+            <div class="layout__imgCont"><img class="layout__img" src="images/layout__img.png" alt=""></div>
           </div>
           <div class="location"> 
             <h2 class="location__h2">Расположение и транспортная доступность</h2>
@@ -204,8 +214,10 @@
               <div class="location__column"> <img class="location__icon" src="images/icon-11.svg" alt="">
                 <div class="location__text">Школы и детские сады</div>
               </div>
-            </div><img class="location__img" src="images/map.png" alt="">
-            <div class="location__map"></div>
+            </div>
+            <div class="location__map">
+              <div class="location__mapCont"><img class="location__img" src="images/map.png" alt=""></div>
+            </div>
           </div>
           <div class="payment payment_margin">
             <h2 class="payment__h2">Способы оплаты</h2>
@@ -216,7 +228,7 @@
               <div class="payment__slide payment__slide_imgMargin"><img class="payment__bank" src="images/payment__bank-7.svg" alt=""><img class="payment__bank" src="images/payment__bank-8.svg" alt=""><img class="payment__bank" src="images/payment__bank-9.svg" alt=""><img class="payment__bank" src="images/payment__bank-10.svg" alt=""></div>
             </div>
           </div>
-        </div><img class="main__foto" src="images/main__foto.jpg" alt="">
+        </div><img class="main__foto" src="images/main__foto.jpg" alt=""><img class="main__foto main__foto_mobile" src="images/main__mobileFoto.jpg" alt="">
         <div class="formQuestion"> <img class="formQuestion__img" src="images/formQuestionImg.jpg" alt="">
           <div class="formQuestion__cont"> 
             <h3 class="formQuestion__h3">Остались вопросы ?</h3>
