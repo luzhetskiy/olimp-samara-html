@@ -460,7 +460,6 @@ select {
   width: 100%;
   left: 0;
   z-index: -1;
-  max-width: 1600px;
 }
 
 .main__foto_mobile {
@@ -474,11 +473,6 @@ select {
 
   .main__foto_mobile {
     display: block;
-  }
-}
-@media (min-width: 1600px) {
-  .main__foto {
-    left: calc(50% - 800px);
   }
 }
 .infoContHome {
@@ -575,6 +569,21 @@ select {
 
   .infoContHome__row {
     margin: 0 0 15px 0;
+  }
+}
+@media (min-width: 1550px) {
+  .infoContHome_marginMain {
+    margin: 86px 0 8vw 0;
+  }
+}
+@media (min-width: 1750px) {
+  .infoContHome_marginMain {
+    margin: 86px 0 13vw 0;
+  }
+}
+@media (min-width: 2000px) {
+  .infoContHome_marginMain {
+    margin: 86px 0 18vw 0;
   }
 }
 .infoConts {
@@ -851,6 +860,18 @@ select {
     left: calc(50% - 28.5px);
   }
 }
+@media (max-width: 300px) {
+  .infoContPermission {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 270px) {
+  .infoContPermission {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .infoLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -894,7 +915,6 @@ select {
   width: 100vw;
   left: 0;
   z-index: -1;
-  max-width: 1600px;
   margin-top: 25px;
 }
 
@@ -921,9 +941,12 @@ select {
     font-size: 16px;
     line-height: 20px;
   }
-
+}
+@media (max-width: 850px) {
   .infoLinks__background {
-    display: none;
+    width: 140vw;
+    left: -20vw;
+    margin-top: 40px;
   }
 }
 @media (max-width: 750px) {
@@ -952,10 +975,14 @@ select {
   .infoLinks__column {
     margin-bottom: 20px;
   }
-}
-@media (min-width: 1600px) {
+
   .infoLinks__background {
-    left: calc(50% - 800px);
+    margin-top: 250px;
+  }
+}
+@media (max-width: 300px) {
+  .infoLinks__background {
+    margin-top: 350px;
   }
 }
 .news__row {
@@ -1118,7 +1145,6 @@ select {
   position: absolute;
   left: 0;
   width: 100vw;
-  max-width: 1600px;
 }
 
 .layout__img {
@@ -1222,6 +1248,16 @@ select {
 
 .layout__circleClick_noPassed {
   background-color: #337c7e;
+}
+
+.layout__bacground {
+  background-color: #eceff6;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  height: 400px;
+  z-index: -1;
+  margin-top: -200px;
 }
 
 .layout__imgClick:hover svg {
@@ -1355,15 +1391,6 @@ select {
     top: 0;
   }
 }
-@media (min-width: 1600px) {
-  .layout__imgCont {
-    left: calc(50% - 800px);
-  }
-
-  .layout {
-    height: 1000px;
-  }
-}
 .location__h2 {
   font-size: 32px;
   color: #333333;
@@ -1408,7 +1435,6 @@ select {
 
 .location__mapCont {
   width: 100vw;
-  max-width: 1600px;
   position: absolute;
   left: 0;
 }
@@ -1446,15 +1472,6 @@ select {
 @media (max-width: 360px) {
   .location__column {
     width: 50%;
-  }
-}
-@media (min-width: 1600px) {
-  .location__mapCont {
-    left: calc(50% - 800px);
-  }
-
-  .location__map {
-    height: 505px;
   }
 }
 .payment p {
@@ -2403,7 +2420,6 @@ select {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  max-width: 1600px;
 }
 
 .formQuestion__img {
