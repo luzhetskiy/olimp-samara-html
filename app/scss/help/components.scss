@@ -682,7 +682,16 @@
 		margin-top: 21px;
 	}
 }
-
+@media (min-width: 1800px) {
+	.formQuestion {
+		height: 495px;
+		overflow-y: hidden;
+	}
+	.formQuestion__img {
+		height: 725px;
+		transform: translateY(-80px);
+	}
+}
 //---------------------------------------------
 // block
 

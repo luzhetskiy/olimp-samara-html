@@ -546,7 +546,7 @@ select {
 }
 @media (max-width: 500px) {
   .infoContHome__h2 {
-    margin: 60vw 0 33px 0;
+    margin: 70vw 0 33px 0;
     color: #ffffff;
     width: 100%;
     text-align: center;
@@ -571,6 +571,16 @@ select {
     margin: 0 0 15px 0;
   }
 }
+@media (max-width: 390px) {
+  .infoContHome__h2 {
+    margin: 63vw 0 33px 0;
+  }
+}
+@media (max-width: 330px) {
+  .infoContHome__h2 {
+    margin: 60vw 0 33px 0;
+  }
+}
 @media (min-width: 1550px) {
   .infoContHome_marginMain {
     margin: 86px 0 8vw 0;
@@ -584,6 +594,11 @@ select {
 @media (min-width: 2000px) {
   .infoContHome_marginMain {
     margin: 86px 0 18vw 0;
+  }
+}
+@media (min-width: 2300px) {
+  .infoContHome_marginMain {
+    margin: 86px 0 24vw 0;
   }
 }
 .infoConts {
@@ -606,6 +621,11 @@ select {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 450px) {
+  .infoConts_mobile {
+    margin-bottom: 20px;
   }
 }
 .infoContOlimp__h2 {
@@ -663,7 +683,7 @@ select {
   .infoContOlimp__h2 {
     font-size: 32px;
     line-height: 43px;
-    margin-bottom: 10px;
+    margin: 20px 0 10px 0;
   }
 
   .infoContOlimp__text {
@@ -672,10 +692,6 @@ select {
 
   .infoContOlimp_infoConts {
     margin: 0;
-  }
-
-  .infoConts_mobile {
-    margin-bottom: 20px;
   }
 }
 .infoContPermission {
@@ -845,8 +861,7 @@ select {
   }
 
   .infoContPermission {
-    line-height: 26px;
-    line-height: 20px;
+    line-height: 23px;
   }
 }
 @media (max-width: 350px) {
@@ -1405,7 +1420,6 @@ select {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 
 .location__column {
@@ -1419,6 +1433,7 @@ select {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .location__text {
@@ -2560,6 +2575,19 @@ select {
   .formQuestion__h3 {
     font-size: 21px;
     margin-top: 21px;
+  }
+}
+@media (min-width: 1800px) {
+  .formQuestion {
+    height: 495px;
+    overflow-y: hidden;
+  }
+
+  .formQuestion__img {
+    height: 725px;
+    -webkit-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
+    transform: translateY(-80px);
   }
 }
 .df-fld-aic {
