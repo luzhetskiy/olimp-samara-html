@@ -17,6 +17,7 @@
 	width: 100%;
 	left: 0;
 	z-index: -1;
+	max-width: 1600px;
 }
 .main__foto_mobile {
 	display: none;
@@ -30,6 +31,11 @@
 	}
 	.main__foto_mobile {
 		display: block;
+	}
+}
+@media (min-width: 1600px) {
+	.main__foto {
+		left: calc(50% - 800px);
 	}
 }
 //---------------------------------------------
@@ -389,6 +395,7 @@
 	width: 100vw;
 	left: 0;
 	z-index: -1;
+	max-width: 1600px;
 	margin-top: 25px;
 }
 // modificators
@@ -434,6 +441,11 @@
 	}
 	.infoLinks__column {
 		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1600px) {
+	.infoLinks__background {
+		left: calc(50% - 800px);
 	}
 }
 //---------------------------------------------
@@ -566,6 +578,7 @@
 	position: absolute;
 	left: 0;
 	width: 100vw;
+	max-width: 1600px;
 }
 .layout__img {
 	width: 100%;
@@ -775,6 +788,14 @@
 		top: 0;
 	}
 }
+@media (min-width: 1600px) {
+	.layout__imgCont {
+		left: calc(50% - 800px);
+	}
+	.layout {
+		height: 1000px;
+	}
+}
 //---------------------------------------------
 // block
 .location {
@@ -808,6 +829,7 @@
 }
 .location__mapCont {
 	width: 100vw;
+	max-width: 1600px;
 	position: absolute;
 	left: 0;
 }
@@ -843,6 +865,14 @@
 		width: 50%;
 	}
 }
+@media (min-width: 1600px) {
+	.location__mapCont {
+		left: calc(50% - 800px);
+	}
+	.location__map {
+		height: 505px;
+	}
+}
 //---------------------------------------------
 // block
 .payment {
@@ -861,38 +891,26 @@
 	margin-bottom: 30px;
 	line-height: 44px;
 }
-.payment__slide {
-	display: flex;
-	flex-wrap: wrap;
+.payment__banks {
 }
 .payment__bank {
-	margin-bottom: 20px;
+	margin: 0 15px 20px 0;
 }
 // modificators
-.payment__slide_jcsb {
-	justify-content: space-between;
-}
-.payment__slide_imgMargin {
-	img {
-		margin-right: 20px;
-	}
-}
+
 .payment_margin {
 	margin-bottom: 35px;
 }
 // events
-@media (max-width: 640px) {
-	.payment__slide_imgMargin {
+@media (max-width: 450px) {
+	.payment__banks {
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
-		img {
-			margin-right: 0;
-		}
-	}
-	.payment__slide {
-		margin-bottom: 0;
 	}
 	.payment__bank {
-		margin-bottom: 15px;
+		width: 47%;
+		margin: 0 0 15px 0;
 	}
 }
 @media (max-width: 400px) {
@@ -904,10 +922,6 @@
 	.payment p {
 		font-size: 15px;
 		line-height: 22px;
-	}
-	.payment__bank {
-		max-width: 50%;
-		width: 132px;
 	}
 }
 //---------------------------------------------
