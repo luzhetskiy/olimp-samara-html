@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	let el = document.querySelector('.news__slider')
 	el.addEventListener("touchstart", newsSliderFunc, false);
 	el.addEventListener("touchend", newsSliderFunc, false);
-	// el.addEventListener("touchmove", newsSliderFunc, false);
+	el.addEventListener("touchmove", newsSliderFunc, false);
 	// el.addEventListener("touchcancel", handleCancel, false);
 	// el.addEventListener("touchmove", handleMove, false);
 	document.querySelector(".news__slider").insertAdjacentHTML("afterbegin", `
@@ -60,15 +60,15 @@ let newsSliderTouchMove = 0;
 // let newsSliderTouchStart = 0;
 function newsSliderFunc(e) {
 	if (document.querySelector("body").clientWidth < 650) {
-		// if (e.type != "touchend" && e.type != "touchstart") {
-		// 	if (newsSliderTouchMove == 0) {
-		// 		newsSliderTouchMove = e.changedTouches[0].clientX;
-		// 		return
-		// 	}
-		// 	document.querySelector(".news__sliderCont").style.transform = `translateX(calc(${(-100 / newsSlidsQuantity) * newsSliderCounter}% + ${newsSliderTouchMove - e.changedTouches[0].clientX}px))`;
-		// 	console.log("return 'No end or start'")
-		// 	return
-		// }
+		if (e.type != "touchend" && e.type != "touchstart") {
+			if (newsSliderTouchMove == 0) {
+				newsSliderTouchMove = e.changedTouches[0].clientX;
+				return
+			}
+			document.querySelector(".news__sliderCont").style.transform = `translateX(calc(${(-100 / newsSlidsQuantity) * newsSliderCounter}% - ${newsSliderTouchMove - e.changedTouches[0].clientX}px))`;
+			console.log("return 'No end or start'")
+			return
+		}
 		newsSliderTouchMove = 0
 		if (touch == 11111) {
 			touch = e.changedTouches[0].clientX;
@@ -89,6 +89,14 @@ function newsSliderFunc(e) {
 			console.log("++")
 			newsSliderCounter++;
 			document.querySelector(".news__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * newsSliderCounter}%)`;
+			// let i = (-100 / newsSlidsQuantity) * newsSliderCounter;
+			// let w = document.querySelector("body").clientWidth;
+			// let c = i / w;
+			// for (let b = 0; b < w; b++) {
+			// 	setTimeout(() => {
+			// document.querySelector(".news__sliderCont").style.transform = `translateX(${b * c}%)`;
+			// 	}, 1 * b);
+			// }
 		} else {
 			console.log("--")
 			newsSliderCounter--
