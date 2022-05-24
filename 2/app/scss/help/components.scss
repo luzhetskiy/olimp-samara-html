@@ -6,14 +6,17 @@
 // елемент - b__e, модификатор - b_m или b__e_m.
 // В названиях классов исользую camelCase и kebab-case.
 // Почитать про ↑ можно тут https://medium.com/@vladimirmorulus/справка-по-case-camelcase-kebab-case-pascalcase-snake-case-и-все-case-ecda10463fa8
+// Шаблон разделения блоков, элементов, модификаторов, событий.
+//"
+//---------------------------------------------
+// block
 
-//=========================================
-// Классы
-.df-fld-aic {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+// elements
+
+// modificators
+
+// events
+//"
 //==========================================
 // Компоненты/блоки
 //---------------------------------------
@@ -64,7 +67,7 @@
 	position: absolute;
 	left: 15px;
 	pointer-events: none;
-	top: 10px;
+	top: 12px;
 	font-size: 18px;
 	line-height: 18px;
 	transition: 0.3s;
@@ -341,4 +344,379 @@
 	.orderCall_mobileInBlock-1 {
 		margin-top: 15px;
 	}
+}
+//-------------------------------------------
+// block
+.burger {
+	display: none;
+	width: 72px;
+	height: 50px;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	align-items: center;
+	border-left: solid 2px #fff;
+	.burger__line:nth-child(2) {
+		margin: 6px 0;
+	}
+}
+// elements
+.burger__line {
+	height: 3px;
+	width: 21px;
+	background-color: $color-2;
+}
+// modificators
+
+// events
+
+@media (max-width: 840px) {
+	.burger {
+		display: flex;
+	}
+}
+
+//--------------------------------------------
+// block
+.btnClose {
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	display: none;
+}
+// elements
+.btnClose_headerNav {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+// modificators
+.btnClose_orderCallform {
+	position: absolute;
+	top: 16px;
+	right: 17px;
+	display: block;
+}
+// events
+
+@media (max-width: 840px) {
+	.btnClose {
+		display: block;
+	}
+}
+@media (max-width: 350px) {
+	.btnClose_orderCallform {
+		top: 8px;
+		right: 8px;
+	}
+}
+//---------------------------------------------
+// block
+
+.orderCallForm {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	z-index: 15;
+	background-color: rgba(236, 239, 246, 0.9);
+}
+// elements
+
+.orderCallForm__cont {
+	border: solid 2px #337c7e;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 580px;
+	background-color: $color-2;
+	min-height: 400px;
+	box-shadow: 0px 4px 25px 0px #337c7e40;
+	border-radius: 15px;
+	position: relative;
+}
+.orderCallForm__h3 {
+	width: 380px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 32px;
+	color: $color-6;
+	font-family: $font-1;
+	margin: 32px 0 35px 0;
+}
+.orderCallForm__text {
+	max-width: 380px;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.orderCallForm__submit {
+	min-width: 180px;
+	min-height: 42px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	background-color: #337c7e;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-2;
+}
+.orderCallForm__miniCont {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+}
+
+.orderCallForm__smailik {
+	margin: 87px 0 25px 0;
+}
+.orderCallForm__resText {
+	font-size: 24px;
+	line-height: 32px;
+	color: $color-6;
+	font-family: $font-1;
+}
+.orderCallForm__btnClose {
+	width: 180px;
+	height: 42px;
+	color: $color-2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-7;
+	border-radius: 7px;
+	margin-top: 25px;
+	font-size: 18px;
+}
+
+// modificators
+.orderCall_header {
+	border: solid 1px rgba(117, 118, 180, 0.5);
+	color: $color-3;
+}
+// events
+.orderCall_header:hover {
+	border: solid 1px #7576b4;
+}
+
+@media (max-width: 840px) {
+	.orderCallForm__cont {
+		margin: 0 20px;
+	}
+}
+@media (max-width: 470px) {
+	.orderCallForm__miniCont {
+		width: 90%;
+	}
+	.orderCallForm__h3 {
+		font-size: 20px;
+		width: 100%;
+		margin: 32px 0 12px 0;
+		line-height: 25px;
+	}
+}
+@media (max-width: 400px) {
+	.orderCallForm__text {
+		font-size: 11px;
+	}
+	.orderCallForm__cont {
+		min-height: 380px;
+	}
+}
+@media (max-width: 350px) {
+	.orderCallForm__submit {
+		margin-bottom: 10px;
+	}
+}
+@media (max-width: 300px) {
+	.orderCallForm__h3 {
+		font-size: 16px;
+	}
+}
+@keyframes orderCallFormOpen {
+	0% {
+		left: -110%;
+	}
+	100% {
+		left: 0;
+	}
+}
+@keyframes orderCallFormClose {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 110%;
+	}
+}
+
+//---------------------------------------------
+// block
+.formQuestion {
+	display: flex;
+	width: 100vw;
+}
+// elements
+
+.formQuestion__img {
+	width: 50%;
+}
+.formQuestion__cont {
+	background-color: #337c7e;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	color: $color-2;
+	padding-left: 110px;
+}
+.formQuestion__h3 {
+	font-size: 32px;
+	margin-top: 26px;
+}
+.formQuestion__subH3 {
+	font-size: 15px;
+	margin-bottom: 32px;
+	font-family: $font-2;
+}
+
+.formQuestion__submit {
+	box-shadow: 0px 2px 15px 0px #0000000d;
+	background-color: #b5cfe4;
+	width: 180px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	color: #337c7e;
+	justify-content: center;
+	border-radius: 7px;
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+.formQuestion__text {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 13px;
+	margin-bottom: 21px;
+}
+// modificators
+
+// events
+.formQuestion__submit:hover {
+	background-color: $color-2;
+}
+
+@media (max-width: 1100px) {
+	.formQuestion__cont {
+		padding-left: 30px;
+	}
+	.formQuestion__h3 {
+		margin-top: 13px;
+		font-size: 29px;
+	}
+	.formQuestion__subH3 {
+		font-size: 14px;
+		margin-bottom: 26px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 12px;
+	}
+}
+@media (max-width: 840px) {
+	.formQuestion__cont {
+		padding-left: 20px;
+	}
+	.formQuestion__h3 {
+		margin-top: 4px;
+		font-size: 23px;
+	}
+	.formQuestion__subH3 {
+		font-size: 12px;
+		margin-bottom: 14px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 6px;
+	}
+}
+@media (max-width: 600px) {
+	.formQuestion {
+		flex-direction: column;
+	}
+	.formQuestion__img {
+		width: 100%;
+	}
+	.formQuestion__cont {
+		width: 100%;
+		padding: 0 6.25%;
+	}
+
+	.formQuestion__h3 {
+		margin-top: 33px;
+		font-size: 24px;
+	}
+	.formQuestion__subH3 {
+		font-size: 15px;
+		margin-bottom: 18px;
+		// max-width: 350px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 15px;
+		// width: 350px;
+		width: 100%;
+	}
+
+	.formQuestion__text {
+		margin-bottom: 41px;
+	}
+}
+@media (max-width: 315px) {
+	.formQuestion__submit {
+		// width: 100%;
+	}
+	.formQuestion__h3 {
+		font-size: 21px;
+		margin-top: 21px;
+	}
+}
+@media (min-width: 1800px) {
+	.formQuestion {
+		height: 495px;
+		overflow-y: hidden;
+	}
+	.formQuestion__img {
+		height: 725px;
+		transform: translateY(-80px);
+	}
+}
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+
+//=========================================
+// Классы
+.df-fld-aic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bc-3 {
+	background-color: $color-3;
 }

@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dark_Haker03",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-scss": "^1.4.0",
+    "sass": "^1.39.2",
+    "scss": "^0.2.4"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2"
+  }
+}
