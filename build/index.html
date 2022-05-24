@@ -195,8 +195,11 @@
           <div class="layout">
             <div class="layout__h2"> 
               <h2>План ЖК «ОЛИМП»</h2>
-            </div>
-            <div class="layout__imgCont"><img class="layout__img" src="images/layout__foto.png" alt=""><a class="layout__imgClick layout__imgClick_1" href=""> 
+            </div><svg class="layout__triangle" viewBox="0 0 1440 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.78877e-06 -0.999947L720 -0.999992L720 49L8.78877e-06 -0.999947Z" fill="#ECEFF6"/>
+<path d="M1440 -0.999947L720 -0.999992L720 49L1440 -0.999947Z" fill="#ECEFF6"/>
+</svg>
+            <div class="layout__imgCont"><img class="layout__img" src="images/layout__foto2.png" alt=""><a class="layout__imgClick layout__imgClick_1" href=""> 
                 <div class="layout__circleClick layout__circleClick_1 layout__circleClick_passed">
                   <div>Дом №179</div>
                   <div>Дом сдан</div>
@@ -237,7 +240,7 @@
               </div>
             </div>
             <div class="location__map">
-              <div class="location__mapCont"><img class="location__img" src="images/map.png" alt=""></div>
+              <div class="location__mapCont"><div id="map" class="location__img"></div></div>
             </div>
           </div>
           <div class="payment payment_margin">
@@ -309,7 +312,8 @@
           </div>
         </div>
       </footer>
-    </div>
+    </div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+<script src="icon_customImage.js" type="text/javascript"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

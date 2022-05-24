@@ -862,6 +862,7 @@ select {
 
   .infoContPermission {
     line-height: 23px;
+    font-size: 17px;
   }
 }
 @media (max-width: 350px) {
@@ -1081,7 +1082,7 @@ select {
 }
 
 .news_margin {
-  margin-bottom: 70px;
+  margin-bottom: 116px;
 }
 
 .news__h3:hover {
@@ -1105,6 +1106,9 @@ select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transform: translateY(-16px);
+    -ms-transform: translateY(-16px);
+    transform: translateY(-16px);
   }
 }
 @media (max-width: 450px) {
@@ -1125,14 +1129,10 @@ select {
     position: absolute;
     width: 100%;
     left: 0;
-    z-index: 3;
-    -webkit-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
   }
 }
 .layout {
-  height: 62.08vw;
+  height: 58vw;
 }
 
 .layout__h2 {
@@ -1151,19 +1151,24 @@ select {
   text-align: center;
   font-size: 32px;
   position: absolute;
-  top: 20px;
-  z-index: 3;
+  top: -50px;
+  z-index: 6;
   color: #333333;
 }
 
 .layout__imgCont {
   position: absolute;
   left: 0;
+  height: 58vw;
   width: 100vw;
+  overflow: hidden;
 }
 
 .layout__img {
   width: 100%;
+  -webkit-transform: translateY(-9.8vw);
+  -ms-transform: translateY(-9.8vw);
+  transform: translateY(-9.8vw);
 }
 
 .layout__imgClick {
@@ -1207,10 +1212,25 @@ select {
   line-height: 15px;
 }
 
+.layout__triangle {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+.layout__triangle path:first-child {
+  -webkit-transform: translateX(1px);
+  -ms-transform: translateX(1px);
+  transform: translateX(1px);
+}
+
 .layout__imgClick_1 {
   width: 20vw;
   height: 27vw;
-  top: 15vw;
+  top: 11.1vw;
   left: 50vw;
 }
 .layout__imgClick_1 svg {
@@ -1222,7 +1242,7 @@ select {
 .layout__imgClick_2 {
   width: 23vw;
   height: 12vw;
-  top: 22vw;
+  top: 18vw;
   left: 71vw;
 }
 .layout__imgClick_2 svg {
@@ -1234,7 +1254,7 @@ select {
 .layout__imgClick_3 {
   width: 37vw;
   height: 9vw;
-  top: 43vw;
+  top: 39vw;
   left: 50vw;
 }
 .layout__imgClick_3 svg {
@@ -1305,10 +1325,6 @@ select {
     left: 15vw;
     top: 0.5vw;
   }
-
-  .layout__h2 h2 {
-    top: 0;
-  }
 }
 @media (max-width: 750px) {
   .layout__h2 {
@@ -1325,26 +1341,38 @@ select {
 }
 @media (max-width: 500px) {
   .layout__imgCont {
-    overflow: scroll;
+    overflow-x: scroll;
     z-index: 1;
+    height: 359px;
   }
 
   .layout__img {
     width: 700px;
+    -webkit-transform: translateY(-127px);
+    -ms-transform: translateY(-127px);
+    transform: translateY(-127px);
   }
 
   .layout {
-    height: 434px;
+    height: 359px;
   }
 
   .layout__imgClick svg {
     display: block;
   }
 
+  .layout__triangle {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    width: 120vw;
+    left: -10vw;
+  }
+
   .layout__imgClick_1 {
     width: 130px;
     height: 178px;
-    top: 110px;
+    top: 24px;
     left: 350px;
   }
   .layout__imgClick_1 svg {
@@ -1356,7 +1384,7 @@ select {
   .layout__imgClick_2 {
     width: 144px;
     height: 75px;
-    top: 160px;
+    top: 72px;
     left: 500px;
   }
   .layout__imgClick_2 svg {
@@ -1368,7 +1396,7 @@ select {
   .layout__imgClick_3 {
     width: 247px;
     height: 62px;
-    top: 300px;
+    top: 213px;
     left: 356px;
   }
   .layout__imgClick_3 svg {

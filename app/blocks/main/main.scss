@@ -374,6 +374,7 @@
 	}
 	.infoContPermission {
 		line-height: 23px;
+		font-size: 17px;
 	}
 }
 @media (max-width: 350px) {
@@ -562,7 +563,7 @@
 }
 // modificators
 .news_margin {
-	margin-bottom: 70px;
+	margin-bottom: 116px;
 }
 // events
 .news__h3:hover {
@@ -580,6 +581,7 @@
 	}
 	.news__points {
 		display: flex;
+		transform: translateY(-16px);
 	}
 }
 @media (max-width: 450px) {
@@ -597,14 +599,12 @@
 		position: absolute;
 		width: 100%;
 		left: 0;
-		z-index: 3;
-		transform: translateY(10px);
 	}
 }
 //---------------------------------------------
 // block
 .layout {
-	height: 62.08vw;
+	height: 58vw;
 }
 // elements
 .layout__h2 {
@@ -616,18 +616,21 @@
 		text-align: center;
 		font-size: 32px;
 		position: absolute;
-		top: 20px;
-		z-index: 3;
+		top: -50px;
+		z-index: 6;
 		color: $color-6;
 	}
 }
 .layout__imgCont {
 	position: absolute;
 	left: 0;
+	height: 58vw;
 	width: 100vw;
+	overflow: hidden;
 }
 .layout__img {
 	width: 100%;
+	transform: translateY(-9.8vw);
 }
 .layout__imgClick {
 	// background-color: rgb(0, 0, 0, 0.6);
@@ -659,12 +662,21 @@
 		line-height: 15px;
 	}
 }
-
+.layout__triangle {
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	z-index: 3;
+	transform: translateY(-1px);
+	path:first-child {
+		transform: translateX(1px);
+	}
+}
 // modificators
 .layout__imgClick_1 {
 	width: 20vw;
 	height: 27vw;
-	top: 15vw;
+	top: 11.1vw;
 	left: 50vw;
 	svg {
 		width: 15.5vw;
@@ -675,7 +687,7 @@
 .layout__imgClick_2 {
 	width: 23vw;
 	height: 12vw;
-	top: 22vw;
+	top: 18vw;
 	left: 71vw;
 	svg {
 		width: 20.3vw;
@@ -686,7 +698,7 @@
 .layout__imgClick_3 {
 	width: 37vw;
 	height: 9vw;
-	top: 43vw;
+	top: 39vw;
 	left: 50vw;
 	svg {
 		width: 34.6vw;
@@ -749,11 +761,6 @@
 		left: 15vw;
 		top: 0.5vw;
 	}
-	.layout__h2 {
-		h2 {
-			top: 0;
-		}
-	}
 }
 
 @media (max-width: 750px) {
@@ -770,24 +777,31 @@
 }
 @media (max-width: 500px) {
 	.layout__imgCont {
-		overflow: scroll;
+		overflow-x: scroll;
 		z-index: 1;
+		height: 359px;
 	}
 	.layout__img {
 		width: 700px;
+		transform: translateY(-127px);
 	}
 	.layout {
-		height: 434px;
+		height: 359px;
 	}
 	.layout__imgClick {
 		svg {
 			display: block;
 		}
 	}
+	.layout__triangle {
+		transform: translateY(0);
+		width: 120vw;
+		left: -10vw;
+	}
 	.layout__imgClick_1 {
 		width: 130px;
 		height: 178px;
-		top: 110px;
+		top: 24px;
 		left: 350px;
 		svg {
 			width: 110px;
@@ -798,7 +812,7 @@
 	.layout__imgClick_2 {
 		width: 144px;
 		height: 75px;
-		top: 160px;
+		top: 72px;
 		left: 500px;
 		svg {
 			width: 140px;
@@ -809,7 +823,7 @@
 	.layout__imgClick_3 {
 		width: 247px;
 		height: 62px;
-		top: 300px;
+		top: 213px;
 		left: 356px;
 		svg {
 			width: 241px;
