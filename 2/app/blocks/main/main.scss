@@ -1,0 +1,125 @@
+.main {
+	flex-direction: column;
+	margin-top: 300px;
+	@include parent-container();
+	.container {
+	}
+}
+.formQuestion {
+	display: flex;
+	width: 100vw;
+}
+.formQuestion__img {
+	width: 50%;
+}
+.formQuestion__cont {
+	background-color: #337c7e;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	color: $color-2;
+	padding-left: 110px;
+}
+.formQuestion__h3 {
+	font-size: 32px;
+	margin-top: 26px;
+}
+.formQuestion__subH3 {
+	font-size: 15px;
+	margin-bottom: 32px;
+	font-family: $font-2;
+}
+
+.formQuestion__submit {
+	box-shadow: 0px 2px 15px 0px #0000000d;
+	background-color: #b5cfe4;
+	width: 180px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	color: #337c7e;
+	justify-content: center;
+	border-radius: 7px;
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+.formQuestion__submit:hover {
+	background-color: $color-2;
+}
+.formQuestion__text {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 13px;
+	margin-bottom: 21px;
+}
+@media (max-width: 1100px) {
+	.formQuestion__cont {
+		padding-left: 30px;
+	}
+	.formQuestion__h3 {
+		margin-top: 13px;
+		font-size: 29px;
+	}
+	.formQuestion__subH3 {
+		font-size: 14px;
+		margin-bottom: 26px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 12px;
+	}
+}
+@media (max-width: 840px) {
+	.formQuestion__cont {
+		padding-left: 20px;
+	}
+	.formQuestion__h3 {
+		margin-top: 4px;
+		font-size: 23px;
+	}
+	.formQuestion__subH3 {
+		font-size: 12px;
+		margin-bottom: 14px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 6px;
+	}
+}
+@media (max-width: 600px) {
+	.formQuestion {
+		flex-direction: column;
+	}
+	.formQuestion__img {
+		width: 100%;
+	}
+	.formQuestion__cont {
+		width: 100%;
+		padding: 0 6.25%;
+	}
+
+	.formQuestion__h3 {
+		margin-top: 33px;
+		font-size: 24px;
+	}
+	.formQuestion__subH3 {
+		font-size: 15px;
+		margin-bottom: 18px;
+		// max-width: 350px;
+	}
+	.formQuestion__submit {
+		margin-bottom: 15px;
+		// width: 350px;
+		width: 100%;
+	}
+
+	.formQuestion__text {
+		margin-bottom: 41px;
+	}
+}
+@media (max-width: 315px) {
+	.formQuestion__submit {
+		// width: 100%;
+	}
+	.formQuestion__h3 {
+		font-size: 21px;
+		margin-top: 21px;
+	}
+}

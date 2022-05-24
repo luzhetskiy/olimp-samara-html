@@ -1,0 +1,344 @@
+// README
+// Тут будут все переиспользуемые компоненты/блоки и
+// просто некоторые классы для удобства.
+// Они будут разделены по секциям, каждый со своими
+// @media. Примеры названий: блок - b,
+// елемент - b__e, модификатор - b_m или b__e_m.
+// В названиях классов исользую camelCase и kebab-case.
+// Почитать про ↑ можно тут https://medium.com/@vladimirmorulus/справка-по-case-camelcase-kebab-case-pascalcase-snake-case-и-все-case-ecda10463fa8
+
+//=========================================
+// Классы
+.df-fld-aic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+//==========================================
+// Компоненты/блоки
+//---------------------------------------
+//oderCall
+.orderCall {
+	@include df-jcx-aic(center);
+	border-radius: 7px;
+	font-size: 13px;
+	width: 167px;
+	cursor: pointer;
+}
+// елементьы
+.orderCall__Img {
+	margin: 10px 13px 10px 0px;
+}
+.orderCallText {
+}
+// модификаторы
+.orderCall_color-1 {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: $color-2;
+}
+.orderCall_mobileInBlock-1 {
+	display: none;
+	margin-top: 27px;
+}
+.orderCall_block-1Header {
+}
+// события
+.orderCall:hover {
+}
+.orderCall_color-1:hover {
+	border: solid 1px #fff;
+}
+
+@media (max-width: 650px) {
+	.orderCall_mobileInBlock-1 {
+		display: flex;
+	}
+}
+//----------------------------------------
+// labelInput
+.labelInput {
+	position: relative;
+}
+// елементы
+.labelInput__label {
+	position: absolute;
+	left: 15px;
+	pointer-events: none;
+	top: 10px;
+	font-size: 18px;
+	line-height: 18px;
+	transition: 0.3s;
+}
+.labelInput__textArea {
+	color: rgb(255, 255, 255, 0.5);
+	font-size: 18px;
+	width: 380px;
+	height: 80px;
+	border: solid 1px rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+	padding: 10px 21px 20px 21px;
+	// margin-bottom: 16px;
+}
+.labelInput__input {
+}
+// модификаторы
+.labelInput_orderCallForm {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.labelInput__input_orderCallForm {
+	border: solid 2px #337c7e;
+	width: 380px;
+	border-radius: 7px;
+	height: 42px;
+	padding: 0 21px;
+}
+.labelInput_margin {
+	margin: 23px 0 20px 0;
+}
+.labelInput__label_OrderCallForm {
+	color: $color-6;
+}
+.labelInput__label_formQuestion {
+	color: rgba(255, 255, 255, 0.5);
+}
+.labelInput_formQuestion {
+	font-family: $font-2;
+	margin-bottom: 16px;
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+}
+.labelInput__input_formQuestion {
+	width: 380px;
+	height: 42px;
+	border: solid 1px rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+	color: rgb(255, 255, 255, 0.5);
+	font-size: 18px;
+	padding: 0 21px;
+}
+.labelInput__invalidFormat {
+	background-color: red;
+	min-width: 160px;
+	min-height: 24px;
+	border-radius: 7px;
+	padding: 0 11px;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	font-size: 14px;
+	color: $color-2;
+	opacity: 0.8;
+	margin-top: 7px;
+}
+// события
+.labelInput__input:focus ~ .labelInput__label,
+.labelInput__input:not(:focus):valid ~ .labelInput__label {
+	top: -10px;
+	left: 2px;
+	line-height: 12px;
+	text-transform: uppercase;
+	font-size: 7px;
+}
+.labelInput__input_formQuestion::placeholder {
+	color: rgb(255, 255, 255, 0.5);
+}
+.labelInput__textArea::placeholder {
+	color: rgb(255, 255, 255, 0.5);
+}
+.labelInput__textArea:focus ~ .labelInput__label,
+.labelInput__textArea:not(:focus):valid ~ .labelInput__label {
+	top: -10px;
+	left: 2px;
+	line-height: 12px;
+	text-transform: uppercase;
+	font-size: 7px;
+}
+.labelInput__input:focus ~ .labelInput__label_formQuestion,
+.labelInput__input:not(:focus):valid ~ .labelInput__label_formQuestion {
+	color: $color-2;
+}
+.labelInput__textArea:focus ~ .labelInput__label_formQuestion,
+.labelInput__textArea:not(:focus):valid ~ .labelInput__label_formQuestion {
+	color: $color-2;
+}
+
+@media (max-width: 840px) {
+	.labelInput__input_formQuestion {
+		// max-width: 350px;
+		width: 90%;
+		padding: 0 12px;
+	}
+	.labelInput_formQuestion {
+		margin-bottom: 12px;
+	}
+	.labelInput__textArea {
+		// max-width: 350px;
+		width: 90%;
+		// margin-bottom: 12px;
+		padding: 10px;
+	}
+}
+@media (max-width: 600px) {
+	.labelInput__input_formQuestion {
+		width: 100%;
+
+		padding: 0 12px;
+	}
+	.labelInput_formQuestion {
+		margin-bottom: 20px;
+	}
+	.labelInput__textArea {
+		width: 100%;
+		// margin-bottom: 25px;
+		padding: 10px;
+	}
+}
+@media (max-width: 470px) {
+	.labelInput__input_orderCallForm {
+		width: 100%;
+	}
+}
+@media (max-width: 350px) {
+	.labelInput_margin {
+		margin: 15px 0 10px 0;
+	}
+
+	.labelInput__input_orderCallForm {
+		padding: 0 12px;
+	}
+}
+
+//---------------------------------
+// block-1
+.block-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+// елeменты
+.block-1__workTime {
+	color: $color-4;
+	font-size: 15px;
+}
+.block-1__phoneNumber {
+	font-size: 32px;
+	font-family: $font-1;
+	color: $color-2;
+	line-height: 24px;
+}
+.block-1__linkIcons {
+	margin: 21px 0 23px 0;
+	display: flex;
+	justify-content: space-between;
+	width: 218px;
+}
+
+// модификаторы
+.block-1_aie {
+	align-items: end;
+}
+.block-1__phoneNumber_1 {
+	margin: 21px 0 16px 0;
+}
+.block-1_mobile {
+	display: none;
+}
+.block-1_mobileHeaderNav {
+	align-items: start;
+	margin-top: 30px;
+	.block-1__phoneNumber {
+		font-size: 28px;
+	}
+	.block-1__phoneNumber_1 {
+		margin: 30px 0 20px 0;
+	}
+	.block-1__workTime {
+		font-size: 24px;
+	}
+	.block-1__linkIcons {
+		width: 210px;
+	}
+	.block-1__imgIcon {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media (max-width: 1100px) {
+	.block-1__phoneNumber {
+		font-size: 25px;
+	}
+}
+@media (max-width: 840px) {
+	.block-1__linkIcons {
+		width: 150px;
+	}
+	.block-1__phoneNumber {
+		font-size: 18px;
+	}
+	.block-1__workTime {
+		font-size: 12px;
+	}
+	.block-1__imgIcon {
+		width: 27px;
+		height: 27px;
+	}
+	.block-1_mobile {
+		display: flex;
+	}
+}
+@media (max-width: 650px) {
+	.block-1_footer {
+		order: -1;
+		align-items: center;
+		margin: 18px 0 0 0;
+	}
+	.block-1__location {
+		margin-bottom: 22px;
+	}
+	.block-1__workTime {
+		font-size: 13px;
+	}
+	.block-1__phoneNumber_1 {
+		margin: 15px 0 5px 0;
+	}
+	.block-1__linkIcons {
+		margin: 30px 0 14px 0;
+	}
+}
+@media (max-width: 420px) {
+	.block-1_mobileHeaderNav {
+		.block-1__phoneNumber {
+			font-size: 21px;
+		}
+		.block-1__phoneNumber_1 {
+			margin: 20px 0 10px 0;
+		}
+		.block-1__workTime {
+			font-size: 18px;
+		}
+		.block-1__linkIcons {
+			width: 160px;
+		}
+		.block-1__imgIcon {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+@media (max-width: 350px) {
+	.block-1_mobileHeaderNav {
+		.block-1__phoneNumber_1 {
+			margin: 15px 0 10px 0;
+		}
+		.block-1__workTime {
+			font-size: 15px;
+		}
+	}
+	.orderCall_mobileInBlock-1 {
+		margin-top: 15px;
+	}
+}

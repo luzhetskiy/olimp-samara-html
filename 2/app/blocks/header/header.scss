@@ -1,0 +1,353 @@
+.header {
+	font-family: $font-2;
+	line-height: 18px;
+	.container {
+	}
+}
+.header__row {
+	@include df-jcx-aic(center);
+	width: 100vw;
+}
+.header__rowCont {
+	max-width: 1308px;
+	width: 92%;
+	@include df-jcx-aic($jcsb);
+}
+.header__logo {
+	margin: 12px 0 6px 0;
+}
+.header__nav {
+	max-width: 1182px;
+	width: 85%;
+	margin: 16px 0;
+}
+.header__ul {
+	@include df-jcx-aic($jcsb);
+	width: 100%;
+	color: $color-2;
+	font-size: 15px;
+	line-height: 18px;
+}
+.header__a {
+	color: $color-2;
+}
+
+.header__a:hover {
+	color: #acb7f4;
+}
+.header__block {
+	@include df-jcx-aic($jcsb);
+	min-width: 500px;
+	font-size: 16px;
+}
+.orderCall_header {
+	border: solid 1px rgba(117, 118, 180, 0.5);
+	color: $color-3;
+}
+.orderCall_header:hover {
+	border: solid 1px #7576b4;
+}
+.header__workTimeTextBottom {
+	color: $color-5;
+}
+.header__phoneNumbers {
+	cursor: pointer;
+	font-family: $font-1;
+	display: flex;
+	flex-direction: column;
+	a {
+		color: $color-6;
+	}
+}
+.header__workTimeTextTop {
+	color: $color-4;
+	margin-bottom: 5px;
+}
+.header__phoneNumber_top {
+	margin-bottom: 7px;
+}
+.header__mobileOrderCall {
+	display: none;
+	font-size: 18px;
+	color: $color-2;
+
+	justify-content: center;
+
+	width: calc(100% - 72px);
+	cursor: pointer;
+}
+.header__mobileOrderCallCont {
+	transform: translateX(36px);
+	display: flex;
+	align-items: center;
+}
+.header__mobileOrderCallText {
+	margin: 15px 23px 17px 0;
+}
+.burger {
+	display: none;
+	width: 72px;
+	height: 50px;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	align-items: center;
+	border-left: solid 2px #fff;
+	.burger__line:nth-child(2) {
+		margin: 6px 0;
+	}
+}
+.burger__line {
+	height: 3px;
+	width: 21px;
+	background-color: $color-2;
+}
+.btnClose {
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	display: none;
+}
+.btnClose_headerNav {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.orderCallForm {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background-color: rgba(236, 239, 246, 0.9);
+}
+.orderCallForm__cont {
+	border: solid 2px #337c7e;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 580px;
+	background-color: $color-2;
+	min-height: 400px;
+	box-shadow: 0px 4px 25px 0px #337c7e40;
+	border-radius: 15px;
+	position: relative;
+}
+.orderCallForm__h3 {
+	width: 380px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 32px;
+	color: $color-6;
+	font-family: $font-1;
+	margin: 32px 0 35px 0;
+}
+.orderCallForm__text {
+	max-width: 380px;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.orderCallForm__submit {
+	min-width: 180px;
+	min-height: 42px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	background-color: #337c7e;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-2;
+}
+.orderCallForm__miniCont {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+}
+.btnClose_orderCallform {
+	position: absolute;
+	top: 16px;
+	right: 17px;
+	display: block;
+}
+.orderCallForm__smailik {
+	margin: 87px 0 25px 0;
+}
+.orderCallForm__resText {
+	font-size: 24px;
+	line-height: 32px;
+	color: $color-6;
+	font-family: $font-1;
+}
+.orderCallForm__btnClose {
+	width: 180px;
+	height: 42px;
+	color: $color-2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-7;
+	border-radius: 7px;
+	margin-top: 25px;
+	font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+	.header {
+	}
+	.header__nav {
+		width: 90%;
+	}
+	.header__li {
+		font-size: 13px;
+	}
+	.header__block {
+		min-width: 450px;
+	}
+}
+@media (max-width: 840px) {
+	.header__block {
+		display: none;
+	}
+	.header__rowCont {
+		justify-content: center;
+	}
+	.header__nav {
+		display: none;
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: $color-1;
+		margin: 0;
+		flex-direction: column;
+		padding: 30px;
+		align-items: start;
+		opacity: 0.9;
+		z-index: 3;
+	}
+	.orderCallForm__cont {
+		margin: 0 20px;
+	}
+	.header__ul {
+		flex-direction: column;
+		align-items: start;
+		// margin: 30px 0 0 30px;
+		font-size: 18px;
+		width: auto;
+	}
+	.header__li {
+		margin: 16px 0;
+		font-size: 22px;
+	}
+	.header__mobileOrderCall {
+		display: flex;
+	}
+	.burger {
+		display: flex;
+	}
+	.btnClose {
+		display: block;
+	}
+}
+@media (max-width: 470px) {
+	.orderCallForm__miniCont {
+		width: 90%;
+	}
+
+	.orderCallForm__h3 {
+		font-size: 20px;
+		width: 100%;
+		margin: 32px 0 12px 0;
+		line-height: 25px;
+	}
+}
+@media (max-width: 400px) {
+	.header__mobileOrderCallCont {
+		transform: translateX(0);
+	}
+	.orderCallForm__text {
+		font-size: 11px;
+	}
+	.orderCallForm__cont {
+		min-height: 380px;
+	}
+}
+@media (max-width: 350px) {
+	.header__li {
+		font-size: 21px;
+	}
+	.btnClose_orderCallform {
+		top: 8px;
+		right: 8px;
+	}
+	.orderCallForm__submit {
+		margin-bottom: 10px;
+	}
+}
+@media (max-width: 300px) {
+	.header__li {
+		margin: 12px 0;
+		font-size: 18px;
+	}
+	.orderCallForm__h3 {
+		font-size: 16px;
+	}
+}
+@media (max-width: 280px) {
+	.header__li {
+		font-size: 16px;
+	}
+}
+@media (min-width: 840px) {
+	.header__nav {
+		display: flex !important;
+	}
+}
+.bc-3 {
+	background-color: $color-3;
+}
+.navActive {
+	color: #acb7f4;
+}
+//--------------
+// Анимации закрытия и открытия, бургера и формы.
+@keyframes headerNavAnimOpen {
+	0% {
+		left: -110%;
+	}
+	100% {
+		left: 0;
+	}
+}
+@keyframes headerNavAnimClose {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -110%;
+	}
+}
+@keyframes orderCallFormOpen {
+	0% {
+		left: -110%;
+	}
+	100% {
+		left: 0;
+	}
+}
+@keyframes orderCallFormClose {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 110%;
+	}
+}

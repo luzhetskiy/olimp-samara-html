@@ -1,0 +1,20 @@
+main.main 
+	.container
+	.formQuestion 
+		img(src="images/formQuestionImg.jpg", alt="").formQuestion__img
+		.formQuestion__cont 
+			h3.formQuestion__h3 Остались вопросы ?
+			.formQuestion__subH3 Напишите нам*. Мы помогаем на всём пути к вашему новому дому.
+			.labelInput.labelInput_formQuestion
+				input(type="text" required).labelInput__input.labelInput__input_formQuestion.labelInput_valueFormQuestion
+				label.labelInput__label.labelInput__label_formQuestion Имя
+			.labelInput.labelInput_formQuestion
+				input(type="text" name="telephone" required).labelInput__input.labelInput__input_formQuestion.labelInput_valueFormQuestion
+				label.labelInput__label.labelInput__label_formQuestion Телефон
+				.labelInput__invalidFormat Неправильный формат
+			.labelInput.labelInput_formQuestion
+				textarea(name="", cols="30" required).labelInput__textArea.labelInput__textArea_formQuestion.labelInput_valueFormQuestion
+				label.labelInput__label.labelInput__label_formQuestion Ваш вопрос
+			button.formQuestion__submit Отправить
+			.formQuestion__text *Все поля обязательны для заполнения
+	
