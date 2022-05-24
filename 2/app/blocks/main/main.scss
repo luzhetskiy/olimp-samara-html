@@ -1,3 +1,13 @@
+p {
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-family: $font-2;
+	color: $color-6;
+	line-height: 24px;
+	max-width: 900px;
+}
+//---------------------------------------------
+// block
 .main {
 	flex-direction: column;
 	position: relative;
@@ -7,6 +17,74 @@
 	.container {
 	}
 }
+
+// elements
+.main__contWay {
+	margin: 56px 0 10px 0;
+	display: flex;
+	align-items: center;
+}
+.main__way {
+	font-size: 15px;
+	font-family: $font-2;
+	line-height: 20px;
+	color: $color-7;
+	margin-right: 11px;
+}
+.main__wayArrow {
+	margin-right: 11px;
+}
+.main__h1 {
+	max-width: 700px;
+	margin-bottom: 30px;
+	h1 {
+		color: $color-3;
+		font-size: 48px;
+		line-height: 66px;
+	}
+}
+.main__h2 {
+	max-width: 700px;
+	margin: 10px 0 20px 0;
+	h2 {
+		color: $color-6;
+		font-size: 32px;
+		line-height: 43px;
+	}
+}
+.main__h3 {
+	max-width: 700px;
+	margin-bottom: 20px;
+	h3 {
+		color: $color-6;
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+.main__img {
+	margin-bottom: 30px;
+	img {
+	}
+}
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
 //---------------------------------------------
 // block
 
