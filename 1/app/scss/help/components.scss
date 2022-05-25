@@ -154,6 +154,9 @@
 .labelInput__textArea::placeholder {
 	color: rgb(255, 255, 255, 0.5);
 }
+.labelInput__textArea_formQuestion {
+	color: $color-2;
+}
 .labelInput__textArea:focus ~ .labelInput__label,
 .labelInput__textArea:not(:focus):valid ~ .labelInput__label {
 	top: -14px;

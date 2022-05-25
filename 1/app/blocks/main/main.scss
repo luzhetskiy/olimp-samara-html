@@ -1078,13 +1078,14 @@
 	color: $color-2;
 	font-size: 18px;
 	margin-top: 30px;
+	border-radius: 5px;
 }
 .infoContHome__btn:hover {
 	background-color: #60bf26;
 }
 // modificators
 .infoContHome_marginMain {
-	margin: 86px 0 60px 0;
+	margin: 86px 0 80px 0;
 }
 // events
 @media (max-width: 1000px) {
@@ -1194,12 +1195,14 @@
 .infoContOlimp__h1 {
 	font-size: 48px;
 	color: $color-3;
-	line-height: 48px;
+	line-height: 66px;
+	margin-bottom: 16px;
 }
 .infoContOlimp__text {
 	font-size: 24px;
 	color: $color-6;
 	max-width: 450px;
+	line-height: 32px;
 }
 // modificators
 .infoContOlimp_infoConts {
@@ -1454,6 +1457,14 @@
 		line-height: 20px;
 	}
 }
+@media (max-width: 900px) {
+	.infoLinks_mobile {
+		flex-wrap: wrap;
+	}
+	.infoLinks__column {
+		margin: 15px 15px 0 0;
+	}
+}
 @media (max-width: 850px) {
 	.infoLinks__background {
 		width: 140vw;
@@ -1478,7 +1489,7 @@
 		line-height: 24px;
 	}
 	.infoLinks__column {
-		margin-bottom: 20px;
+		margin: 0 0 20px 0;
 	}
 	.infoLinks__background {
 		margin-top: 250px;
@@ -1567,6 +1578,12 @@
 .news__inArchive:hover {
 	color: $color-4;
 }
+@media (max-width: 1300px) {
+	.news__slide {
+		max-width: 31.5%;
+	}
+}
+
 @media (max-width: 750px) {
 	.news_margin {
 		margin-bottom: 0;
@@ -1590,6 +1607,9 @@
 	}
 	.news__row {
 		margin-bottom: 37px;
+	}
+	.news__slide {
+		max-width: none;
 	}
 }
 @media (max-width: 450px) {
@@ -1735,6 +1755,7 @@
 		display: block;
 	}
 }
+
 @media (max-width: 1000px) {
 	.layout__circleClick {
 		width: 80px;
@@ -1759,6 +1780,11 @@
 		top: 0.5vw;
 	}
 }
+@media (max-width: 900px) {
+	.layout__bacground {
+		margin-top: -370px;
+	}
+}
 @media (max-width: 750px) {
 	.layout__h2 {
 		display: none;
@@ -1767,7 +1793,6 @@
 		margin-top: -200px;
 	}
 	.layout__triangle {
-		transform: translateY(0);
 		width: 120vw;
 		left: -10vw;
 	}
@@ -1861,14 +1886,12 @@
 		top: 0;
 	}
 }
-@media (max-width: 500px) {
-	.layout__imgCont {
-	}
 
-	.layout {
+@media (min-width: 1900px) {
+	.layout__bacground {
+		margin-top: -160px;
 	}
 }
-
 //---------------------------------------------
 
 // block

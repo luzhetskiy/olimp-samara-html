@@ -537,6 +537,7 @@ select {
   color: #ffffff;
   font-size: 18px;
   margin-top: 30px;
+  border-radius: 5px;
 }
 
 .infoContHome__btn:hover {
@@ -544,7 +545,7 @@ select {
 }
 
 .infoContHome_marginMain {
-  margin: 86px 0 60px 0;
+  margin: 86px 0 80px 0;
 }
 
 @media (max-width: 1000px) {
@@ -650,13 +651,15 @@ select {
 .infoContOlimp__h1 {
   font-size: 48px;
   color: #6667ac;
-  line-height: 48px;
+  line-height: 66px;
+  margin-bottom: 16px;
 }
 
 .infoContOlimp__text {
   font-size: 24px;
   color: #333333;
   max-width: 450px;
+  line-height: 32px;
 }
 
 .infoContOlimp_infoConts {
@@ -917,6 +920,16 @@ select {
     line-height: 20px;
   }
 }
+@media (max-width: 900px) {
+  .infoLinks_mobile {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .infoLinks__column {
+    margin: 15px 15px 0 0;
+  }
+}
 @media (max-width: 850px) {
   .infoLinks__background {
     width: 140vw;
@@ -948,7 +961,7 @@ select {
   }
 
   .infoLinks__column {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
   }
 
   .infoLinks__background {
@@ -1052,6 +1065,11 @@ select {
   color: #53ba14;
 }
 
+@media (max-width: 1300px) {
+  .news__slide {
+    max-width: 31.5%;
+  }
+}
 @media (max-width: 750px) {
   .news_margin {
     margin-bottom: 0;
@@ -1084,6 +1102,10 @@ select {
 
   .news__row {
     margin-bottom: 37px;
+  }
+
+  .news__slide {
+    max-width: none;
   }
 }
 .layout {
@@ -1281,6 +1303,11 @@ select {
     top: 0.5vw;
   }
 }
+@media (max-width: 900px) {
+  .layout__bacground {
+    margin-top: -370px;
+  }
+}
 @media (max-width: 750px) {
   .layout__h2 {
     display: none;
@@ -1291,9 +1318,6 @@ select {
   }
 
   .layout__triangle {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
     width: 120vw;
     left: -10vw;
   }
@@ -1395,6 +1419,11 @@ select {
   .layout__circleClick_3 {
     left: 0;
     top: 0;
+  }
+}
+@media (min-width: 1900px) {
+  .layout__bacground {
+    margin-top: -160px;
   }
 }
 .location__h2 {
@@ -1795,6 +1824,10 @@ select {
   padding: 10px 21px 20px 21px;
 }
 
+.labelInput__input {
+  font-size: 18px;
+}
+
 .labelInput_orderCallForm {
   width: 100%;
   display: -webkit-box;
@@ -1815,13 +1848,14 @@ select {
   border-radius: 7px;
   height: 42px;
   padding: 0 21px;
+  color: #000000;
 }
 
 .labelInput_margin {
   margin: 23px 0 20px 0;
 }
 
-.labelInput__label_OrderCallForm {
+.labelInput__label_orderCallForm {
   color: #333333;
 }
 
@@ -1849,7 +1883,7 @@ select {
   height: 42px;
   border: solid 1px rgba(255, 255, 255, 0.2);
   border-radius: 7px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   font-size: 18px;
   padding: 0 21px;
 }
@@ -1875,11 +1909,11 @@ select {
 
 .labelInput__input:focus ~ .labelInput__label,
 .labelInput__input:not(:focus):valid ~ .labelInput__label {
-  top: -10px;
+  top: -14px;
   left: 2px;
   line-height: 12px;
   text-transform: uppercase;
-  font-size: 7px;
+  font-size: 12px;
 }
 
 .labelInput__input_formQuestion::-webkit-input-placeholder {
@@ -1922,13 +1956,17 @@ select {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.labelInput__textArea_formQuestion {
+  color: #ffffff;
+}
+
 .labelInput__textArea:focus ~ .labelInput__label,
 .labelInput__textArea:not(:focus):valid ~ .labelInput__label {
-  top: -10px;
+  top: -14px;
   left: 2px;
   line-height: 12px;
   text-transform: uppercase;
-  font-size: 7px;
+  font-size: 12px;
 }
 
 .labelInput__input:focus ~ .labelInput__label_formQuestion,
@@ -2222,7 +2260,7 @@ select {
   justify-content: center;
   left: 0;
   top: 0;
-  z-index: 3;
+  z-index: 15;
   background-color: rgba(236, 239, 246, 0.9);
 }
 
