@@ -1,0 +1,19 @@
+// @mixin x(){}- создание
+// @include x() - вставка
+// x - неизвестно
+@mixin x() {
+}
+@mixin df-jcx-aic($i) {
+	display: flex;
+	justify-content: $i;
+	align-items: center;
+}
+@mixin parent-container($i) {
+	width: 100vw;
+	display: flex;
+	justify-content: $i;
+	.container {
+		max-width: 1182px;
+		width: 85%;
+	}
+}
