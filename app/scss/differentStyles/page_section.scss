@@ -1,0 +1,66 @@
+@import "../repeatStyles/help/variables.scss";
+@import "../repeatStyles/help/mixins.scss";
+//---------------------------------------------
+// block
+.main {
+	flex-direction: column;
+	position: relative;
+	min-height: 1000px;
+	align-items: center;
+	@include parent-container(start);
+	.container {
+		height: 1000px;
+		h1 {
+			color: $color-3;
+			font-size: 48px;
+			max-width: 700px;
+			margin-bottom: 30px;
+			line-height: 66px;
+		}
+	}
+}
+
+// elements
+.main__contWay {
+	margin: 56px 0 10px 0;
+	display: flex;
+	align-items: center;
+}
+.main__way {
+	font-size: 15px;
+	font-family: $font-2;
+	line-height: 20px;
+	color: $color-7;
+	margin-right: 11px;
+}
+.main__wayArrow {
+	margin-right: 11px;
+}
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events

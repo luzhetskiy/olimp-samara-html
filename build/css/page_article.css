@@ -1,0 +1,361 @@
+@charset "UTF-8";
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-height: 1000px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main .container {
+  max-width: 1182px;
+  width: 85%;
+}
+.main .container p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  color: #333333;
+  line-height: 24px;
+  max-width: 900px;
+}
+.main .container h1 {
+  color: #6667ac;
+  font-size: 48px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 66px;
+}
+.main .container h2 {
+  color: #333333;
+  font-size: 32px;
+  max-width: 900px;
+  margin: 10px 0 20px 0;
+  line-height: 43px;
+}
+.main .container h3 {
+  color: #333333;
+  font-size: 24px;
+  max-width: 900px;
+  margin-bottom: 20px;
+  line-height: 32px;
+}
+.main .container h6 {
+  color: #333333;
+  font-size: 18px;
+  max-width: 900px;
+  margin-bottom: 15px;
+  line-height: 24px;
+  font-family: "Manrope-Regular";
+}
+.main .container img {
+  margin-bottom: 30px;
+}
+.main .container ul {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  color: #333333;
+  position: relative;
+  line-height: 24px;
+}
+.main .container ul li {
+  margin-bottom: 25px;
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .container ul li::before {
+  content: "";
+  width: 12px;
+  margin-top: 11px;
+  height: 2px;
+  position: absolute;
+  left: 9px;
+  background-color: #6667ac;
+}
+.main .container blockquote {
+  background-color: #d2e4f0;
+  padding: 24px 28px 26px 27px;
+  display: block;
+  max-width: 780px;
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+.main .container ol {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  color: #333333;
+  list-style-type: none;
+  /* Убираем исходные маркеры */
+  counter-reset: my-counter;
+  /* Задаём имя счетчика */
+  line-height: 24px;
+}
+.main .container ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.main .container ol li::before {
+  content: counter(my-counter);
+  /* Выводим число */
+  counter-increment: my-counter;
+  /* Увеличиваем значение счётчика */
+  min-width: 30px;
+  margin-right: 19px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: #53ba14 2px solid;
+  color: #6667ac;
+}
+.main .container table {
+  margin-bottom: 30px;
+  -webkit-transform: translateX(-40px);
+  -ms-transform: translateX(-40px);
+  transform: translateX(-40px);
+  border-collapse: collapse;
+  width: 780px;
+}
+.main .container table tr:hover {
+  background-color: #eceff6;
+}
+.main .container table th {
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  padding: 10px 0;
+  border-bottom: solid 1px #eceff6;
+}
+.main .container table td {
+  color: #333333;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 0;
+  line-height: 20px;
+  font-family: "Manrope-Regular";
+  border-bottom: solid 1px #eceff6;
+}
+.main .container button {
+  margin-bottom: 50px;
+  padding: 8px 30px;
+  font-family: "Manrope-Regular";
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 7px;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 2px 15px 0px #0000000d;
+  box-shadow: 0px 2px 15px 0px #0000000d;
+  background-color: #337c7e;
+}
+.main .container button:hover {
+  background-color: #5c9698;
+}
+
+.main__contWay {
+  margin: 56px 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main__way {
+  font-size: 15px;
+  font-family: "Manrope-Regular";
+  line-height: 20px;
+  color: #337c7e;
+  margin-right: 11px;
+}
+
+.main__wayArrow {
+  margin-right: 11px;
+}
+
+@media (max-width: 900px) {
+  .main .container p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .main .container h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    line-height: 54px;
+  }
+  .main .container h2 {
+    font-size: 26px;
+    margin: 10px 0 20px 0;
+    line-height: 36px;
+  }
+  .main .container h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 28px;
+  }
+  .main .container h6 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 21px;
+  }
+  .main .container img {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .main .container blockquote {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .main .container ol {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 750px) {
+  .main .container table {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@media (max-width: 600px) {
+  .main .container p {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .main .container h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .main .container h2 {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    line-height: 32px;
+  }
+  .main .container h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+  .main .container h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 18px;
+  }
+  .main .container ul {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .main .container ul li {
+    margin-bottom: 15px;
+  }
+  .main .container ul li::before {
+    margin-top: 9px;
+  }
+  .main .container ol {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .main .container ol li {
+    margin-bottom: 11px;
+  }
+  .main .container ol li::before {
+    min-width: 25px;
+    margin-right: 14px;
+    height: 25px;
+  }
+  .main .container blockquote {
+    padding: 18px 20px 18px 19px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main .container .contTable {
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 360px) {
+  .main .container p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main .container h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 26px;
+  }
+  .main .container h2 {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+    line-height: 18px;
+  }
+  .main .container h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 19px;
+  }
+  .main .container h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 17px;
+  }
+  .main .container img {
+    margin-bottom: 20px;
+  }
+  .main .container blockquote {
+    padding: 12px 14px 12px 13px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 16px;
+  }
+  .main .container table {
+    margin-bottom: 20px;
+  }
+  .main .container table th {
+    font-size: 15px;
+    line-height: 18px;
+    padding-bottom: 16px;
+  }
+  .main .container table td {
+    font-size: 15px;
+    padding-bottom: 16px;
+    line-height: 18px;
+  }
+  .main .container button {
+    padding: 6px 20px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
