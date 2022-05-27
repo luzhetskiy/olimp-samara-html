@@ -20,9 +20,6 @@
   max-width: 1182px;
   width: 85%;
 }
-.main .container {
-  height: 1000px;
-}
 .main .container h1 {
   color: #6667ac;
   font-size: 48px;
@@ -51,4 +48,27 @@
 
 .main__wayArrow {
   margin-right: 11px;
+}
+
+.main__contFlats {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.main__imgFlats {
+  width: calc(100% - 13.1vw);
+  margin: 0 6.55vw;
+}
+
+.searchFlats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.searchFlats__listFlats {
+  margin-bottom: 40px;
 }

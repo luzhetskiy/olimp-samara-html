@@ -9,7 +9,6 @@
 	align-items: center;
 	@include parent-container(start);
 	.container {
-		height: 1000px;
 		h1 {
 			color: $color-3;
 			font-size: 48px;
@@ -36,15 +35,29 @@
 .main__wayArrow {
 	margin-right: 11px;
 }
-
+.main__contFlats {
+	position: relative;
+	margin-bottom: 30px;
+}
+.main__imgFlats {
+	width: calc(100% - 13.1vw);
+	margin: 0 6.55vw;
+}
 // modificators
 
 // events
 //---------------------------------------------
 // block
-
+.searchFlats {
+	display: flex;
+	justify-content: space-between;
+}
 // elements
-
+.searchFlats__filter {
+}
+.searchFlats__listFlats {
+	margin-bottom: 40px;
+}
 // modificators
 
 // events

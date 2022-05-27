@@ -146,7 +146,7 @@ for (i of document.querySelectorAll(".labelInput__input")) {
 		//-------------
 		// Если атрибут name у input равен telephone.
 		// Тут this равен input(у).
-		if (this.getAttribute("name") == "telephone") {
+		if (this.getAttribute("name") == "phone") {
 			if (this.value.length < 13) {
 				// this.value = this.value.replace(/[^\0-9\+]/g, '');
 				// this.value = this.value.replace(/\.|[^\0-9\+]/g, '');
@@ -221,80 +221,80 @@ for (i of document.querySelectorAll(".labelInput__input")) {
 	})
 }
 
-document.querySelector(".orderCallForm__submit").addEventListener("click", function () {
-	orderCallFormFunc(0)
-})
-document.querySelector(".formQuestion__submit").addEventListener("click", function () {
-	if (!orderCallDataSubmited) {
-		orderCallFormFunc(1)
-	} else {
-		orderCallFormOpenFunc()
-	}
-})
-function orderCallFormFunc(a) {
-	let inputCheck = 0;
-	let l = [".labelInput__input_orderCallForm", ".labelInput_valueFormQuestion"]
-	for (i of document.querySelectorAll(l[a])) {
-		// i.value != '' ? i.style.border = "solid 2px #53ba14" : i.style.border = "solid 2px red";
-		// i.getAttribute("name") == "telephone" ? i.value.length == 12 ? i.style.border = "solid 2px #53ba14" : i.style.border = "solid 2px red" : ''
-		if (i.value != '') {
-			i.style.border = "solid 2px #53ba14"
-			i.style.color = "#333"
-			i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
-		} else {
-			i.style.border = "solid 2px red";
-			i.style.color = "#333"
-			i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
-			inputCheck++
-		}
-		if (i.getAttribute("name") == "telephone") {
-			if (i.value.length == 12) {
-				i.style.border = "solid 2px #53ba14"
-				i.style.color = "#333"
-				i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
-				document.querySelectorAll(".labelInput__invalidFormat")[a].style.display = "none"
-			} else {
-				i.style.border = "solid 2px red"
-				i.style.color = "red"
-				i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
-				inputCheck++
-				document.querySelectorAll(".labelInput__invalidFormat")[a].style.display = "flex"
-			}
-		}
-	}
-	if (inputCheck != 0) {
-		return
-	}
-	let p = new Promise((res, rej) => {
-		setTimeout(() => {
-			Math.random() > 0.5 ? res() : rej();
-		}, 200)
-	})
-	p.then(res => {
-		orderCallDataSubmited = true
-		console.log("axios.post()")
-		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
-		document.querySelectorAll(".orderCallForm__miniCont")[1].style.display = 'flex'
-		orderCallFormOpenFunc()
-		setTimeout(() => {
-			labelInputResetFunc(l[0])
-			labelInputResetFunc(l[1])
-		}, 500);
-		for (i of orderCallQuantity) {
-			i.style.opacity = '0.5'
-		}
-		document.querySelector(".formQuestion__submit").style.opacity = '0.5'
-	}, rej => {
-		console.error("error:axios.post()")
-		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
-		document.querySelectorAll(".orderCallForm__miniCont")[2].style.display = 'flex'
-		orderCallFormOpenFunc()
-	})
-}
-function labelInputResetFunc(a) {
-	for (i of document.querySelectorAll(a)) {
-		i.value = ''
-		i.style.border = 'solid 1px rgba(255, 255, 255, 0.2)'
-		i.style.backgroundColor = "transparent"
-	}
-}
+// document.querySelector(".orderCallForm__submit").addEventListener("click", function () {
+// 	orderCallFormFunc(0)
+// })
+// document.querySelector(".formQuestion__submit").addEventListener("click", function () {
+// 	if (!orderCallDataSubmited) {
+// 		orderCallFormFunc(1)
+// 	} else {
+// 		orderCallFormOpenFunc()
+// 	}
+// })
+// function orderCallFormFunc(a) {
+// 	let inputCheck = 0;
+// 	let l = [".labelInput__input_orderCallForm", ".labelInput_valueFormQuestion"]
+// 	for (i of document.querySelectorAll(l[a])) {
+// 		// i.value != '' ? i.style.border = "solid 2px #53ba14" : i.style.border = "solid 2px red";
+// 		// i.getAttribute("name") == "telephone" ? i.value.length == 12 ? i.style.border = "solid 2px #53ba14" : i.style.border = "solid 2px red" : ''
+// 		if (i.value != '') {
+// 			i.style.border = "solid 2px #53ba14"
+// 			i.style.color = "#333"
+// 			i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
+// 		} else {
+// 			i.style.border = "solid 2px red";
+// 			i.style.color = "#333"
+// 			i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
+// 			inputCheck++
+// 		}
+// 		if (i.getAttribute("name") == "phone") {
+// 			if (i.value.length == 12) {
+// 				i.style.border = "solid 2px #53ba14"
+// 				i.style.color = "#333"
+// 				i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
+// 				document.querySelectorAll(".labelInput__invalidFormat")[a].style.display = "none"
+// 			} else {
+// 				i.style.border = "solid 2px red"
+// 				i.style.color = "red"
+// 				i.style.backgroundColor = "rgba(255, 255, 255, 0.8)"
+// 				inputCheck++
+// 				document.querySelectorAll(".labelInput__invalidFormat")[a].style.display = "flex"
+// 			}
+// 		}
+// 	}
+// 	if (inputCheck != 0) {
+// 		return
+// 	}
+// 	let p = new Promise((res, rej) => {
+// 		setTimeout(() => {
+// 			Math.random() > 0.5 ? res() : rej();
+// 		}, 200)
+// 	})
+// 	p.then(res => {
+// 		orderCallDataSubmited = true
+// 		console.log("axios.post()")
+// 		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
+// 		document.querySelectorAll(".orderCallForm__miniCont")[1].style.display = 'flex'
+// 		orderCallFormOpenFunc()
+// 		setTimeout(() => {
+// 			labelInputResetFunc(l[0])
+// 			labelInputResetFunc(l[1])
+// 		}, 500);
+// 		for (i of orderCallQuantity) {
+// 			i.style.opacity = '0.5'
+// 		}
+// 		document.querySelector(".formQuestion__submit").style.opacity = '0.5'
+// 	}, rej => {
+// 		console.error("error:axios.post()")
+// 		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
+// 		document.querySelectorAll(".orderCallForm__miniCont")[2].style.display = 'flex'
+// 		orderCallFormOpenFunc()
+// 	})
+// }
+// function labelInputResetFunc(a) {
+// 	for (i of document.querySelectorAll(a)) {
+// 		i.value = ''
+// 		i.style.border = 'solid 1px rgba(255, 255, 255, 0.2)'
+// 		i.style.backgroundColor = "transparent"
+// 	}
+// }

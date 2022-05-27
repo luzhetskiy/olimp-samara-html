@@ -1490,6 +1490,240 @@ select {
     transform: translateY(-80px);
   }
 }
+.filter {
+  background-color: #eceff6;
+  padding: 27px 22px;
+  border-radius: 7px;
+  max-width: 300px;
+}
+
+.filter__text {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.filter__sections {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  height: 42px;
+}
+
+.filter__section:first-child {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.filter__section {
+  width: 20%;
+  border: solid 2px #337c7e;
+  border-right: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filter__section:hover {
+  background-color: #337c7e;
+  color: #ffffff;
+}
+
+.filter__section:last-child {
+  border-right: solid 2px #337c7e;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.filter__filterPriceInputText {
+  width: 114px;
+  height: 42px;
+  border-radius: 7px;
+  padding: 9px 12px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  border: solid 2px #337c7e;
+}
+
+.filter__contFilterPriceInputText {
+  margin-bottom: 20px;
+}
+.filter__contFilterPriceInputText span {
+  font-size: 18px;
+  color: #333333;
+  margin: 0 8px;
+}
+
+.filter__filterPriceSlider {
+  background-color: #337c7e;
+  height: 4px;
+  margin-bottom: 30px;
+  width: 97%;
+}
+
+.filter__summary {
+  font-size: 23px;
+  color: #6667ac;
+  line-height: 32px;
+}
+
+.explanationBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.explanationBlock__icon {
+  margin-right: 16px;
+}
+
+.explanationBlock__h2 {
+  font-size: 32px;
+  line-height: 43px;
+  color: #333333;
+}
+
+.listFlats {
+  max-width: 830px;
+  width: 70%;
+}
+
+.listFlats__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.listFlats__headerWordLevel {
+  font-size: 15px;
+}
+
+.listFlats__headerCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.listFlats__headerText {
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  margin-left: 60px;
+  line-height: 24px;
+  position: relative;
+}
+
+.listFlats__headerText::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 6px);
+  left: -25px;
+}
+
+.listFlats__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.listFlats__row:last-child {
+  margin-bottom: 0;
+}
+
+.listFlats__flat {
+  height: 36px;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.listFlats__flatQuantityRooms {
+  width: 25px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.listFlats__flatText {
+  font-size: 15px;
+  margin-left: 11px;
+}
+
+.listFlats__level {
+  font-size: 15px;
+  color: #666;
+}
+
+.listFlats__headerText_sale::before {
+  background-color: #53ba14;
+}
+
+.listFlats__headerText_reserve::before {
+  background-color: #d79f33;
+}
+
+.listFlats__headerText_bought::before {
+  background-color: #e5e5e5;
+}
+
+.listFlats__flat_sale {
+  background-color: #53ba14;
+  color: #ffffff;
+}
+
+.listFlats__flat_reserve {
+  background-color: #d79f33;
+  color: #ffffff;
+}
+
+.listFlats__flat_bought {
+  background-color: #e5e5e5;
+  color: #666;
+}
+
 .df-fld-aic {
   display: -webkit-box;
   display: -ms-flexbox;
