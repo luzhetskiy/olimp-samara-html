@@ -772,7 +772,58 @@
 // modificators
 
 // events
+@media (max-width: 1500px) {
+	.filter {
+		padding: 1.875vw 1.53vw;
+	}
+	.filter__text {
+		font-size: 1.665vw;
+		line-height: 2.22vw;
+		margin-bottom: 15px;
+	}
+	.filter__sections {
+		max-width: 100%;
+		margin-bottom: 2.08vw;
+		height: 2.914vw;
+	}
+	.filter__section:first-child {
+		border-top-left-radius: 0.5vw;
+		border-bottom-left-radius: 0.5vw;
+	}
+	.filter__section {
+		width: 20%;
+		font-size: 1.25vw;
+	}
 
+	.filter__section:last-child {
+		border-top-right-radius: 0.5vw;
+		border-bottom-right-radius: 0.5vw;
+	}
+	.filter__filterPriceInputText {
+		width: 7.917vw;
+		height: 2.92vw;
+		border-radius: 0.5vw;
+		padding: 0.6vw 0.9vw;
+		font-size: 1.2vw;
+		line-height: 1.8vw;
+	}
+	.filter__contFilterPriceInputText {
+		margin-bottom: 1.39vw;
+		span {
+			font-size: 1.25vw;
+			margin: 0 0.55vw;
+		}
+	}
+	.filter__filterPriceSlider {
+		height: 4px;
+		margin-bottom: 2.086vw;
+		width: 97%;
+	}
+	.filter__summary {
+		font-size: 1.6vw;
+		line-height: 2.225vw;
+	}
+}
 //---------------------------------------------
 // block
 .explanationBlock {
@@ -792,6 +843,21 @@
 // modificators
 
 // events
+
+@media (max-width: 1500px) {
+	.explanationBlock {
+		margin-bottom: 1.39vw;
+	}
+
+	.explanationBlock__icon {
+		margin-right: 1.111vw;
+		width: 2.78vw;
+	}
+	.explanationBlock__h2 {
+		font-size: 2.225vw;
+		line-height: 3.056vw;
+	}
+}
 //---------------------------------------------
 // block
 .listFlats {
@@ -884,6 +950,47 @@
 	color: #666;
 }
 // events
+@media (max-width: 1500px) {
+	.listFlats__row {
+		margin-bottom: 0.75vw;
+	}
+
+	.listFlats__flat {
+		height: 2.5vw;
+		width: 12.5vw;
+		margin-left: 1.4vw;
+	}
+	.listFlats__flatQuantityRooms {
+		width: 1.65vw;
+		font-size: 1.25vw;
+	}
+	.listFlats__flatText {
+		font-size: 1.045vw;
+		margin-left: 0.77vw;
+	}
+	.listFlats__level {
+		font-size: 1.045vw;
+		// line-height: 1.045vw;
+	}
+	.listFlats__header {
+		margin-bottom: 2.085vw;
+	}
+	.listFlats__headerText {
+		line-height: 1.7vw;
+		margin-left: 4.165vw;
+		font-size: 1.5vw;
+	}
+	.listFlats__headerText::before {
+		width: 0.833vw;
+		height: 0.833vw;
+		left: -1.735vw;
+		top: calc(50% - 0.49vw);
+	}
+	.listFlats__headerWordLevel {
+		font-size: 1.041vw;
+	}
+}
+
 //---------------------------------------------
 // block
 
