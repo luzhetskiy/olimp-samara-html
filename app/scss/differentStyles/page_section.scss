@@ -5,17 +5,10 @@
 .main {
 	flex-direction: column;
 	position: relative;
-	min-height: 1000px;
+
 	align-items: center;
 	@include parent-container(start);
 	.container {
-		h1 {
-			color: $color-3;
-			font-size: 48px;
-			max-width: 700px;
-			margin-bottom: 30px;
-			line-height: 66px;
-		}
 	}
 }
 
@@ -42,10 +35,49 @@
 .main__imgFlats {
 	width: calc(100% - 13.1vw);
 	margin: 0 6.55vw;
+	z-index: 0;
+}
+.main__imgSection {
+	position: absolute;
+	z-index: 3;
 }
 // modificators
-
+.main__imgSection_1 {
+	left: 14.3%;
+	top: 3%;
+	width: 20%;
+	max-width: 236px;
+}
+.main__imgSection_2 {
+	left: 25%;
+	top: 53%;
+	width: 20%;
+	z-index: 5;
+	max-width: 236px;
+}
+.main__imgSection_3 {
+	left: 45%;
+	top: 53%;
+	width: 30%;
+	z-index: 5;
+	max-width: 354px;
+}
+.main__imgSection_4 {
+	left: 55.3%;
+	top: 3%;
+	width: 30.3%;
+	max-width: 358px;
+}
 // events
+.main__contFlats:hover .main__imgSection:not(:hover) {
+	opacity: 0;
+}
+@media (min-width: 1500px) {
+	.main__imgFlats {
+		margin: 0 94px;
+		width: calc(100% - 192px);
+	}
+}
 //---------------------------------------------
 // block
 .searchFlats {
@@ -61,6 +93,14 @@
 // modificators
 
 // events
+@media (max-width: 600px) {
+	.searchFlats {
+		flex-direction: column;
+	}
+	.searchFlats__filter {
+		margin-bottom: 20px;
+	}
+}
 //---------------------------------------------
 // block
 

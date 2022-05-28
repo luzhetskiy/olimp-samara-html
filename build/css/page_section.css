@@ -4,7 +4,6 @@
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  min-height: 1000px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -20,14 +19,6 @@
   max-width: 1182px;
   width: 85%;
 }
-.main .container h1 {
-  color: #6667ac;
-  font-size: 48px;
-  max-width: 700px;
-  margin-bottom: 30px;
-  line-height: 66px;
-}
-
 .main__contWay {
   margin: 56px 0 10px 0;
   display: -webkit-box;
@@ -58,8 +49,54 @@
 .main__imgFlats {
   width: calc(100% - 13.1vw);
   margin: 0 6.55vw;
+  z-index: 0;
 }
 
+.main__imgSection {
+  position: absolute;
+  z-index: 3;
+}
+
+.main__imgSection_1 {
+  left: 14.3%;
+  top: 3%;
+  width: 20%;
+  max-width: 236px;
+}
+
+.main__imgSection_2 {
+  left: 25%;
+  top: 53%;
+  width: 20%;
+  z-index: 5;
+  max-width: 236px;
+}
+
+.main__imgSection_3 {
+  left: 45%;
+  top: 53%;
+  width: 30%;
+  z-index: 5;
+  max-width: 354px;
+}
+
+.main__imgSection_4 {
+  left: 55.3%;
+  top: 3%;
+  width: 30.3%;
+  max-width: 358px;
+}
+
+.main__contFlats:hover .main__imgSection:not(:hover) {
+  opacity: 0;
+}
+
+@media (min-width: 1500px) {
+  .main__imgFlats {
+    margin: 0 94px;
+    width: calc(100% - 192px);
+  }
+}
 .searchFlats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,4 +108,17 @@
 
 .searchFlats__listFlats {
   margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  .searchFlats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .searchFlats__filter {
+    margin-bottom: 20px;
+  }
 }

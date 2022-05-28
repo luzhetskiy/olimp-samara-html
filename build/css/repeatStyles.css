@@ -1586,7 +1586,7 @@ select {
   .filter__text {
     font-size: 1.665vw;
     line-height: 2.22vw;
-    margin-bottom: 15px;
+    margin-bottom: 1vw;
   }
 
   .filter__sections {
@@ -1636,6 +1636,29 @@ select {
   .filter__summary {
     font-size: 1.6vw;
     line-height: 2.225vw;
+  }
+}
+@media (max-width: 600px) {
+  .filter__section {
+    border: solid 1px #337c7e;
+  }
+
+  .filter__sections {
+    height: 4vw;
+  }
+
+  .filter__section:last-child {
+    border-right: solid 1px #337c7e;
+  }
+
+  .filter__filterPriceInputText {
+    border: solid 1px #337c7e;
+    width: 12vw;
+    height: 4vw;
+  }
+
+  .filter__filterPriceSlider {
+    height: 2px;
   }
 }
 .explanationBlock {
@@ -1843,6 +1866,84 @@ select {
 
   .listFlats__headerWordLevel {
     font-size: 1.041vw;
+  }
+}
+@media (max-width: 600px) {
+  .listFlats__row {
+    margin-bottom: 0.75vw;
+  }
+
+  .listFlats__flat {
+    height: 3.5vw;
+    width: 18.5vw;
+    margin-left: 1.6vw;
+  }
+
+  .listFlats__flatQuantityRooms {
+    width: 2.7vw;
+    font-size: 1.65vw;
+  }
+
+  .listFlats__flatText {
+    font-size: 1.345vw;
+    margin-left: 0.77vw;
+  }
+
+  .listFlats__level {
+    font-size: 1.545vw;
+  }
+
+  .listFlats__header {
+    margin-bottom: 2.085vw;
+  }
+
+  .listFlats__headerText {
+    line-height: 1.9vw;
+    margin-left: 4.165vw;
+    font-size: 1.8vw;
+  }
+
+  .listFlats__headerText::before {
+    width: 0.833vw;
+    height: 0.833vw;
+    left: -1.735vw;
+    top: calc(50% - 0.49vw);
+  }
+
+  .listFlats__headerWordLevel {
+    font-size: 1.241vw;
+  }
+
+  .listFlats {
+    width: 100%;
+  }
+}
+h1 {
+  color: #6667ac;
+  font-size: 48px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 66px;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 360px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 26px;
   }
 }
 .df-fld-aic {
