@@ -156,7 +156,7 @@
   font-family: "Manrope-Regular";
   border-bottom: solid 1px #eceff6;
 }
-.main .container button {
+.main .container a:not([class]) {
   margin-bottom: 50px;
   padding: 8px 30px;
   font-family: "Manrope-Regular";
@@ -168,30 +168,8 @@
   box-shadow: 0px 2px 15px 0px #0000000d;
   background-color: #337c7e;
 }
-.main .container button:hover {
+.main .container a:hover {
   background-color: #5c9698;
-}
-
-.main__contWay {
-  margin: 56px 0 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.main__way {
-  font-size: 15px;
-  font-family: "Manrope-Regular";
-  line-height: 20px;
-  color: #337c7e;
-  margin-right: 11px;
-}
-
-.main__wayArrow {
-  margin-right: 11px;
 }
 
 @media (max-width: 900px) {
@@ -331,7 +309,7 @@
     padding-bottom: 16px;
     line-height: 18px;
   }
-  .main .container button {
+  .main .container a:not([class]) {
     padding: 6px 20px;
     font-size: 15px;
     line-height: 28px;

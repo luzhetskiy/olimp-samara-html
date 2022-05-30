@@ -1,0 +1,239 @@
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main .container {
+  max-width: 1182px;
+  width: 85%;
+}
+.listGallerys__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.listGallerys__contDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.listGallerys__textDate {
+  font-size: 32px;
+  line-height: 43px;
+  color: #53ba14;
+  margin-left: 34px;
+}
+
+.listGallerys__textDom {
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+
+.listGallerys__contImg {
+  position: relative;
+  margin: 0 100px;
+}
+
+.listGallerys__imgTextBackground {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  height: 100%;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.listGallerys__contImg:hover .listGallerys__imgTextBackground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1050px) {
+  .listGallerys__row {
+    margin-bottom: 30px;
+  }
+
+  .listGallerys__textDate {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 20px;
+  }
+
+  .listGallerys__textDom {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .listGallerys__contImg {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 850px) {
+  .listGallerys__textDate {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+
+  .listGallerys__textDom {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .listGallerys__contImg {
+    margin: 0 20px;
+  }
+
+  .listGallerys__iconDate {
+    width: 45px;
+  }
+
+  .listGallerys__img {
+    max-width: 380px;
+    width: 43vw;
+  }
+}
+@media (max-width: 450px) {
+  .listGallerys__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .listGallerys__img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .listGallerys__contImg {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+
+  .listGallerys__textDate {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 10px;
+  }
+
+  .listGallerys__textDom {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .listGallerys__iconDate {
+    width: 60px;
+  }
+}
+.main p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Manrope-Regular";
+  color: #333333;
+  line-height: 24px;
+  max-width: 900px;
+}
+.main h2 {
+  color: #333333;
+  font-size: 32px;
+  max-width: 900px;
+  margin: 10px 0 20px 0;
+  line-height: 43px;
+}
+.main h3 {
+  color: #333333;
+  font-size: 24px;
+  max-width: 920px;
+  margin-bottom: 20px;
+  line-height: 32px;
+}
+
+@media (max-width: 900px) {
+  .main p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .main h2 {
+    font-size: 26px;
+    margin: 10px 0 20px 0;
+    line-height: 36px;
+  }
+  .main h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .main p {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .main h2 {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    line-height: 32px;
+  }
+  .main h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 360px) {
+  .main p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main h2 {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+    line-height: 18px;
+  }
+  .main h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 19px;
+  }
+}

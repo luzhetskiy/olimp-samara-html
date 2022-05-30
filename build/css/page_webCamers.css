@@ -1,0 +1,89 @@
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main .container {
+  max-width: 1182px;
+  width: 85%;
+}
+.webCamers__grid {
+  display: grid;
+  gap: 40px 100px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.webCamers__contIframe {
+  cursor: pointer;
+}
+.webCamers__contIframe img {
+  -webkit-box-shadow: 0px 4px 25px 0px #6667ac80, 0px 2px 5px 0px #00000080;
+  box-shadow: 0px 4px 25px 0px #6667ac80, 0px 2px 5px 0px #00000080;
+  width: 100%;
+}
+
+.webCamers__text {
+  font-size: 32px;
+  line-height: 43px;
+  color: #333333;
+  margin-top: 17px;
+}
+
+@media (max-width: 1000px) {
+  .webCamers__grid {
+    gap: 20px 40px;
+  }
+
+  .webCamers__text {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .webCamers__grid {
+    gap: 20px;
+  }
+
+  .webCamers__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 700px) {
+  .webCamers__grid {
+    gap: 25px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .webCamers__text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 330px) {
+  .webCamers__grid {
+    gap: 20px 0;
+  }
+
+  .webCamers__text {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+  }
+}
+.webCamers {
+  margin-bottom: 40px;
+}

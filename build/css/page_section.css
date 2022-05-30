@@ -19,28 +19,6 @@
   max-width: 1182px;
   width: 85%;
 }
-.main__contWay {
-  margin: 56px 0 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.main__way {
-  font-size: 15px;
-  font-family: "Manrope-Regular";
-  line-height: 20px;
-  color: #337c7e;
-  margin-right: 11px;
-}
-
-.main__wayArrow {
-  margin-right: 11px;
-}
-
 .main__contFlats {
   position: relative;
   margin-bottom: 30px;
@@ -55,6 +33,7 @@
 .main__imgSection {
   position: absolute;
   z-index: 3;
+  opacity: 0;
 }
 
 .main__imgSection_1 {
@@ -87,8 +66,8 @@
   max-width: 358px;
 }
 
-.main__contFlats:hover .main__imgSection:not(:hover) {
-  opacity: 0;
+.main__imgSection:hover {
+  opacity: 1;
 }
 
 @media (min-width: 1500px) {
@@ -108,6 +87,10 @@
 
 .searchFlats__listFlats {
   margin-bottom: 40px;
+}
+
+.searchFlats__explanationBlock {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {

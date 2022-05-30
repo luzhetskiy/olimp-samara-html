@@ -1,0 +1,126 @@
+@import "../repeatStyles/help/variables.scss";
+@import "../repeatStyles/help/mixins.scss";
+//-----------------------------------
+// block
+.main {
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	@include parent-container(start);
+	.container {
+	}
+}
+// elements
+.main__parkingImg {
+	margin-bottom: 40px;
+	width: 100%;
+}
+// modificators
+
+// events
+@media (max-width: 750px) {
+}
+//-----------------------------------
+// block
+.parking {
+	display: flex;
+	justify-content: space-between;
+}
+// elements
+.parking__h3 {
+	font-size: 24px;
+	line-height: 32px;
+	max-width: 560px;
+	color: $color-6;
+	margin-bottom: 20px;
+}
+.parking__text {
+	font-size: 18px;
+	line-height: 24px;
+	color: $color-6;
+	font-family: $font-2;
+	max-width: 680px;
+	margin-bottom: 30px;
+}
+.parking__btnLeaveRequest {
+	max-width: 380px;
+	height: 64px;
+	padding: 23px 20px;
+	width: 100%;
+}
+.parking__delivery {
+	.delivery__contInfo {
+		margin-bottom: 30px;
+	}
+}
+
+// modificators
+.parking_margin {
+	margin-bottom: 62px;
+}
+// events
+@media (max-width: 950px) {
+	.parking {
+		flex-direction: column;
+	}
+}
+@media (max-width: 800px) {
+	.parking__delivery {
+	}
+}
+@media (max-width: 450px) {
+	.parking__h3 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.parking__text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.parking_margin {
+		margin-bottom: 10px;
+	}
+}
+
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+// block
+.filter {
+	max-width: 480px;
+	margin-bottom: 30px;
+}
+.explanationBlock {
+	margin-bottom: 20px;
+}
+// elements
+
+// modificators
+
+// events
+//===================================

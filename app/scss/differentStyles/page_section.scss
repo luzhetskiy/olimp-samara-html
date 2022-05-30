@@ -13,21 +13,7 @@
 }
 
 // elements
-.main__contWay {
-	margin: 56px 0 10px 0;
-	display: flex;
-	align-items: center;
-}
-.main__way {
-	font-size: 15px;
-	font-family: $font-2;
-	line-height: 20px;
-	color: $color-7;
-	margin-right: 11px;
-}
-.main__wayArrow {
-	margin-right: 11px;
-}
+
 .main__contFlats {
 	position: relative;
 	margin-bottom: 30px;
@@ -40,6 +26,7 @@
 .main__imgSection {
 	position: absolute;
 	z-index: 3;
+	opacity: 0;
 }
 // modificators
 .main__imgSection_1 {
@@ -69,8 +56,8 @@
 	max-width: 358px;
 }
 // events
-.main__contFlats:hover .main__imgSection:not(:hover) {
-	opacity: 0;
+.main__imgSection:hover {
+	opacity: 1;
 }
 @media (min-width: 1500px) {
 	.main__imgFlats {
@@ -85,10 +72,12 @@
 	justify-content: space-between;
 }
 // elements
-.searchFlats__filter {
-}
+
 .searchFlats__listFlats {
 	margin-bottom: 40px;
+}
+.searchFlats__explanationBlock {
+	margin-bottom: 20px;
 }
 // modificators
 

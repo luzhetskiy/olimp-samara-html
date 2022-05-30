@@ -5,37 +5,12 @@
 .main {
 	flex-direction: column;
 	position: relative;
-
 	align-items: center;
 	@include parent-container(start);
 	.container {
-		h1 {
-			color: $color-3;
-			font-size: 48px;
-			max-width: 700px;
-			margin-bottom: 30px;
-			line-height: 66px;
-		}
 	}
 }
-
 // elements
-.main__contWay {
-	margin: 56px 0 10px 0;
-	display: flex;
-	align-items: center;
-}
-.main__way {
-	font-size: 15px;
-	font-family: $font-2;
-	line-height: 20px;
-	color: $color-7;
-	margin-right: 11px;
-}
-.main__wayArrow {
-	margin-right: 11px;
-}
-
 .main__contImgHouse {
 	height: 45.146vw;
 	margin-bottom: 42px;
@@ -102,44 +77,9 @@
 	opacity: 1;
 }
 
-@media (max-width: 900px) {
-	.main {
-		.container {
-			h1 {
-				font-size: 38px;
-				max-width: 700px;
-				margin-bottom: 25px;
-				line-height: 54px;
-			}
-		}
-	}
-}
-
 @media (max-width: 600px) {
-	.main {
-		.container {
-			h1 {
-				font-size: 30px;
-				max-width: 700px;
-				margin-bottom: 25px;
-				line-height: 40px;
-			}
-		}
-	}
 	.main__contImgHouse {
 		margin-bottom: 20px;
-	}
-}
-@media (max-width: 360px) {
-	.main {
-		.container {
-			h1 {
-				font-size: 20px;
-				max-width: 700px;
-				margin-bottom: 15px;
-				line-height: 26px;
-			}
-		}
 	}
 }
 
@@ -352,3 +292,33 @@
 // modificators
 
 // events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+
+//===================================

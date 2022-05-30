@@ -1,0 +1,129 @@
+@import "../repeatStyles/help/variables.scss";
+@import "../repeatStyles/help/mixins.scss";
+//---------------------------------------------
+// block
+.main {
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	@include parent-container(start);
+	.container {
+	}
+}
+
+// elements
+
+// modificators
+
+// events
+
+//---------------------------------------------
+// block
+.webCamers {
+}
+// elements
+.webCamers__grid {
+	display: grid;
+	gap: 40px 100px;
+	grid-template-columns: 1fr 1fr;
+}
+.webCamers__contIframe {
+	cursor: pointer;
+	img {
+		box-shadow: 0px 4px 25px 0px #6667ac80, 0px 2px 5px 0px #00000080;
+		width: 100%;
+	}
+}
+.webCamers__text {
+	font-size: 32px;
+	line-height: 43px;
+	color: $color-6;
+	margin-top: 17px;
+}
+// modificators
+
+// events
+@media (max-width: 1000px) {
+	.webCamers__grid {
+		gap: 20px 40px;
+	}
+
+	.webCamers__text {
+		font-size: 22px;
+		line-height: 26px;
+		margin-top: 10px;
+	}
+}
+@media (max-width: 700px) {
+	.webCamers__grid {
+		gap: 20px;
+	}
+
+	.webCamers__text {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+@media (max-width: 700px) {
+	.webCamers__grid {
+		gap: 25px 0;
+		grid-template-columns: 1fr;
+	}
+
+	.webCamers__text {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+@media (max-width: 330px) {
+	.webCamers__grid {
+		gap: 20px 0;
+	}
+
+	.webCamers__text {
+		font-size: 18px;
+		line-height: 20px;
+		margin-top: 0;
+	}
+}
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+//---------------------------------------------
+// block
+
+.webCamers {
+	margin-bottom: 40px;
+}
+// elements
+
+// modificators
+
+// events
+
+//===================================

@@ -1,0 +1,98 @@
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main .container {
+  max-width: 1182px;
+  width: 85%;
+}
+.main__parkingImg {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.parking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.parking__h3 {
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 560px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.parking__text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  font-family: "Manrope-Regular";
+  max-width: 680px;
+  margin-bottom: 30px;
+}
+
+.parking__btnLeaveRequest {
+  max-width: 380px;
+  height: 64px;
+  padding: 23px 20px;
+  width: 100%;
+}
+
+.parking__delivery .delivery__contInfo {
+  margin-bottom: 30px;
+}
+
+.parking_margin {
+  margin-bottom: 62px;
+}
+
+@media (max-width: 950px) {
+  .parking {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .parking__h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .parking__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .parking_margin {
+    margin-bottom: 10px;
+  }
+}
+.filter {
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+
+.explanationBlock {
+  margin-bottom: 20px;
+}

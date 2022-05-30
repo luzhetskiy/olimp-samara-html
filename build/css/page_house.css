@@ -19,36 +19,6 @@
   max-width: 1182px;
   width: 85%;
 }
-.main .container h1 {
-  color: #6667ac;
-  font-size: 48px;
-  max-width: 700px;
-  margin-bottom: 30px;
-  line-height: 66px;
-}
-
-.main__contWay {
-  margin: 56px 0 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.main__way {
-  font-size: 15px;
-  font-family: "Manrope-Regular";
-  line-height: 20px;
-  color: #337c7e;
-  margin-right: 11px;
-}
-
-.main__wayArrow {
-  margin-right: 11px;
-}
-
 .main__contImgHouse {
   height: 45.146vw;
   margin-bottom: 42px;
@@ -131,32 +101,9 @@
   opacity: 1;
 }
 
-@media (max-width: 900px) {
-  .main .container h1 {
-    font-size: 38px;
-    max-width: 700px;
-    margin-bottom: 25px;
-    line-height: 54px;
-  }
-}
 @media (max-width: 600px) {
-  .main .container h1 {
-    font-size: 30px;
-    max-width: 700px;
-    margin-bottom: 25px;
-    line-height: 40px;
-  }
-
   .main__contImgHouse {
     margin-bottom: 20px;
-  }
-}
-@media (max-width: 360px) {
-  .main .container h1 {
-    font-size: 20px;
-    max-width: 700px;
-    margin-bottom: 15px;
-    line-height: 26px;
   }
 }
 .location__h2 {

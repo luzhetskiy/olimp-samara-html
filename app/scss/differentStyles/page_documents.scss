@@ -1,0 +1,179 @@
+@import "../repeatStyles/help/variables.scss";
+@import "../repeatStyles/help/mixins.scss";
+//-----------------------------------
+// block
+.main {
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	@include parent-container(start);
+	.container {
+	}
+}
+// elements
+
+// modificators
+
+// events
+
+//-----------------------------------
+// block
+.documents {
+}
+// elements
+.documents__NumberGroup {
+	font-size: 32px;
+	color: $color-6;
+	line-height: 43px;
+	margin-bottom: 22px;
+}
+.documents__icon {
+	margin: 0 25px 0 5px;
+}
+.documents__text {
+	font-size: 18px;
+	line-height: 24px;
+	color: $color-7;
+}
+.documents__block {
+	display: flex;
+	font-family: $font-2;
+	align-items: end;
+	margin-bottom: 30px;
+}
+.documents__textWeight {
+	color: #666;
+	font-size: 15px;
+
+	line-height: 20px;
+}
+// modificators
+
+// events
+@media (max-width: 450px) {
+	.documents__text {
+		font-size: 15px;
+		line-height: 19px;
+	}
+	.documents__textWeight {
+		font-size: 13px;
+		line-height: 16px;
+	}
+	.documents__icon {
+		margin: 0 15px 0 0;
+	}
+	.documents__NumberGroup {
+		font-size: 26px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 350px) {
+	.documents__textWeight {
+		font-size: 10px;
+		line-height: 12px;
+	}
+	.documents__text {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.documents__icon {
+		margin: 0 10px 0 0;
+		width: 30px;
+	}
+	.documents__NumberGroup {
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 15px;
+	}
+}
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+// block
+
+p {
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-family: $font-2;
+	color: $color-6;
+	line-height: 24px;
+	max-width: 900px;
+}
+h2 {
+	color: $color-6;
+	font-size: 32px;
+	max-width: 900px;
+	margin: 10px 0 20px 0;
+	line-height: 43px;
+}
+// elements
+
+// modificators
+
+// events
+@media (max-width: 900px) {
+	p {
+		margin-bottom: 25px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	h2 {
+		font-size: 26px;
+		margin: 10px 0 20px 0;
+		line-height: 36px;
+	}
+}
+
+@media (max-width: 600px) {
+	p {
+		margin-bottom: 25px;
+		font-size: 15px;
+		line-height: 22px;
+	}
+	h2 {
+		font-size: 22px;
+		margin: 10px 0 20px 0;
+		line-height: 32px;
+	}
+}
+@media (max-width: 360px) {
+	p {
+		margin-bottom: 25px;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	h2 {
+		font-size: 16px;
+		margin: 10px 0 15px 0;
+		line-height: 18px;
+	}
+}
+
+//===================================

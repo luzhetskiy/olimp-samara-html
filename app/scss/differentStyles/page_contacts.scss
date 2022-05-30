@@ -1,0 +1,172 @@
+@import "../repeatStyles/help/variables.scss";
+@import "../repeatStyles/help/mixins.scss";
+//-----------------------------------
+// block
+.main {
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	@include parent-container(start);
+	.container {
+	}
+}
+// elements
+
+// modificators
+
+// events
+
+//-----------------------------------
+// block
+.contacts {
+	display: flex;
+}
+// elements
+.contacts__row {
+	display: flex;
+}
+.contacts__text {
+	font-family: $font-2;
+}
+.contacts__map {
+	max-width: 580px;
+	width: 76%;
+}
+.contacts__h4 {
+}
+.contacts__grid {
+	display: grid;
+	font-size: 18px;
+	line-height: 24px;
+	grid-template-columns: 1fr 1.8fr;
+	gap: 20px 0;
+}
+.contacts__linkIcons {
+	max-width: 216px;
+	display: flex;
+	justify-content: space-between;
+}
+.contacts__block {
+	margin-right: 20px;
+}
+.contacts__map {
+	margin-bottom: 30px;
+}
+// modificators
+
+// events
+@media (max-width: 900px) {
+	.contacts {
+		flex-direction: column;
+	}
+	.contacts__map {
+		max-width: none;
+		width: 100%;
+	}
+	.contacts__block {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 630px) {
+	.contacts__grid {
+		font-size: 15px;
+		line-height: 19px;
+		grid-template-columns: 1fr 1.8fr;
+		gap: 15px 0;
+	}
+	.contacts__icon {
+		width: 28px;
+	}
+	.contacts__linkIcons {
+		max-width: 190px;
+	}
+}
+@media (max-width: 400px) {
+	.contacts__grid {
+		font-size: 12px;
+		line-height: 15px;
+		grid-template-columns: 1fr 1.8fr;
+		gap: 12px 0;
+	}
+	.contacts__icon {
+		width: 24px;
+	}
+	.contacts__linkIcons {
+		max-width: 150px;
+	}
+}
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+// block
+h2 {
+	color: $color-6;
+	font-size: 32px;
+	max-width: 530px;
+	margin: 10px 0 20px 0;
+	line-height: 43px;
+}
+// elements
+
+// modificators
+
+// events
+
+@media (max-width: 900px) {
+	h2 {
+		font-size: 26px;
+		margin: 10px 0 20px 0;
+		line-height: 36px;
+	}
+}
+
+@media (max-width: 600px) {
+	h2 {
+		font-size: 22px;
+		margin: 10px 0 20px 0;
+		line-height: 32px;
+	}
+}
+@media (max-width: 360px) {
+	h2 {
+		font-size: 16px;
+		margin: 10px 0 15px 0;
+		line-height: 18px;
+	}
+}
+
+//===================================

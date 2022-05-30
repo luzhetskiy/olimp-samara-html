@@ -1,0 +1,147 @@
+.main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.main .container {
+  max-width: 1182px;
+  width: 85%;
+}
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__text {
+  font-family: "Manrope-Regular";
+}
+
+.contacts__map {
+  max-width: 580px;
+  width: 76%;
+}
+
+.contacts__grid {
+  display: grid;
+  font-size: 18px;
+  line-height: 24px;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 20px 0;
+}
+
+.contacts__linkIcons {
+  max-width: 216px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contacts__block {
+  margin-right: 20px;
+}
+
+.contacts__map {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    max-width: none;
+    width: 100%;
+  }
+
+  .contacts__block {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 630px) {
+  .contacts__grid {
+    font-size: 15px;
+    line-height: 19px;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 15px 0;
+  }
+
+  .contacts__icon {
+    width: 28px;
+  }
+
+  .contacts__linkIcons {
+    max-width: 190px;
+  }
+}
+@media (max-width: 400px) {
+  .contacts__grid {
+    font-size: 12px;
+    line-height: 15px;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 12px 0;
+  }
+
+  .contacts__icon {
+    width: 24px;
+  }
+
+  .contacts__linkIcons {
+    max-width: 150px;
+  }
+}
+h2 {
+  color: #333333;
+  font-size: 32px;
+  max-width: 530px;
+  margin: 10px 0 20px 0;
+  line-height: 43px;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 26px;
+    margin: 10px 0 20px 0;
+    line-height: 36px;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    line-height: 32px;
+  }
+}
+@media (max-width: 360px) {
+  h2 {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+    line-height: 18px;
+  }
+}
