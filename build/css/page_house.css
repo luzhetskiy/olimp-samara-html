@@ -104,6 +104,60 @@
 @media (max-width: 600px) {
   .main__contImgHouse {
     margin-bottom: 20px;
+    height: 275px;
+  }
+
+  .main__contImg {
+    height: 275px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .main__imgHouse {
+    width: 610px;
+  }
+
+  .main__imgHouseClick {
+    width: 89px;
+    height: 72px;
+  }
+
+  .main__contImgHouseClick {
+    top: 97px;
+    height: 67px;
+    width: 89px;
+    line-height: 9px;
+    font-size: 7px;
+  }
+
+  .main__imgHouseDate {
+    margin: 14px 0 6px 0;
+    max-width: 41px;
+  }
+
+  .main__contImgHouseClick_1 {
+    left: 108px;
+  }
+
+  .main__contImgHouseClick_2 {
+    left: 184px;
+  }
+
+  .main__contImgHouseClick_3 {
+    left: 262px;
+  }
+
+  .main__contImgHouseClick_4 {
+    left: 337px;
+  }
+
+  .main__contImgHouseClick_5 {
+    left: 414px;
+  }
+
+  .main__imgHouseLink {
+    padding: 3px 4px 4px 5px;
+    border-radius: 3px;
   }
 }
 .location__h2 {
