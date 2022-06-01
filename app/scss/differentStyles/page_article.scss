@@ -50,6 +50,7 @@
 			font-family: $font-2;
 			color: $color-6;
 			position: relative;
+			max-width: 900px;
 			line-height: 24px;
 			li {
 				margin-bottom: 25px;
@@ -82,6 +83,7 @@
 			font-size: 18px;
 			font-family: $font-2;
 			color: $color-6;
+			max-width: 900px;
 			list-style-type: none; /* Убираем исходные маркеры */
 			counter-reset: my-counter; /* Задаём имя счетчика */
 			line-height: 24px;
@@ -131,7 +133,7 @@
 				border-bottom: solid 1px #eceff6;
 			}
 		}
-		a:not([class]) {
+		.btn {
 			margin-bottom: 50px;
 			padding: 8px 30px;
 			font-family: $font-2;
@@ -142,7 +144,7 @@
 			box-shadow: 0px 2px 15px 0px #0000000d;
 			background-color: $color-7;
 		}
-		a:hover {
+		.btn:hover {
 			background-color: #5c9698;
 		}
 	}
@@ -308,7 +310,7 @@
 				}
 			}
 
-			a:not([class]) {
+			.btn {
 				padding: 6px 20px;
 				font-size: 15px;
 				line-height: 28px;

@@ -27,21 +27,7 @@
 	justify-content: space-between;
 }
 // elements
-.parking__h3 {
-	font-size: 24px;
-	line-height: 32px;
-	max-width: 560px;
-	color: $color-6;
-	margin-bottom: 20px;
-}
-.parking__text {
-	font-size: 18px;
-	line-height: 24px;
-	color: $color-6;
-	font-family: $font-2;
-	max-width: 680px;
-	margin-bottom: 30px;
-}
+
 .parking__btnLeaveRequest {
 	max-width: 380px;
 	height: 64px;
@@ -53,7 +39,9 @@
 		margin-bottom: 30px;
 	}
 }
-
+.parking__block {
+	margin-right: 20px;
+}
 // modificators
 .parking_margin {
 	margin-bottom: 62px;
@@ -69,14 +57,6 @@
 	}
 }
 @media (max-width: 450px) {
-	.parking__h3 {
-		font-size: 18px;
-		line-height: 24px;
-	}
-	.parking__text {
-		font-size: 16px;
-		line-height: 18px;
-	}
 	.parking_margin {
 		margin-bottom: 10px;
 	}
@@ -110,6 +90,80 @@
 // Ниже переопределённые компоненты из
 // файла repeatStyles.
 
+//---------------------------------------------
+// block
+.main {
+	p {
+		margin-bottom: 30px;
+		font-size: 18px;
+		font-family: $font-2;
+		color: $color-6;
+		line-height: 24px;
+		max-width: 680px;
+	}
+
+	h3 {
+		color: $color-6;
+		font-size: 24px;
+		max-width: 560px;
+
+		margin-bottom: 20px;
+		line-height: 32px;
+	}
+}
+// elements
+
+// modificators
+
+// events
+
+@media (max-width: 900px) {
+	.main {
+		p {
+			margin-bottom: 25px;
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 15px;
+			line-height: 28px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.main {
+		p {
+			margin-bottom: 25px;
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin-bottom: 15px;
+			line-height: 24px;
+		}
+	}
+}
+@media (max-width: 360px) {
+	.main {
+		p {
+			margin-bottom: 25px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		h3 {
+			font-size: 15px;
+			margin-bottom: 15px;
+			line-height: 19px;
+		}
+	}
+}
+//---------------------------------------------
 // block
 .filter {
 	max-width: 480px;

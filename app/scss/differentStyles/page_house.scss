@@ -26,10 +26,13 @@
 }
 .main__contImgHouseClick {
 	position: absolute;
-	top: 16vw;
+	// top: 16vw;
+	top: 7vw;
 	width: 14.6vw;
-	height: 11vw;
+	height: 20.8vw;
+	// height: 11vw;
 	color: $color-2;
+
 	display: flex;
 	align-items: center;
 	font-size: 1.25vw;
@@ -39,7 +42,8 @@
 }
 .main__imgHouseDate {
 	z-index: 1;
-	margin: 2.2vw 0 1vw 0;
+	margin: 11vw 0 1vw 0;
+	// margin: 2.2vw 0 1vw 0;
 	max-width: 6.6vw;
 }
 .main__imgHouseLink {
@@ -53,7 +57,7 @@
 	width: 14.6vw;
 	position: absolute;
 	left: 0;
-	top: 0;
+	bottom: 0;
 }
 // modificators
 .main__contImgHouseClick_1 {

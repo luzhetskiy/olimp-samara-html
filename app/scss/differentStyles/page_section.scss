@@ -73,12 +73,6 @@
 }
 // elements
 
-.searchFlats__listFlats {
-	margin-bottom: 40px;
-}
-.searchFlats__explanationBlock {
-	margin-bottom: 20px;
-}
 // modificators
 
 // events
@@ -86,9 +80,6 @@
 	.searchFlats {
 		flex-direction: column;
 	}
-	.searchFlats__filter {
-		margin-bottom: 20px;
-	}
 }
 //---------------------------------------------
 // block
@@ -106,3 +97,43 @@
 // modificators
 
 // events
+//===================================
+// Ниже переопределённые компоненты из
+// файла repeatStyles.
+
+//---------------------------------------------
+// block
+.explanationBlock {
+	margin-bottom: 20px;
+}
+
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+.listFlats {
+	margin-bottom: 40px;
+}
+// elements
+
+// modificators
+
+// events
+//---------------------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+@media (max-width: 600px) {
+	.filter {
+		display: none;
+		margin-bottom: 30px;
+	}
+}
+//===================================

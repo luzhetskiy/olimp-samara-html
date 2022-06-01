@@ -28,8 +28,8 @@
 
 .main__year {
   margin-right: 43px;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 32px;
   color: #337c7e;
   border-bottom: dotted 3px rgba(51, 124, 126, 0.5);
 }
@@ -38,6 +38,8 @@
   color: #757575;
   background-color: #eceff6;
   border-bottom: none;
+  border-radius: 7px;
+  padding: 0 9px 3px 12px;
 }
 
 .listNews__new {

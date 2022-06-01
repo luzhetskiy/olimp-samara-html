@@ -37,9 +37,9 @@
 
 .main__contImgHouseClick {
   position: absolute;
-  top: 16vw;
+  top: 7vw;
   width: 14.6vw;
-  height: 11vw;
+  height: 20.8vw;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,7 +58,7 @@
 
 .main__imgHouseDate {
   z-index: 1;
-  margin: 2.2vw 0 1vw 0;
+  margin: 11vw 0 1vw 0;
   max-width: 6.6vw;
 }
 
@@ -74,7 +74,7 @@
   width: 14.6vw;
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
 }
 
 .main__contImgHouseClick_1 {
