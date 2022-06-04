@@ -56,19 +56,35 @@ document.addEventListener("DOMContentLoaded", function () {
 	el.addEventListener("touchstart", newsSliderFunc, false);
 	el.addEventListener("touchend", newsSliderFunc, false);
 	el.addEventListener("touchmove", newsSliderFunc, false);
-	document.getElementById("galleryAlbum__arrowNext").addEventListener("click", galleryAlbumSliderPlusFunc);
-	document.getElementById("galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderMinusFunc);
-	document.addEventListener("keydown", (e) => {
-		if (e.code == "ArrowRight") {
+	document.getElementById("galleryAlbum__arrowNext").addEventListener("click", () => {
+		if (document.querySelector("body").clientWidth > 900) {
 			galleryAlbumSliderPlusFunc()
-			return
 		}
-		if (e.code == "ArrowLeft") {
+	});
+	document.getElementById("galleryAlbum__arrowBack").addEventListener("click", () => {
+		if (document.querySelector("body").clientWidth > 900) {
 			galleryAlbumSliderMinusFunc()
+		}
+	});
+	document.addEventListener("keydown", (e) => {
+		if (document.querySelector("body").clientWidth > 900) {
+			if (e.code == "ArrowRight") {
+				galleryAlbumSliderPlusFunc()
+				return
+			}
+			if (e.code == "ArrowLeft") {
+				galleryAlbumSliderMinusFunc()
+			}
 		}
 	})
 	document.querySelector(".galleryAlbum__slider").insertAdjacentHTML("afterbegin", `
 			<style>
+			.galleryAlbum__sliderCont {
+				width: calc(100% * ${newsSlidsQuantity});
+			}
+			.galleryAlbum__slideImg {
+				width: calc(100% / ${newsSlidsQuantity});
+			}
 			@media (max-width: 750px){
 				.galleryAlbum__sliderCont{
 					width: calc(100% * ${newsSlidsQuantity})
@@ -91,42 +107,44 @@ document.addEventListener("DOMContentLoaded", function () {
 let newsSliderTouchIsNew = 0;
 let newsSliderTouchMove = 0;
 function newsSliderFunc(e) {
-	if (e.type != "touchend" && e.type != "touchstart") {
-		if (newsSliderTouchMove == 0) {
-			newsSliderTouchMove = e.changedTouches[0].clientX;
+	if (document.querySelector("body").clientWidth < 900) {
+		if (e.type != "touchend" && e.type != "touchstart") {
+			if (newsSliderTouchMove == 0) {
+				newsSliderTouchMove = e.changedTouches[0].clientX;
+				return
+			}
+			document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(calc(${(-100 / newsSlidsQuantity) * newsSliderCounter}% - ${newsSliderTouchMove - e.changedTouches[0].clientX}px))`;
+			console.log("return 'No end or start'")
 			return
 		}
-		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(calc(${(-100 / newsSlidsQuantity) * newsSliderCounter}% - ${newsSliderTouchMove - e.changedTouches[0].clientX}px))`;
-		console.log("return 'No end or start'")
-		return
-	}
-	newsSliderTouchMove = 0
-	if (touch == 11111) {
-		touch = e.changedTouches[0].clientX;
-		console.log("touch == 11111")
-	}
-	console.log(e.changedTouches[0].clientX)
-	if (touch == e.changedTouches[0].clientX) {
-		console.log("return")
-		newsSliderTouchIsNew++;
-		if (newsSliderTouchIsNew == 2) {
-			console.log("reset")
-			console.log()
-			e.target.getAttribute("id") == "galleryAlbum__arrowNext" ? galleryAlbumSliderPlusFunc() : ""
-			e.target.getAttribute("id") == "galleryAlbum__arrowBack" ? galleryAlbumSliderMinusFunc() : ""
-			touch = 11111
-			newsSliderTouchIsNew = 0;
+		newsSliderTouchMove = 0
+		if (touch == 11111) {
+			touch = e.changedTouches[0].clientX;
+			console.log("touch == 11111")
 		}
-		return
+		console.log(e.changedTouches[0].clientX)
+		if (touch == e.changedTouches[0].clientX) {
+			console.log("return")
+			newsSliderTouchIsNew++;
+			if (newsSliderTouchIsNew == 2) {
+				console.log("reset")
+				console.log()
+				e.target.getAttribute("id") == "galleryAlbum__arrowNext" ? galleryAlbumSliderPlusFunc() : ""
+				e.target.getAttribute("id") == "galleryAlbum__arrowBack" ? galleryAlbumSliderMinusFunc() : ""
+				touch = 11111
+				newsSliderTouchIsNew = 0;
+			}
+			return
+		}
+		if ((touch - e.changedTouches[0].clientX) > 0) {
+			galleryAlbumSliderPlusFunc()
+		} else {
+			galleryAlbumSliderMinusFunc()
+		}
+		galleryAlbumSliderPointsFunc()
+		touch = 11111
+		newsSliderTouchIsNew = 0;
 	}
-	if ((touch - e.changedTouches[0].clientX) > 0) {
-		galleryAlbumSliderPlusFunc()
-	} else {
-		galleryAlbumSliderMinusFunc()
-	}
-	galleryAlbumSliderPointsFunc()
-	touch = 11111
-	newsSliderTouchIsNew = 0;
 }
 function galleryAlbumSliderPlusFunc() {
 	console.log("++")
