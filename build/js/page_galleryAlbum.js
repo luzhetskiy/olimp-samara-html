@@ -178,7 +178,7 @@ function galleryAlbumSliderMinusFunc() {
 	if (newsSliderCounter != -1) {
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * newsSliderCounter}%)`;
 	} else {
-		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * (newsSlidsQuantity)}%)`;
+		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * (newsSlidsQuantity - 1)}%)`;
 		newsSliderCounter = newsSlidsQuantity - 1;
 	}
 	galleryAlbumSliderPointsFunc()
