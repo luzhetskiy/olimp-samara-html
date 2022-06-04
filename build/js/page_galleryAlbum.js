@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector(".wrapper").addEventListener("click", function (e) {
 		console.log(e)
 		if (e.path[1].classList.contains("galleryAlbum__contImg")) {
+			newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
+			console.log(newsSliderCounter)
+			galleryAlbumSliderPlusFunc()
 			document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
 			return
 		}
@@ -49,7 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.querySelector(".galleryAlbum__contSlider").style.display = "none"
 		}
 	})
-	newsSlidsQuantity = document.querySelectorAll(".galleryAlbum__slideImg").length;
+	newsSlidsQuantity = document.querySelectorAll(".galleryAlbum__contImg").length;
+	for (let i = 0; i < document.querySelectorAll(".galleryAlbum__contImg").length; i++) {
+		document.querySelectorAll(".galleryAlbum__contImg")[i].setAttribute("data_idx", i)
+	}
+	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
+		console.log(i)
+		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("afterbegin", `
+		<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
+		`)
+	}
 	let el = document.querySelector('.galleryAlbum__slider')
 	// document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderMinusFunc)
 	// document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderPlusFunc)
@@ -166,7 +178,7 @@ function galleryAlbumSliderMinusFunc() {
 	if (newsSliderCounter != -1) {
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * newsSliderCounter}%)`;
 	} else {
-		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * (newsSlidsQuantity - 1)}%)`;
+		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * (newsSlidsQuantity)}%)`;
 		newsSliderCounter = newsSlidsQuantity - 1;
 	}
 	galleryAlbumSliderPointsFunc()

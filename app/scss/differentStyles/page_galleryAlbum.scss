@@ -110,6 +110,8 @@
 .galleryAlbum__sliderCont {
 	position: absolute;
 	z-index: -1;
+	height: 100%;
+	display: flex;
 }
 .galleryAlbum__point {
 	width: 11px;
