@@ -60,6 +60,7 @@ document.querySelector(".btnClose_headerNav").addEventListener("click", function
 		}, headerNavAnimTime * 1000 - 50)
 	}
 })
+
 //-------------
 // Прослушка кнопки закрывающей форму.
 document.querySelector(".btnClose_orderCallform").addEventListener("click", function () {

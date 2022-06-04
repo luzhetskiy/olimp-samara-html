@@ -31,9 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		`)
 	}
 	document.querySelectorAll(".news__point")[0].style.backgroundColor = "#337c7e"
+	//-------------
 
 	let layoutImgScrollWidth = (document.querySelector(".layout__img").offsetWidth - document.querySelector("body").offsetWidth) / 2;
 	document.querySelector(".layout__imgCont").scroll(layoutImgScrollWidth, 0)
+
+
 	// let locationMapScrollWidth = (document.querySelector(".location__img").offsetWidth - document.querySelector("body").offsetWidth) / 2;
 	// document.querySelector(".location__mapCont").scroll(locationMapScrollWidth, 0)
 });
