@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	el.addEventListener("touchend", newsSliderFunc, false);
 	el.addEventListener("touchmove", newsSliderFunc, false);
 	document.getElementById("galleryAlbum__arrowNext").addEventListener("click", () => {
-		// if (document.querySelector("body").clientWidth > 900) {
-		galleryAlbumSliderPlusFunc()
-		// }
+		if (document.querySelector("body").clientWidth > 900) {
+			galleryAlbumSliderPlusFunc()
+		}
 	});
 	document.getElementById("galleryAlbum__arrowBack").addEventListener("click", () => {
-		// if (document.querySelector("body").clientWidth > 900) {
-		galleryAlbumSliderMinusFunc()
-		// }
+		if (document.querySelector("body").clientWidth > 900) {
+			galleryAlbumSliderMinusFunc()
+		}
 	});
 	document.addEventListener("keydown", (e) => {
 		if (document.querySelector("body").clientWidth > 900) {
@@ -144,7 +144,7 @@ function newsSliderFunc(e) {
 			newsSliderTouchIsNew++;
 			if (newsSliderTouchIsNew == 2) {
 				console.log("reset")
-				console.log()
+				console.log(e.target)
 				e.target.getAttribute("id") == "galleryAlbum__arrowNext" ? galleryAlbumSliderPlusFunc() : ""
 				e.target.getAttribute("id") == "galleryAlbum__arrowBack" ? galleryAlbumSliderMinusFunc() : ""
 				touch = 11111
