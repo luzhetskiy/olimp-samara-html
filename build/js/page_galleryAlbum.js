@@ -34,13 +34,14 @@
 // 	}
 // })
 // Не забудь фрагментировать и тп.
+const pointsIs = false;
 let touch = 11111;
 let newsSlidsQuantity = 0;
 let newsSliderCounter = 0;
 document.addEventListener("DOMContentLoaded", function () {
-	document.getElementById("galleryAlbum__arrowNext")
+	// document.getElementById("galleryAlbum__arrowNext")
 	document.querySelector(".wrapper").addEventListener("click", function (e) {
-		console.log(e)
+		console.log(e.path)
 		if (e.path[1].classList.contains("galleryAlbum__contImg")) {
 			newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
 			console.log(newsSliderCounter)
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
 			return
 		}
-		if (e.path[0].classList.contains("galleryAlbum__contSlider")) {
+		if (e.path[0].classList.contains("galleryAlbum__contSlideImg")) {
 			document.querySelector(".galleryAlbum__contSlider").style.display = "none"
 		}
 	})
@@ -58,9 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
 		console.log(i)
-		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("afterbegin", `
-		<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
-		`)
+		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("beforeend", `
+			<div class="galleryAlbum__contSlideImg">
+				<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
+			</div>
+			`)
 	}
 	let el = document.querySelector('.galleryAlbum__slider')
 	// document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderMinusFunc)
@@ -69,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	el.addEventListener("touchend", newsSliderFunc, false);
 	el.addEventListener("touchmove", newsSliderFunc, false);
 	document.getElementById("galleryAlbum__arrowNext").addEventListener("click", () => {
-		if (document.querySelector("body").clientWidth > 900) {
-			galleryAlbumSliderPlusFunc()
-		}
+		// if (document.querySelector("body").clientWidth > 900) {
+		galleryAlbumSliderPlusFunc()
+		// }
 	});
 	document.getElementById("galleryAlbum__arrowBack").addEventListener("click", () => {
-		if (document.querySelector("body").clientWidth > 900) {
-			galleryAlbumSliderMinusFunc()
-		}
+		// if (document.querySelector("body").clientWidth > 900) {
+		galleryAlbumSliderMinusFunc()
+		// }
 	});
 	document.addEventListener("keydown", (e) => {
 		if (document.querySelector("body").clientWidth > 900) {
@@ -94,26 +97,27 @@ document.addEventListener("DOMContentLoaded", function () {
 			.galleryAlbum__sliderCont {
 				width: calc(100% * ${newsSlidsQuantity});
 			}
-			.galleryAlbum__slideImg {
+			.galleryAlbum__contSlideImg {
 				width: calc(100% / ${newsSlidsQuantity});
 			}
 			@media (max-width: 750px){
 				.galleryAlbum__sliderCont{
 					width: calc(100% * ${newsSlidsQuantity})
 				}
-				.galleryAlbum__slideImg{
+				.galleryAlbum__contSlideImg{
 					width: calc(100% / ${newsSlidsQuantity})
 				}
 			}
 			</style>
 		`);
-	for (let i = 0; i < newsSlidsQuantity; i++) {
-		document.querySelector(".galleryAlbum__points").insertAdjacentHTML("afterbegin", `
+	if (pointsIs) {
+		for (let i = 0; i < newsSlidsQuantity; i++) {
+			document.querySelector(".galleryAlbum__points").insertAdjacentHTML("afterbegin", `
 			<div class="galleryAlbum__point"></div>
 		`)
+		}
+		document.querySelectorAll(".galleryAlbum__point")[0].style.backgroundColor = "#337c7e"
 	}
-	document.querySelectorAll(".galleryAlbum__point")[0].style.backgroundColor = "#337c7e"
-
 });
 
 let newsSliderTouchIsNew = 0;
@@ -188,8 +192,10 @@ function galleryAlbumSliderPointsFunc() {
 		newsSliderCounter = 0;
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(0)`;
 	}
-	for (i of document.querySelectorAll(".galleryAlbum__point")) {
-		i.style.backgroundColor = "#c4c4c4"
+	if (pointsIs) {
+		for (i of document.querySelectorAll(".galleryAlbum__point")) {
+			i.style.backgroundColor = "#c4c4c4"
+		}
+		document.querySelectorAll(".galleryAlbum__point")[newsSliderCounter].style.backgroundColor = "#337c7e"
 	}
-	document.querySelectorAll(".galleryAlbum__point")[newsSliderCounter].style.backgroundColor = "#337c7e"
 }
