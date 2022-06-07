@@ -41,7 +41,7 @@ let newsSliderCounter = 0;
 document.addEventListener("DOMContentLoaded", function () {
 	// document.getElementById("galleryAlbum__arrowNext")
 	document.querySelector(".wrapper").addEventListener("click", function (e) {
-		console.log(e.path)
+		// console.log(e.path)
 		if (e.path[1].classList.contains("galleryAlbum__contImg")) {
 			newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
 			console.log(newsSliderCounter)
