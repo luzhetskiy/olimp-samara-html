@@ -133,40 +133,11 @@
 // файла repeatStyles.
 
 // block
-h2 {
-	color: $color-6;
-	font-size: 32px;
-	max-width: 530px;
-	margin: 10px 0 20px 0;
-	line-height: 43px;
-}
+
 // elements
 
 // modificators
 
 // events
-
-@media (max-width: 900px) {
-	h2 {
-		font-size: 26px;
-		margin: 10px 0 20px 0;
-		line-height: 36px;
-	}
-}
-
-@media (max-width: 600px) {
-	h2 {
-		font-size: 22px;
-		margin: 10px 0 20px 0;
-		line-height: 32px;
-	}
-}
-@media (max-width: 360px) {
-	h2 {
-		font-size: 16px;
-		margin: 10px 0 15px 0;
-		line-height: 18px;
-	}
-}
 
 //===================================

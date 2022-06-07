@@ -1101,40 +1101,7 @@
 		width: 100%;
 	}
 }
-//---------------------------------------------
-// block
-h1 {
-	color: $color-3;
-	font-size: 48px;
-	max-width: 700px;
-	margin-bottom: 30px;
-	line-height: 66px;
-}
-// elements
 
-// modificators
-
-// events
-@media (max-width: 900px) {
-	h1 {
-		font-size: 38px;
-		margin-bottom: 25px;
-		line-height: 54px;
-	}
-}
-@media (max-width: 600px) {
-	h1 {
-		font-size: 30px;
-		line-height: 40px;
-	}
-}
-@media (max-width: 360px) {
-	h1 {
-		font-size: 20px;
-		margin-bottom: 15px;
-		line-height: 26px;
-	}
-}
 //---------------------------------------------
 // block
 .way {
@@ -1596,12 +1563,33 @@ h1 {
 
 //---------------------------------------------
 // block
+.btn {
+	margin-bottom: 50px;
+	padding: 8px 30px;
+	font-family: $font-2;
+	font-size: 18px;
+	line-height: 24px;
+	border-radius: 7px;
+	color: $color-2;
+	box-shadow: 0px 2px 15px 0px #0000000d;
+	background-color: $color-7;
+}
 
 // elements
 
 // modificators
 
 // events
+.btn:hover {
+	background-color: #5c9698;
+}
+@media (max-width: 360px) {
+	.btn {
+		padding: 6px 20px;
+		font-size: 15px;
+		line-height: 28px;
+	}
+}
 //---------------------------------------------
 // block
 
@@ -1610,6 +1598,11 @@ h1 {
 // modificators
 
 // events
+@media (max-width: 600px) {
+	.contTable {
+		overflow-x: scroll;
+	}
+}
 //---------------------------------------------
 // block
 

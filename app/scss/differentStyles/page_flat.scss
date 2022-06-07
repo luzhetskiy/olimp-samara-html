@@ -8,9 +8,6 @@
 	align-items: center;
 	@include parent-container(start);
 	.container {
-		h1 {
-			max-width: 550px;
-		}
 	}
 }
 // elements
@@ -136,6 +133,15 @@
 // modificators
 
 // events
+//-----------------------------------
+// block
+
+// elements
+
+// modificators
+
+// events
+
 //===================================
 // Ниже переопределённые компоненты из
 // файла repeatStyles.
@@ -183,4 +189,14 @@
 		line-height: 24px;
 	}
 }
+//-----------------------------------
+// block
+h1 {
+	max-width: 550px;
+}
+// elements
+
+// modificators
+
+// events
 //===================================
