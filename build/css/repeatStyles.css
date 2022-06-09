@@ -6450,6 +6450,14 @@ table:not([class]) td {
   .header__li {
     font-size: 16px;
   }
+
+  .header__mobileOrderCall {
+    font-size: 16px;
+  }
+
+  .header__mobileOrderCallText {
+    margin: 10px 10px 10px 0;
+  }
 }
 @media (min-width: 840px) {
   .header__nav {
@@ -6769,10 +6777,12 @@ table:not([class]) td {
   border: solid 1px rgba(255, 255, 255, 0.2);
   border-radius: 7px;
   padding: 10px 21px 20px 21px;
+  font-family: "Manrope-Regular";
 }
 
 .labelInput__input {
   font-size: 18px;
+  font-family: "Manrope-Regular";
 }
 
 .labelInput_orderCallForm {
@@ -7290,6 +7300,7 @@ table:not([class]) td {
   line-height: 32px;
   color: #333333;
   font-family: "Manrope-Bold";
+  text-align: center;
 }
 
 .orderCallForm__btnClose {
@@ -7343,12 +7354,30 @@ table:not([class]) td {
   }
 
   .orderCallForm__cont {
-    min-height: 380px;
+    min-height: 300px;
+    padding: 10px 0;
+  }
+
+  .orderCallForm__resText {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .orderCallForm__btnClose {
+    margin-top: 15px;
+  }
+
+  .orderCallForm__smailik {
+    margin: 70px 0 10px 0;
   }
 }
 @media (max-width: 350px) {
   .orderCallForm__submit {
     margin-bottom: 10px;
+  }
+
+  .orderCallForm__resText {
+    font-size: 15px;
   }
 }
 @media (max-width: 300px) {
@@ -8066,6 +8095,13 @@ table:not([class]) td {
   .way__textWay {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+@media (max-width: 300px) {
+  .way__textWay {
+    font-size: 15px;
+    line-height: 18px;
+    margin-right: 5px;
   }
 }
 .btnLeaveRequest {

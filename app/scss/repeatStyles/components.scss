@@ -80,10 +80,12 @@
 	border: solid 1px rgba(255, 255, 255, 0.2);
 	border-radius: 7px;
 	padding: 10px 21px 20px 21px;
+	font-family: $font-2;
 	// margin-bottom: 16px;
 }
 .labelInput__input {
 	font-size: 18px;
+	font-family: $font-2;
 }
 // модификаторы
 .labelInput_orderCallForm {
@@ -486,6 +488,7 @@
 	line-height: 32px;
 	color: $color-6;
 	font-family: $font-1;
+	text-align: center;
 }
 .orderCallForm__btnClose {
 	width: 180px;
@@ -531,12 +534,26 @@
 		font-size: 11px;
 	}
 	.orderCallForm__cont {
-		min-height: 380px;
+		min-height: 300px;
+		padding: 10px 0;
+	}
+	.orderCallForm__resText {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.orderCallForm__btnClose {
+		margin-top: 15px;
+	}
+	.orderCallForm__smailik {
+		margin: 70px 0 10px 0;
 	}
 }
 @media (max-width: 350px) {
 	.orderCallForm__submit {
 		margin-bottom: 10px;
+	}
+	.orderCallForm__resText {
+		font-size: 15px;
 	}
 }
 @media (max-width: 300px) {
@@ -1131,6 +1148,13 @@
 	.way__textWay {
 		font-size: 18px;
 		line-height: 24px;
+	}
+}
+@media (max-width: 300px) {
+	.way__textWay {
+		font-size: 15px;
+		line-height: 18px;
+		margin-right: 5px;
 	}
 }
 //---------------------------------------------

@@ -41,10 +41,10 @@ let newsSliderCounter = 0;
 document.addEventListener("DOMContentLoaded", function () {
 	// document.getElementById("galleryAlbum__arrowNext")
 	document.querySelector(".wrapper").addEventListener("click", function (e) {
-		// console.log(e.path)
-		if (e.path[1].classList.contains("galleryAlbum__contImg")) {
+		console.log(e.path)
+		if (e.path[1].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__textBackGroundImg") || e.path[0].classList.contains("galleryAlbum__img")) {
 			newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
-			console.log(newsSliderCounter)
+			// console.log(newsSliderCounter)
 			galleryAlbumSliderPlusFunc()
 			document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
 			return
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelectorAll(".galleryAlbum__contImg")[i].setAttribute("data_idx", i)
 	}
 	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
-		console.log(i)
+		// console.log(i)
 		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("beforeend", `
 			<div class="galleryAlbum__contSlideImg">
 				<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
@@ -71,12 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	el.addEventListener("touchstart", newsSliderFunc, false);
 	el.addEventListener("touchend", newsSliderFunc, false);
 	el.addEventListener("touchmove", newsSliderFunc, false);
-	document.getElementById("galleryAlbum__arrowNext").addEventListener("click", () => {
+	document.querySelector(".galleryAlbum__arrowNext").addEventListener("click", () => {
 		if (document.querySelector("body").clientWidth > 900) {
 			galleryAlbumSliderPlusFunc()
 		}
 	});
-	document.getElementById("galleryAlbum__arrowBack").addEventListener("click", () => {
+	document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", () => {
 		if (document.querySelector("body").clientWidth > 900) {
 			galleryAlbumSliderMinusFunc()
 		}
@@ -130,23 +130,23 @@ function newsSliderFunc(e) {
 				return
 			}
 			document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(calc(${(-100 / newsSlidsQuantity) * newsSliderCounter}% - ${newsSliderTouchMove - e.changedTouches[0].clientX}px))`;
-			console.log("return 'No end or start'")
+			// console.log("return 'No end or start'")
 			return
 		}
 		newsSliderTouchMove = 0
 		if (touch == 11111) {
 			touch = e.changedTouches[0].clientX;
-			console.log("touch == 11111")
+			// console.log("touch == 11111")
 		}
-		console.log(e.changedTouches[0].clientX)
+		// console.log(e.changedTouches[0].clientX)
 		if (touch == e.changedTouches[0].clientX) {
-			console.log("return")
+			// console.log("return")
 			newsSliderTouchIsNew++;
 			if (newsSliderTouchIsNew == 2) {
-				console.log("reset")
-				console.log(e.target)
-				e.target.getAttribute("id") == "galleryAlbum__arrowNext" ? galleryAlbumSliderPlusFunc() : ""
-				e.target.getAttribute("id") == "galleryAlbum__arrowBack" ? galleryAlbumSliderMinusFunc() : ""
+				// console.log("reset")
+				// console.log(e.target.getAttribute("class"))
+				e.target.getAttribute("class").includes("galleryAlbum__arrowNext") ? galleryAlbumSliderPlusFunc() : ""
+				e.target.getAttribute("class").includes("galleryAlbum__arrowBack") ? galleryAlbumSliderMinusFunc() : ""
 				touch = 11111
 				newsSliderTouchIsNew = 0;
 			}
@@ -163,7 +163,7 @@ function newsSliderFunc(e) {
 	}
 }
 function galleryAlbumSliderPlusFunc() {
-	console.log("++")
+	// console.log("++")
 	newsSliderCounter++;
 	document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * newsSliderCounter}%)`;
 	// let i = (-100 / newsSlidsQuantity) * newsSliderCounter;
@@ -177,7 +177,7 @@ function galleryAlbumSliderPlusFunc() {
 	galleryAlbumSliderPointsFunc()
 }
 function galleryAlbumSliderMinusFunc() {
-	console.log("--")
+	// console.log("--")
 	newsSliderCounter--
 	if (newsSliderCounter != -1) {
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * newsSliderCounter}%)`;
