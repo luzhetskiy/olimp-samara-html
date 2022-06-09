@@ -38,17 +38,26 @@ const pointsIs = false;
 let touch = 11111;
 let newsSlidsQuantity = 0;
 let newsSliderCounter = 0;
+function sliderOpenFunc(i) {
+	// newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
+	newsSliderCounter = i.getAttribute("data_idx") - 1
+	// console.log(newsSliderCounter)
+	galleryAlbumSliderPlusFunc()
+	document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
+	return
+}
 document.addEventListener("DOMContentLoaded", function () {
 	// document.getElementById("galleryAlbum__arrowNext")
+	for (let i of document.querySelectorAll(".galleryAlbum__contImg")) {
+		i.addEventListener("click", function () {
+			sliderOpenFunc(i)
+		})
+	}
 	document.querySelector(".wrapper").addEventListener("click", function (e) {
 		console.log(e.path)
-		if (e.path[1].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__textBackGroundImg") || e.path[0].classList.contains("galleryAlbum__img")) {
-			newsSliderCounter = e.path[1].getAttribute("data_idx") - 1
-			// console.log(newsSliderCounter)
-			galleryAlbumSliderPlusFunc()
-			document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
-			return
-		}
+		// if (e.path[1].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__textBackGroundImg") || e.path[0].classList.contains("galleryAlbum__img")) {
+		// 	sliderOpenFunc()
+		// }
 		if (e.path[0].classList.contains("galleryAlbum__contSlideImg")) {
 			document.querySelector(".galleryAlbum__contSlider").style.display = "none"
 		}
