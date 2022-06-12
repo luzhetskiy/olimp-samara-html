@@ -53,6 +53,11 @@
   line-height: 20px;
 }
 
+.documents__icon {
+  width: 44px;
+  height: 54px;
+}
+
 @media (max-width: 450px) {
   .documents__text {
     font-size: 15px;
@@ -88,6 +93,7 @@
   .documents__icon {
     margin: 0 10px 0 0;
     width: 30px;
+    height: 30px;
   }
 
   .documents__NumberGroup {

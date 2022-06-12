@@ -19,6 +19,8 @@
 }
 .header__logo {
 	margin: 12px 0 6px 0;
+	width: 206px;
+	height: 42px;
 }
 .header__nav {
 	max-width: 1182px;
@@ -74,6 +76,9 @@
 	justify-content: center;
 	width: calc(100% - 72px);
 	cursor: pointer;
+}
+.header__workTime {
+	margin: 0 10px;
 }
 //----------------------------------
 // Модификаторы

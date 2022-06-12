@@ -58,7 +58,8 @@
 	left: 0;
 	top: 0;
 	height: 63px;
-	width: 209px;
+	min-width: 209px;
+	padding: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

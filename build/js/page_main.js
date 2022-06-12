@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let layoutImgScrollWidth = (document.querySelector(".layout__img").offsetWidth - document.querySelector("body").offsetWidth) / 2;
 	document.querySelector(".layout__imgCont").scroll(layoutImgScrollWidth, 0)
-
-
 	// let locationMapScrollWidth = (document.querySelector(".location__img").offsetWidth - document.querySelector("body").offsetWidth) / 2;
 	// document.querySelector(".location__mapCont").scroll(locationMapScrollWidth, 0)
 });
@@ -106,5 +104,11 @@ function newsSliderFunc(e) {
 }
 
 
-
+sel_addEventListener(
+	".orderCall_main_js",
+	function () {
+		// console.log(this)
+		orderCallFormOpenFunc(2)
+	}
+)
 //-----------------------------------------------------------------------------------------

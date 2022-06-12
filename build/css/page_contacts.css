@@ -66,6 +66,11 @@
   margin-bottom: 30px;
 }
 
+.contacts__icon {
+  width: 36px;
+  height: 36px;
+}
+
 @media (max-width: 900px) {
   .contacts {
     -webkit-box-orient: vertical;
@@ -94,6 +99,7 @@
 
   .contacts__icon {
     width: 28px;
+    height: 28px;
   }
 
   .contacts__linkIcons {
@@ -110,6 +116,7 @@
 
   .contacts__icon {
     width: 24px;
+    height: 24px;
   }
 
   .contacts__linkIcons {

@@ -52,6 +52,10 @@
 .contacts__map {
 	margin-bottom: 30px;
 }
+.contacts__icon {
+	width: 36px;
+	height: 36px;
+}
 // modificators
 
 // events
@@ -77,6 +81,7 @@
 	}
 	.contacts__icon {
 		width: 28px;
+		height: 28px;
 	}
 	.contacts__linkIcons {
 		max-width: 190px;
@@ -91,6 +96,7 @@
 	}
 	.contacts__icon {
 		width: 24px;
+		height: 24px;
 	}
 	.contacts__linkIcons {
 		max-width: 150px;

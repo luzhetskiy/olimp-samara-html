@@ -1,3 +1,35 @@
+const orderCallFormVariables = [
+	{
+		number: 0,
+		text: "Заявка по квартире: двухкомнатная, № 132* ",
+		form: "1",
+		wasSubmited: false,
+		open: false,
+
+	},
+	{
+		number: 1,
+		text: "Паркинг",
+		form: "2",
+		wasSubmited: false,
+		open: false,
+	},
+	{
+		number: 2,
+		text: "Квартиры",
+		form: "3",
+		wasSubmited: false,
+		open: false,
+	},
+	{
+		number: 3,
+		text: "flat",
+		form: "4",
+		wasSubmited: false,
+		open: false,
+	},
+]
+
 //---------------
 // Переменные определяющие время анимаций
 // бургера и формы.
@@ -73,7 +105,7 @@ document.querySelector(".btnClose_orderCallform").addEventListener("click", func
 // на каждую кнопку открывающюю форму.
 for (i of orderCallQuantity) {
 	i.addEventListener("click", function () {
-		orderCallFormOpenFunc()
+		orderCallFormOpenFunc(0)
 	})
 }
 //-----------
@@ -86,7 +118,25 @@ for (i of document.querySelectorAll(".orderCallForm__btnClose")) {
 }
 //--------------
 // Функция открывающая форму
-function orderCallFormOpenFunc() {
+function orderCallFormOpenFunc(a) {
+	if (a == "formQuestion submited = true") {
+		console.log("formQuestion submited = true")
+		orderCallFormIsSubmited()
+	} else if (a != null || a != undefined) {
+		// if (a == 1) {
+		console.log(" orderCallFormOpenFunc one step")
+		document.querySelector(".orderCallForm__h3").innerText = orderCallFormVariables[a].text
+		console.log(orderCallFormVariables[a].text)
+		orderCallFormVariables[a].open = true;
+		// }
+		if (orderCallFormVariables[a].wasSubmited) {
+			console.log(" orderCallFormOpenFunc two step true")
+			orderCallFormIsSubmited()
+		} else {
+			console.log(" orderCallFormOpenFunc two step false")
+			orderCallFormIsSubmited(false)
+		}
+	}
 	//-------------
 	// Проверяет закончилась ли анимация.
 	if (orderCallFormTimeOut) {
@@ -124,11 +174,18 @@ function orderCallFormCloseFunc() {
 				orderCallFormMiniConts[2].style.display = 'none'
 			}
 		}, orderCallFormTime * 1000 - 50);
+		for (let i of orderCallFormVariables) {
+			i.open = false
+		}
 	}
 }
 // document.querySelector(".formQuestion__submit").addEventListener("click", function () {
 
 // })
+
+// function OrderCallFormChangedFunc(params) {
+// 	doc_querySel(".orderCallForm__h3").innerText = params.text
+// }
 
 // let numberLength = 0;
 let number;
@@ -229,7 +286,7 @@ document.querySelector(".formQuestion__submit").addEventListener("click", functi
 	if (!orderCallDataSubmited) {
 		orderCallFormFunc(1)
 	} else {
-		orderCallFormOpenFunc()
+		orderCallFormOpenFunc("formQuestion submited = true")
 	}
 })
 function orderCallFormFunc(a) {
@@ -267,15 +324,31 @@ function orderCallFormFunc(a) {
 		return
 	}
 	let p = new Promise((res, rej) => {
+		let submitData;
 		setTimeout(() => {
 			Math.random() > 0.5 ? res() : rej();
 		}, 200)
+		for (let i of orderCallFormVariables) {
+			if (i.open) {
+				submitData = i.form
+				console.log(submitData)
+			}
+		}
 	})
 	p.then(res => {
+		let isOrderCall = false
+		for (let i of orderCallFormVariables) {
+			if (i.open == true) {
+				i.wasSubmited = true
+				isOrderCall = true
+			}
+		}
+		if (!isOrderCall) {
+			orderCallFormVariables[0].wasSubmited = true
+		}
 		orderCallDataSubmited = true
 		console.log("axios.post()")
-		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
-		document.querySelectorAll(".orderCallForm__miniCont")[1].style.display = 'flex'
+		orderCallFormIsSubmited()
 		orderCallFormOpenFunc()
 		setTimeout(() => {
 			labelInputResetFunc(l[0])
@@ -292,10 +365,36 @@ function orderCallFormFunc(a) {
 		orderCallFormOpenFunc()
 	})
 }
+function orderCallFormIsSubmited(a = true) {
+	if (a) {
+		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'none'
+		document.querySelectorAll(".orderCallForm__miniCont")[1].style.display = 'flex'
+	} else {
+		document.querySelectorAll(".orderCallForm__miniCont")[1].style.display = 'none'
+		document.querySelectorAll(".orderCallForm__miniCont")[0].style.display = 'flex'
+	}
+	document.querySelectorAll(".orderCallForm__miniCont")[2].style.display = 'none'
+
+}
 function labelInputResetFunc(a) {
 	for (i of document.querySelectorAll(a)) {
 		i.value = ''
-		i.style.border = 'solid 1px rgba(255, 255, 255, 0.2)'
+		if (a == ".labelInput_valueFormQuestion") {
+			i.style.border = 'solid 1px rgba(255, 255, 255, 0.2)'
+		} else if (a == ".labelInput__input_orderCallForm") {
+			i.style.border = 'solid 2px #337c7e'
+		}
 		i.style.backgroundColor = "transparent"
 	}
 }
+function doc_querySel(params) {
+	return document.querySelector(params)
+}
+function sel_addEventListener(selector, func) {
+	return document.querySelector(selector).addEventListener("click", function () {
+		func.call(this)
+	})
+}
+// setInterval(() => {
+// 	console.log(orderCallFormVariables)
+// }, 1111);

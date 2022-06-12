@@ -46,6 +46,10 @@ function sliderOpenFunc(i) {
 	document.querySelector(".galleryAlbum__contSlider").style.display = "flex"
 	return
 }
+function galleryAlbumSliderCloseFunc() {
+
+	document.querySelector(".galleryAlbum__contSlider").style.display = "none"
+}
 document.addEventListener("DOMContentLoaded", function () {
 	// document.getElementById("galleryAlbum__arrowNext")
 	for (let i of document.querySelectorAll(".galleryAlbum__contImg")) {
@@ -53,21 +57,45 @@ document.addEventListener("DOMContentLoaded", function () {
 			sliderOpenFunc(i)
 		})
 	}
-	document.querySelector(".wrapper").addEventListener("click", function (e) {
-		console.log(e.path)
-		// if (e.path[1].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__textBackGroundImg") || e.path[0].classList.contains("galleryAlbum__img")) {
-		// 	sliderOpenFunc()
-		// }
-		if (e.path[0].classList.contains("galleryAlbum__contSlideImg")) {
-			document.querySelector(".galleryAlbum__contSlider").style.display = "none"
+	doc_querySel(".galleryAlbum__closeSlider").addEventListener("click", function () {
+		galleryAlbumSliderCloseFunc()
+	})
+	document.addEventListener("keydown", function (e) {
+		if (e.code == "Escape") {
+			galleryAlbumSliderCloseFunc()
 		}
 	})
+	// document.querySelector(".wrapper").addEventListener("click", function (e) {
+	// 	console.log(e.path)
+	// if (e.path[1].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__contImg") || e.path[0].classList.contains("galleryAlbum__textBackGroundImg") || e.path[0].classList.contains("galleryAlbum__img")) {
+	// 	sliderOpenFunc()
+	// }
+	// if (e.path[0].classList.contains("galleryAlbum__contSlideImg")) {
+	// 	galleryAlbumSliderCloseFunc()
+	// }
+	// })
 	newsSlidsQuantity = document.querySelectorAll(".galleryAlbum__contImg").length;
 	for (let i = 0; i < document.querySelectorAll(".galleryAlbum__contImg").length; i++) {
 		document.querySelectorAll(".galleryAlbum__contImg")[i].setAttribute("data_idx", i)
 	}
 	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
-		// console.log(i)
+		console.log(i.naturalHeight)
+		console.log(i.naturalWidth)
+		let b = i.naturalHeight - i.naturalWidth
+		let width = 0;
+		let height = 0;
+		if (b < 0) {
+			width = i.naturalWidth / i.naturalHeight * 100;
+			height = 100
+		} else if (b > 0) {
+			height = i.naturalHeight / i.naturalWidth * 100;
+			width = 100
+		} else if (b == 0) {
+			width = 100
+			height = 100
+		}
+		i.style.width = `${width}%`
+		i.style.height = `${height}%`
 		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("beforeend", `
 			<div class="galleryAlbum__contSlideImg">
 				<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
@@ -81,14 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	el.addEventListener("touchend", newsSliderFunc, false);
 	el.addEventListener("touchmove", newsSliderFunc, false);
 	document.querySelector(".galleryAlbum__arrowNext").addEventListener("click", () => {
-		if (document.querySelector("body").clientWidth > 900) {
-			galleryAlbumSliderPlusFunc()
-		}
+		// if (document.querySelector("body").clientWidth > 900) {
+		galleryAlbumSliderPlusFunc()
+		// }
 	});
 	document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", () => {
-		if (document.querySelector("body").clientWidth > 900) {
-			galleryAlbumSliderMinusFunc()
-		}
+		// if (document.querySelector("body").clientWidth > 900) {
+		galleryAlbumSliderMinusFunc()
+		// }
 	});
 	document.addEventListener("keydown", (e) => {
 		if (document.querySelector("body").clientWidth > 900) {
@@ -127,6 +155,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		document.querySelectorAll(".galleryAlbum__point")[0].style.backgroundColor = "#337c7e"
 	}
+	document.querySelector(".galleryAlbum__sliderBackgroundClickForClose").addEventListener("click", function () {
+		galleryAlbumSliderCloseFunc()
+	})
 });
 
 let newsSliderTouchIsNew = 0;
@@ -154,8 +185,8 @@ function newsSliderFunc(e) {
 			if (newsSliderTouchIsNew == 2) {
 				// console.log("reset")
 				// console.log(e.target.getAttribute("class"))
-				e.target.getAttribute("class").includes("galleryAlbum__arrowNext") ? galleryAlbumSliderPlusFunc() : ""
-				e.target.getAttribute("class").includes("galleryAlbum__arrowBack") ? galleryAlbumSliderMinusFunc() : ""
+				// e.target.getAttribute("class").includes("galleryAlbum__arrowNext") ? galleryAlbumSliderPlusFunc() : ""
+				// e.target.getAttribute("class").includes("galleryAlbum__arrowBack") ? galleryAlbumSliderMinusFunc() : ""
 				touch = 11111
 				newsSliderTouchIsNew = 0;
 			}
@@ -166,7 +197,7 @@ function newsSliderFunc(e) {
 		} else {
 			galleryAlbumSliderMinusFunc()
 		}
-		galleryAlbumSliderPointsFunc()
+		// galleryAlbumSliderPointsFunc()
 		touch = 11111
 		newsSliderTouchIsNew = 0;
 	}
@@ -183,7 +214,7 @@ function galleryAlbumSliderPlusFunc() {
 	// document.querySelector(".news__sliderCont").style.transform = `translateX(${b * c}%)`;
 	// 	}, 1 * b);
 	// }
-	galleryAlbumSliderPointsFunc()
+	galleryAlbumSliderZeroingOut()
 }
 function galleryAlbumSliderMinusFunc() {
 	// console.log("--")
@@ -194,13 +225,16 @@ function galleryAlbumSliderMinusFunc() {
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(${(-100 / newsSlidsQuantity) * (newsSlidsQuantity - 1)}%)`;
 		newsSliderCounter = newsSlidsQuantity - 1;
 	}
-	galleryAlbumSliderPointsFunc()
+	galleryAlbumSliderZeroingOut()
 }
-function galleryAlbumSliderPointsFunc() {
+function galleryAlbumSliderZeroingOut() {
 	if (newsSliderCounter == newsSlidsQuantity) {
 		newsSliderCounter = 0;
 		document.querySelector(".galleryAlbum__sliderCont").style.transform = `translateX(0)`;
 	}
+	galleryAlbumSliderPointsFunc()
+}
+function galleryAlbumSliderPointsFunc() {
 	if (pointsIs) {
 		for (i of document.querySelectorAll(".galleryAlbum__point")) {
 			i.style.backgroundColor = "#c4c4c4"

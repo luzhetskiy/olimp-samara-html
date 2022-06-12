@@ -9,3 +9,10 @@ for (let i of document.querySelectorAll(".filter__section")) {
 		// console.log(i.data_img_src)
 	})
 }
+sel_addEventListener(
+	".orderCall_parking_js",
+	function () {
+		// console.log(this)
+		orderCallFormOpenFunc(1)
+	}
+)

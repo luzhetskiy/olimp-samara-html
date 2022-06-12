@@ -70,6 +70,8 @@
 
 .infoContHome__icon {
   margin-right: 23px;
+  width: 54px;
+  height: 54px;
 }
 
 .infoContHome__text {
@@ -103,6 +105,8 @@
   font-size: 18px;
   margin-top: 30px;
   border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 .infoContHome__btn:hover {
@@ -135,6 +139,7 @@
   .infoContHome__icon {
     margin-right: 11px;
     width: 40px;
+    height: 40px;
   }
 
   .infoContHome__mobileBtn {
@@ -714,6 +719,8 @@
 
 .payment__bank {
   margin: 0 15px 20px 0;
+  width: 180px;
+  height: 90px;
 }
 
 .payment_margin {
