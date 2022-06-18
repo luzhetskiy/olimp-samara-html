@@ -22,6 +22,9 @@
 .webCamers__grid {
   display: grid;
   gap: 40px 100px;
+}
+
+.webCamers__grid_grid-template-columns-2 {
   grid-template-columns: 1fr 1fr;
 }
 

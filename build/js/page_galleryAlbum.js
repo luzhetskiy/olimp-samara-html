@@ -50,6 +50,7 @@ function galleryAlbumSliderCloseFunc() {
 
 	document.querySelector(".galleryAlbum__contSlider").style.display = "none"
 }
+
 document.addEventListener("DOMContentLoaded", function () {
 	// document.getElementById("galleryAlbum__arrowNext")
 	for (let i of document.querySelectorAll(".galleryAlbum__contImg")) {
@@ -78,30 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	for (let i = 0; i < document.querySelectorAll(".galleryAlbum__contImg").length; i++) {
 		document.querySelectorAll(".galleryAlbum__contImg")[i].setAttribute("data_idx", i)
 	}
-	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
-		console.log(i.naturalHeight)
-		console.log(i.naturalWidth)
-		let b = i.naturalHeight - i.naturalWidth
-		let width = 0;
-		let height = 0;
-		if (b < 0) {
-			width = i.naturalWidth / i.naturalHeight * 100;
-			height = 100
-		} else if (b > 0) {
-			height = i.naturalHeight / i.naturalWidth * 100;
-			width = 100
-		} else if (b == 0) {
-			width = 100
-			height = 100
-		}
-		i.style.width = `${width}%`
-		i.style.height = `${height}%`
-		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("beforeend", `
-			<div class="galleryAlbum__contSlideImg">
-				<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
-			</div>
-			`)
-	}
+
 	let el = document.querySelector('.galleryAlbum__slider')
 	// document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderMinusFunc)
 	// document.querySelector(".galleryAlbum__arrowBack").addEventListener("click", galleryAlbumSliderPlusFunc)
@@ -159,7 +137,32 @@ document.addEventListener("DOMContentLoaded", function () {
 		galleryAlbumSliderCloseFunc()
 	})
 });
-
+window.addEventListener("load", function () {
+	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
+		console.log(i.naturalHeight)
+		console.log(i.naturalWidth)
+		let b = i.naturalHeight - i.naturalWidth
+		let width = 0;
+		let height = 0;
+		if (b < 0) {
+			width = i.naturalWidth / i.naturalHeight * 100;
+			height = 100
+		} else if (b > 0) {
+			height = i.naturalHeight / i.naturalWidth * 100;
+			width = 100
+		} else if (b == 0) {
+			width = 100
+			height = 100
+		}
+		i.style.width = `${width}%`
+		i.style.height = `${height}%`
+		document.querySelector(".galleryAlbum__sliderCont").insertAdjacentHTML("beforeend", `
+			<div class="galleryAlbum__contSlideImg">
+				<img src="${i.getAttribute("src")}" alt="" class="galleryAlbum__slideImg">
+			</div>
+			`)
+	}
+})
 let newsSliderTouchIsNew = 0;
 let newsSliderTouchMove = 0;
 function newsSliderFunc(e) {

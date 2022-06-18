@@ -44,7 +44,13 @@
 .contacts__linkIcons {
 	max-width: 216px;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	a {
+		margin-right: 24px;
+	}
+	a:last-child {
+		margin-right: 0;
+	}
 }
 .contacts__block {
 	margin-right: 20px;
@@ -85,6 +91,13 @@
 	}
 	.contacts__linkIcons {
 		max-width: 190px;
+	}
+}
+@media (max-width: 500px) {
+	.contacts__linkIcons {
+		a {
+			margin-right: 16px;
+		}
 	}
 }
 @media (max-width: 400px) {

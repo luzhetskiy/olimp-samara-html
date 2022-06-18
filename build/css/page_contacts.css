@@ -53,9 +53,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.contacts__linkIcons a {
+  margin-right: 24px;
+}
+.contacts__linkIcons a:last-child {
+  margin-right: 0;
 }
 
 .contacts__block {
@@ -104,6 +109,11 @@
 
   .contacts__linkIcons {
     max-width: 190px;
+  }
+}
+@media (max-width: 500px) {
+  .contacts__linkIcons a {
+    margin-right: 16px;
   }
 }
 @media (max-width: 400px) {
