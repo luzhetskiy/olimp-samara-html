@@ -139,8 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 window.addEventListener("load", function () {
 	for (let i of document.querySelectorAll(".galleryAlbum__img")) {
-		console.log(i.naturalHeight)
-		console.log(i.naturalWidth)
+		// console.log(i.naturalHeight)
+		// console.log(i.naturalWidth)
 		let b = i.naturalHeight - i.naturalWidth
 		let width = 0;
 		let height = 0;
