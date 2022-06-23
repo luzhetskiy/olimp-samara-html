@@ -31,10 +31,10 @@
 .webCamers__contIframe {
   cursor: pointer;
 }
-.webCamers__contIframe img {
-  -webkit-box-shadow: 0px 4px 25px 0px #6667ac80, 0px 2px 5px 0px #00000080;
-  box-shadow: 0px 4px 25px 0px #6667ac80, 0px 2px 5px 0px #00000080;
+
+.webCamers__video {
   width: 100%;
+  height: auto;
 }
 
 .webCamers__text {
