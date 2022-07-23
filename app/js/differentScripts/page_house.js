@@ -71,3 +71,43 @@ for (let elem of document.querySelectorAll(".levelFlats")) {
 document.querySelector(".comeAndLivePopup__close").addEventListener("click", () => {
 	document.querySelector(".comeAndLivePopup").style.display = "none";
 })
+
+for (i of document.querySelectorAll(".catalog__input")) {
+	i.addEventListener("input", function () {
+		if (this.getAttribute("name") == "phone") {
+			if (this.value.length < 13) {
+				this.value = this.value.replace(/[^\d\+]/g, '');
+				if (this.value.length >= 1) {
+					let numberArray = this.value.split('');
+					if (this.value.length <= 11) {
+						if (numberArray[0] != "+") {
+							numberArray[0] = "+"
+						}
+						if (numberArray[1] != "7" && numberArray[1] != undefined) {
+							numberArray[0] = "+7"
+						}
+					} else if (this.value.length == 12) {
+						if (numberArray[0] != "+") {
+							numberArray[0] = "+"
+						}
+						if (numberArray[1] != "7" && numberArray[1] != undefined) {
+							numberArray[1] = "7"
+						}
+					}
+					if (this.value.length > 1) {
+						for (let i = 1; i < numberArray.length; i++) {
+							if (numberArray[i] == "+") {
+								numberArray.splice(i, 1)
+							}
+						}
+					}
+					this.value = numberArray.join('')
+				}
+				number = this.value
+				return
+			} else {
+				this.value = number
+			}
+		}
+	})
+}
