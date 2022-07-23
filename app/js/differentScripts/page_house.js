@@ -1,38 +1,5 @@
-const levelFlatsInfo = {
-	white_box: {
-		img: "images/repeatImages/шьп.jpg",
-		title: "White Box",
-		text: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus ullam unde commodi reprehenderit suscipit nobis architecto quasi adipisci ducimus voluptas maxime neque, repellendus voluptatum eum, voluptates ea. Laboriosam, esse.",
-			"2",
-			"3"
-		],
-		price: "ОТ 3000 РУБ.ЗА КВ.М"
-	},
-	white_box2: {
-		img: "images/repeatImages/шьп.jpg",
-		title: "White Box2",
-		text: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus ullam unde commodi reprehenderit suscipit nobis architecto quasi adipisci ducimus voluptas maxime neque, repellendus voluptatum eum, voluptates ea. Laboriosam, esse.",
-			"2",
-			"4"
-		],
-		price: "ОТ 3000 РУБ.ЗА КВ.М"
-	},
-	white_box3: {
-		img: "images/repeatImages/шьп.jpg",
-		title: "White Box3",
-		text: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus ullam unde commodi reprehenderit suscipit nobis architecto quasi adipisci ducimus voluptas maxime neque, repellendus voluptatum eum, voluptates ea. Laboriosam, esse.",
-			"2",
-			"5"
-		],
-		price: "ОТ 3000 РУБ.ЗА КВ.М"
-	},
-}
-
-
-
 let scrollWidthMainContImg = (document.querySelector(".main__imgHouse").offsetWidth - document.querySelector("body").offsetWidth) / 2
 document.querySelector(".main__contImg").scroll(scrollWidthMainContImg, 0)
-
 
 window.addEventListener("load", function () {
 	for (let i of document.querySelectorAll(".levelFlats__img")) {
@@ -53,24 +20,23 @@ window.addEventListener("load", function () {
 		i.style.height = `${height}%`
 	}
 })
-const comeAndLivePopupChange = (value) => {
-	// const textChange = e => document.querySelector(e).innerText;
-	document.querySelector(".comeAndLivePopup__h2").innerText = levelFlatsInfo[value].title
-	for (let i; i < document.querySelectorAll(".comeAndLivePopup__text").length; i++) {
-		document.querySelectorAll(".comeAndLivePopup__text")[i].innerText = levelFlatsInfo[value].text[i];
-	}
-}
 for (let elem of document.querySelectorAll(".levelFlats")) {
+	const idx = Number(elem.getAttribute("idx"))
+	const popupBlockArray = document.querySelectorAll(".comeAndLivePopup__block")
 	elem.addEventListener("click", () => {
-		// const attribute = elem.getAttribute("data_levelflats")
-		// if (attribute) comeAndLivePopupChange(attribute);
-
+		for (let i of popupBlockArray) {
+			i.style.display = "none";
+		}
+		popupBlockArray[idx].style.display = "flex";
 		document.querySelector(".comeAndLivePopup").style.display = "flex";
 	})
 }
 document.querySelector(".comeAndLivePopup__close").addEventListener("click", () => {
 	document.querySelector(".comeAndLivePopup").style.display = "none";
 })
+
+
+
 
 for (i of document.querySelectorAll(".catalog__input")) {
 	i.addEventListener("input", function () {

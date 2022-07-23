@@ -1660,6 +1660,7 @@
 .comeAndLive__contH2AndPrice {
 	display: flex;
 	align-items: end;
+	flex-wrap: wrap;
 	margin-bottom: 20px;
 	.priceInCont {
 		margin-left: 20px;
@@ -2200,10 +2201,11 @@
 }
 .comeAndLivePopup__h2 {
 	font-size: 30px;
+	margin-bottom: 15px;
 }
 .comeAndLivePopup__text {
 	font-size: 16px;
-	margin: 10px 0 40px 0;
+	margin: 0 0 30px 0;
 }
 // modificators
 
@@ -2217,7 +2219,6 @@
 	}
 	.comeAndLivePopup__text {
 		font-size: 15px;
-		margin: 10px 0 40px 0;
 	}
 }
 @media (max-width: 1100px) {
@@ -2244,6 +2245,7 @@
 	}
 	.comeAndLivePopup__img {
 		max-width: 100%;
+		width: 100%;
 		max-height: 600px;
 	}
 	.comeAndLivePopup__infoContainer {
