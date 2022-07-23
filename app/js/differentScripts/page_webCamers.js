@@ -1,5 +1,5 @@
 // let webCamersBlocksQuantity = document.querySelectorAll(".webCamers__block").length;
-let webCamers = document.querySelectorAll('.webCamers__video')
+
 
 // document.querySelector(".webCamers__grid").insertAdjacentHTML("afterbegin", webCamersBlocksStyle())
 // function webCamersBlocksStyle() {
@@ -16,6 +16,9 @@ let webCamers = document.querySelectorAll('.webCamers__video')
 // 	}
 // 	return ``
 // }
+
+let webCamers = document.querySelectorAll('.webCamers__video')
+
 if (webCamers.length > 1) {
 	document.querySelector(".webCamers__grid").classList.add("webCamers__grid_grid-template-columns-2")
 }
