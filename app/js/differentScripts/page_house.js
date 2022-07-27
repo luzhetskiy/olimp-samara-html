@@ -43,8 +43,6 @@ document.querySelector("body").addEventListener("click", (e) => {
 	document.querySelector(".comeAndLivePopup").style.display = "none";
 })
 
-
-
 for (i of document.querySelectorAll(".catalog__input")) {
 	i.addEventListener("input", function () {
 		if (this.getAttribute("name") == "phone") {
