@@ -2163,16 +2163,20 @@
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
+	overflow: auto;
 	height: 100vh;
 	background-color: rgba(236, 239, 246, 0.95);
 }
 // elements
 .comeAndLivePopup__container {
-	position: relative;
 	width: 85%;
+	height: 100%;
 	max-width: 1182px;
+	margin-top: 100px;
+	position: relative;
 	min-width: 200px;
 }
+
 .comeAndLivePopup__close {
 	font-size: 30px;
 	right: -20px;

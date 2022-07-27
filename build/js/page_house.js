@@ -20,21 +20,28 @@ window.addEventListener("load", function () {
 		i.style.height = `${height}%`
 	}
 })
+
 for (let elem of document.querySelectorAll(".levelFlats")) {
 	const idx = Number(elem.getAttribute("idx"))
 	const popupBlockArray = document.querySelectorAll(".comeAndLivePopup__block")
-	elem.addEventListener("click", () => {
+	elem.addEventListener("click", (e) => {
 		for (let i of popupBlockArray) {
 			i.style.display = "none";
 		}
 		popupBlockArray[idx].style.display = "flex";
 		document.querySelector(".comeAndLivePopup").style.display = "flex";
+		e.stopPropagation()
 	})
 }
+document.querySelector(".comeAndLivePopup__miniContainer").addEventListener("click", (e) => {
+	e.stopPropagation()
+})
 document.querySelector(".comeAndLivePopup__close").addEventListener("click", () => {
 	document.querySelector(".comeAndLivePopup").style.display = "none";
 })
-
+document.querySelector("body").addEventListener("click", (e) => {
+	document.querySelector(".comeAndLivePopup").style.display = "none";
+})
 
 
 
