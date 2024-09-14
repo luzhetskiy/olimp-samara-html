@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -24,13 +25,255 @@
   width: 100%;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1020;
+}
+
 .parking {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.parking, .parking-view, .parking-view-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.parking-view {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 20px;
+  margin-block: 32px 64px;
+}
+.parking-view-hint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px 20px;
+  font-size: 14px;
+}
+.parking-view-hint-svg {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(96, 191, 38, 0.5);
+}
+.parking-view-hint-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+}
+.parking-view-hint-item:nth-child(2) .parking-view-hint-svg {
+  background-color: transparent;
+  border: 2px solid #ffa500;
+}
+.parking-view-hint-item:nth-child(3) .parking-view-hint-svg {
+  background-color: transparent;
+  border: 2px solid #000;
+}
+.parking-view-picture {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+  box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+}
+.parking-view-svg {
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.parking-view-buttons {
+  gap: 1rem;
+}
+.parking-view-btn {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 24px;
+  line-height: 1;
+  padding: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.parking-view-btn[disabled] {
+  background-color: rgba(83, 186, 20, 0.5);
+  pointer-events: none;
+}
+.parking-view-content {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.parking-view-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 16px;
+}
+.parking-view-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #60bf26;
+}
+.parking-view-value {
+  font-size: 18px;
+  color: #000;
+}
+.parking-view-pdf {
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .parking-view-pdf {
+    width: auto;
+  }
+}
+.parking-view-body {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+.parking-view-body p {
+  max-width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  margin: 0;
+}
+.parking-view-body p + p {
+  margin-top: 8px;
+}
+.parking-window {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+  box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  -o-transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+.parking-window.is-show {
+  -webkit-transform: initial;
+  -ms-transform: initial;
+  transform: initial;
+}
+@media (hover: hover) {
+  .parking-window {
+    width: auto;
+    position: absolute;
+    bottom: initial;
+    left: initial;
+    -webkit-transform: initial;
+    -ms-transform: initial;
+    transform: initial;
+  }
+}
+.parking-window-title, .parking-window-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+.parking-window-info {
+  opacity: 0.5;
+}
+.parking-window-price {
+  color: #cc1228;
+}
+.parking-window-close {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.parking-window-button {
+  height: 40px;
+  margin-top: 16px;
+}
+
+[data-parking-item] {
+  fill: transparent;
+  stroke: transparent;
+  -webkit-transition: fill 200ms ease-in-out;
+  -o-transition: fill 200ms ease-in-out;
+  transition: fill 200ms ease-in-out;
+}
+
+[data-parking-status="Свободное место"] {
+  fill: rgba(96, 191, 38, 0.5);
+}
+
+[data-parking-status=Забронированный] {
+  fill: transparent;
+  stroke: #ffa500;
+  stroke-width: 2px;
+}
+
+[data-parking-status=Продано] {
+  fill: transparent;
+  stroke: transparent;
 }
 
 .parking__btnLeaveRequest {

@@ -55,56 +55,8 @@
   -o-transition: fill 200ms ease-in-out;
   transition: fill 200ms ease-in-out;
 }
-@media (hover: hover) {
-  .house-view-svg-action:hover {
-    fill: rgba(96, 191, 38, 0.5);
-  }
-}
-.house-view-svg-action:active {
+.house-view-svg-action:hover {
   fill: rgba(96, 191, 38, 0.5);
-}
-
-.listFlats__contFlats--6 .listFlats__flat, .listFlats__contFlats--8 .listFlats__flat {
-  height: auto;
-}
-.listFlats__contFlats--6 .listFlats__flat {
-  width: 114px;
-}
-@media (max-width: 1500px) {
-  .listFlats__contFlats--6 .listFlats__flat {
-    width: 8.25vw;
-  }
-}
-@media (max-width: 600px) {
-  .listFlats__contFlats--6 .listFlats__flat {
-    width: 12.25vw;
-  }
-}
-.listFlats__contFlats--8 .listFlats__flat {
-  width: 80px;
-}
-@media (max-width: 1500px) {
-  .listFlats__contFlats--8 .listFlats__flat {
-    width: 5.75vw;
-  }
-}
-@media (max-width: 600px) {
-  .listFlats__contFlats--8 .listFlats__flat {
-    width: 8.75vw;
-  }
-}
-.listFlats__contFlats--8 .listFlats__flatText {
-  font-size: 12px;
-}
-@media (max-width: 1500px) {
-  .listFlats__contFlats--8 .listFlats__flatText {
-    font-size: 0.625vw;
-  }
-}
-@media (max-width: 600px) {
-  .listFlats__contFlats--8 .listFlats__flatText {
-    font-size: 1.25vw;
-  }
 }
 
 .main__contFlats {

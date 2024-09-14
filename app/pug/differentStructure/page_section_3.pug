@@ -1,0 +1,397 @@
+main.main 
+	.container
+		.way
+			a(href="").way__textWay Главная
+			<svg class="way__arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1.12158 0.437417L6.68359 6.00008L1.12158 11.5627L0.650247 11.0914L5.74093 6.00008L0.650248 0.90875L1.12158 0.437417Z" fill="#757575"/>
+			</svg>
+			a(href="").way__textWay Квартиры
+		h1 Секция А (Дом № 3)
+
+		.house-view 
+			.house-view-picture 
+				svg.house-view-svg(viewBox="0 0 1410 1009", fill="none", xmlns="http://www.w3.org/2000/svg")
+					image(width="100%", height="100%", xlink:href="images/differentImages/page_section/section-3.svg", x="0", y="0")
+					polygon.house-view-svg-action(points="353.000 202.000, 468.000 202.000, 468.000 189.000, 458.000 189.000, 458.000 158.000, 584.000 158.000, 584.000 189.000, 494.000 189.000, 494.000 202.000, 575.000 202.000, 575.000 480.000, 487.000 480.000, 487.000 489.000, 453.000 489.000, 453.000 470.000, 394.000 470.000, 394.000 479.000, 353.000 479.000, 353.000 202.000")
+					polygon.house-view-svg-action(points="132.000 195.000, 233.000 195.000, 233.000 255.000, 247.000 255.000, 247.000 202.000, 343.000 202.000, 343.000 488.000, 394.000 488.000, 394.000 493.000, 403.000 493.000, 403.000 528.000, 394.000 528.000, 394.000 541.000, 344.000 541.000, 344.000 719.000, 132.000 719.000, 132.000 255.000, 207.000 255.000, 207.000 242.000, 132.000 242.000, 132.000 195.000")
+					polygon.house-view-svg-action(points="394.000 550.000, 353.000 550.000, 353.000 783.000, 428.000 783.000, 428.000 796.000, 353.000 796.000, 353.000 842.000, 456.000 842.000, 456.000 783.000, 469.000 783.000, 469.000 835.000, 575.000 835.000, 575.000 782.000, 585.000 782.000, 585.000 835.000, 698.000 835.000, 698.000 551.000, 642.000 551.000, 642.000 560.000, 580.000 560.000, 580.000 551.000, 479.000 551.000, 479.000 542.000, 444.000 542.000, 444.000 565.000, 394.000 565.000, 394.000 550.000")
+					polygon.house-view-svg-action(points="763.000 551.000, 707.000 551.000, 707.000 835.000, 821.000 835.000, 821.000 782.000, 830.000 782.000, 830.000 835.000, 937.000 835.000, 937.000 782.000, 950.000 782.000, 950.000 842.000, 1053.000 842.000, 1053.000 795.000, 977.000 795.000, 977.000 782.000, 1053.000 782.000, 1053.000 551.000, 1011.000 551.000, 1011.000 565.000, 961.000 565.000, 961.000 542.000, 926.000 542.000, 926.000 551.000, 826.000 551.000, 826.000 560.000, 763.000 560.000, 763.000 551.000")
+					polygon.house-view-svg-action(points="1062.000 551.000, 1121.000 551.000, 1121.000 542.000, 1155.000 542.000, 1155.000 551.000, 1174.000 551.000, 1174.000 489.000, 1274.000 489.000, 1274.000 720.000, 1171.000 720.000, 1171.000 733.000, 1193.000 733.000, 1193.000 765.000, 1066.000 765.000, 1066.000 733.000, 1144.000 733.000, 1144.000 720.000, 1062.000 720.000, 1062.000 551.000")
+					polygon.house-view-svg-action(points="1062.000 202.000, 1159.000 202.000, 1159.000 255.000, 1172.000 255.000, 1172.000 195.000, 1274.000 195.000, 1274.000 242.000, 1199.000 242.000, 1199.000 255.000, 1274.000 255.000, 1274.000 465.000, 1168.000 465.000, 1168.000 479.000, 1155.000 479.000, 1155.000 488.000, 1121.000 488.000, 1121.000 461.000, 1115.000 461.000, 1115.000 465.000, 1062.000 465.000, 1062.000 202.000")
+					polygon.house-view-svg-action(points="821.500 158.000, 947.500 158.000, 947.500 189.000, 935.500 189.000, 935.500 202.000, 1052.500 202.000, 1052.500 465.000, 1001.500 465.000, 1001.500 470.000, 947.500 470.000, 947.500 489.000, 913.500 489.000, 913.500 480.000, 882.000 480.000, 882.000 465.000, 831.500 465.000, 831.500 202.000, 909.500 202.000, 909.500 189.000, 821.500 189.000, 821.500 158.000")
+
+		.searchFlats 
+			.searchFlats__block 
+				.explanationBlock.searchFlats__explanationBlock
+					img(src="images/repeatImages/icon-filter.svg", alt="").explanationBlock__icon
+					h2.explanationBlock__h2 Поиск квартир 
+					.explanationBlock__arrow &#9660
+				.filter
+					.filter__text Секция
+					.filter__sections
+						.filter__section A
+						.filter__section B
+						.filter__section C
+						.filter__section D
+						.filter__section E 
+					.filter__text  Количество комнат
+					.filter__sections
+						.filter__section 1
+						.filter__section 2
+						.filter__section 3
+					.filter__text Стоимость, ₽
+					.filter__contFilterPrice 
+						.filter__contFilterPriceInputText
+							input(type="text").filter__filterPriceInputText
+							span -
+							input(type="text").filter__filterPriceInputText
+						input(type="range" ).filter__filterPriceSlider
+					.filter__summary Найдено квартир: 52
+			.listFlats
+				.listFlats__header 
+					.listFlats__headerWordLevel ЭТАЖ
+					.listFlats__headerCont 
+						.listFlats__headerText.listFlats__headerText_sale В продаже
+						.listFlats__headerText.listFlats__headerText_reserve В резерве
+						.listFlats__headerText.listFlats__headerText_bought Куплено
+				.listFlats__contFlats.listFlats__contFlats--6
+					.listFlats__row
+						.listFlats__level 17
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 16
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 15
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought.listFlats__flat_filter
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 14
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 13
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 12
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 11
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 10
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 9
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 8
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 7
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 6
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 5
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 4
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 3
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 2
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+					.listFlats__row
+						.listFlats__level 1
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_sale
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_reserve
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн
+						a(href="").listFlats__flat.listFlats__flat_bought
+							.listFlats__flatQuantityRooms 1
+							.listFlats__flatText 42,72 м2 4,45 млн

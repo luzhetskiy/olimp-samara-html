@@ -22,9 +22,235 @@
 }
 //-----------------------------------
 // block
+.overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1020;
+}
+
 .parking {
-	display: flex;
 	justify-content: space-between;
+
+	&,
+	&-view,
+	&-view-buttons {
+		display: flex;
+	}
+
+	&-view {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		margin-block: 32px 64px;
+
+		&-hint {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 8px 20px;
+			font-size: 14px;
+
+			&-svg {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: rgba(96, 191, 38, .5);
+			}
+
+			&-item {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+
+				&:nth-child(2) {
+					.parking-view-hint-svg {
+						background-color: transparent;
+						border: 2px solid #ffa500;
+					}
+				}
+				&:nth-child(3) {
+					.parking-view-hint-svg {
+						background-color: transparent;
+						border: 2px solid #000;
+					}
+				}
+			}
+		}
+
+		&-picture {
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+		}
+
+		&-svg {
+			display: block;
+			object-fit: contain;
+		}
+
+		&-buttons {
+			gap: 1rem;
+		}
+
+		&-btn {
+			min-width: 40px;
+			min-height: 40px;
+
+			font-size: 24px;
+			line-height: 1;
+			padding: 8px;
+			user-select: none;
+
+			&[disabled] {
+				background-color: rgba(83, 186, 20, .5);
+				pointer-events: none;
+			}
+		}
+
+		&-content {
+			width: 100%;
+			display: grid;
+			gap: 20px;
+			align-items: flex-start;
+		}
+
+		&-header {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 16px;
+		}
+
+		&-title {
+			font-size: 24px;
+			font-weight: 700;
+			color: #60bf26;
+		}
+
+		&-value {
+			font-size: 18px;
+			color: #000;
+		}
+
+		&-pdf {
+			width: 100%;
+			height: 40px;
+			padding: 8px 20px;
+			cursor: pointer;
+
+			@media (min-width: 768px) {
+				width: auto;
+			}
+		}
+
+		&-body {
+			font-size: 18px;
+			font-weight: 700;
+			color: #000;
+
+			p {
+				max-width: 100%;
+				font-size: inherit;
+				font-weight: inherit;
+				color: inherit;
+				margin: 0;
+
+				& + p {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+
+	&-window {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		font-size: 14px;
+		color: #000;
+		background-color: #fff;
+		border-radius: 12px;
+		padding: 16px;
+		box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.3);
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 1040;
+		transform: translateY(100%);
+		transition: transform 200ms ease-in-out;
+
+		&.is-show {
+			transform: initial;
+		}
+
+		@media (hover: hover) {
+			width: auto;
+			position: absolute;
+			bottom: initial;
+			left: initial;
+			transform: initial;
+		}
+
+		&-title,
+		&-price {
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		&-info {
+			opacity: .5;
+		}
+
+		&-price {
+			color: #cc1228;
+		}
+
+		&-close {
+			width: 24px;
+			height: 24px;
+			padding: 0;
+			position: absolute;
+			top: 16px;
+			right: 16px;
+		}
+
+		&-button {
+			height: 40px;
+			margin-top: 16px;
+		}
+	}
+}
+
+[data-parking-item] {
+	fill: transparent;
+	stroke: transparent;
+	transition: fill 200ms ease-in-out;
+}
+
+[data-parking-status="Свободное место"] {
+	fill: rgba(96, 191, 38, .5);
+}
+
+[data-parking-status="Забронированный"] {
+	fill: transparent;
+	stroke: #ffa500;
+	stroke-width: 2px;
+}
+
+[data-parking-status="Продано"] {
+	fill: transparent;
+	stroke: transparent;
 }
 // elements
 
