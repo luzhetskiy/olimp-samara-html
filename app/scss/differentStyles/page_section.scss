@@ -44,12 +44,12 @@
 			
 			@media (hover: hover) {
 				&:hover {
-					fill: rgba(96, 191, 38, .5);
+					fill: rgba(189, 189, 216, .5);
 				}
 			}
 
 			&:active {
-				fill: rgba(96, 191, 38, .5);
+				fill: rgba(189, 189, 216, .5);
 			}
 		}
 	}
@@ -58,37 +58,78 @@
 .listFlats__contFlats {
 
 	&--6,
+	&--7,
 	&--8 {
+
+		.listFlats__row {
+			display: grid;
+			gap: 20px;
+
+			@media (max-width: 1500px) {
+				gap: 1.4vw;
+			}
+		}
+
 		.listFlats__flat {
+			width: 100%;
 			height: auto;
+			margin: 0;
+
+			@media (max-width: 1500px) {
+				width: 100%;
+			}
+
+			@media (max-width: 600px) {
+				width: 100%;
+			}
 		}
 	}
 
 	&--6 {
-		.listFlats__flat {
-			width: 114px;
+
+		.listFlats__row {
+			grid-template-columns: 2em repeat(6, 1fr);
 
 			@media (max-width: 1500px) {
-				width: 8.25vw;
+				grid-template-columns: 1.045vw repeat(6, 1fr);
 			}
 
 			@media (max-width: 600px) {
-				width: 12.25vw;
+				grid-template-columns: 1.845vw repeat(6, 1fr);
+			}
+		}
+	}
+
+	&--7 {
+
+		.listFlats__row {
+			grid-template-columns: 2em repeat(7, 1fr);
+
+			@media (max-width: 1500px) {
+				grid-template-columns: 1.045vw repeat(7, 1fr);
+			}
+
+			@media (max-width: 600px) {
+				grid-template-columns: 1.845vw repeat(7, 1fr);
 			}
 		}
 	}
 
 	&--8 {
-		.listFlats__flat {
-			width: 80px;
+
+		.listFlats__row {
+			grid-template-columns: 2em repeat(8, 1fr);
 
 			@media (max-width: 1500px) {
-				width: 5.75vw;
+				grid-template-columns: 1.045vw repeat(8, 1fr);
 			}
 
 			@media (max-width: 600px) {
-				width: 8.75vw;
+				grid-template-columns: 1.845vw repeat(8, 1fr);
 			}
+		}
+
+		.listFlats__flat {
 
 			&Text {
 				font-size: 12px;

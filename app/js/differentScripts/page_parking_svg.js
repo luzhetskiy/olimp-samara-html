@@ -72,6 +72,44 @@ function removeParkingWindowWithDelay(parkingWindow, targetItem) {
 	}, 200)
 }
 
+function createParkingPopup(parkingItem) {
+  const popup = document.createElement('div');
+  popup.classList.add('parking-popup');
+  
+  const placement = parkingItem.getAttribute('data-parking-placement');
+  const square = parkingItem.getAttribute('data-parking-square');
+  const price = parkingItem.getAttribute('data-parking-price');
+  
+  popup.innerHTML = `
+		<div class="parking-popup-header">
+			<h2 class="parking-popup-title">Заявка на бронирование</h2>
+			<button type="button" class="parking-popup-close">
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='none' fill-rule='evenodd'><path d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z'/><path fill='currentColor' d='m12 14.122 5.303 5.303a1.5 1.5 0 0 0 2.122-2.122L14.12 12l5.304-5.303a1.5 1.5 0 1 0-2.122-2.121L12 9.879 6.697 4.576a1.5 1.5 0 1 0-2.122 2.12L9.88 12l-5.304 5.304a1.5 1.5 0 1 0 2.122 2.12z'/></g></svg>
+			</button>
+		</div>
+		<div class="parking-popup-detail">
+			<span class="parking-popup-info">Место: № ${placement}</span>
+			<span class="parking-popup-info">Площадь: ${square}</span>
+			<span class="parking-popup-price">${price}</span>
+		</div>
+		<form class="parking-popup-form">
+			<div class="labelInput labelInput_formQuestion">
+				<input class="labelInput__input labelInput__input_formQuestion labelInput_valueFormQuestion" type="text" required="">
+				<label class="labelInput__label labelInput__label_formQuestion">Имя</label>
+			</div>
+			<div class="labelInput labelInput_formQuestion">
+				<input class="labelInput__input labelInput__input_formQuestion labelInput_valueFormQuestion" type="text" name="phone" required="">
+				<label class="labelInput__label labelInput__label_formQuestion">Телефон</label>
+				<div class="labelInput__invalidFormat">Неправильный формат</div>
+			</div>
+			<button type="submit" class="parking-popup-book btnLeaveRequest">Отправить</button>
+		</form>
+  `;
+  
+  document.body.appendChild(popup);
+  return popup;
+}
+
 function updateParkingWindowContent(target, parkingWindow) {
 	const id = target.getAttribute('data-parking-placement')
 	const status = target.getAttribute('data-parking-status')
@@ -165,6 +203,7 @@ function removeOverlay() {
 
 function setupParkingInteractions(element) {
 	let activeWindow = null
+	let activePopup = null
 
 	function handleMouseMove(event) {
 		const targetItem = event.target.closest('[data-parking-item]')
@@ -212,22 +251,51 @@ function setupParkingInteractions(element) {
 	function handleClick(event) {
 		const targetItem = event.target.closest('[data-parking-item]')
 		if (targetItem) {
+			const status = targetItem.getAttribute('data-parking-status')
+
+			if (!isTouch && status === 'Свободное место') {
+        if (activePopup) {
+          activePopup.remove();
+          removeOverlay();
+        }
+        
+        const popup = createParkingPopup(targetItem);
+        const overlay = createOverlay();
+        
+        activePopup = popup;
+        
+        popup.querySelector('.parking-popup-close').addEventListener('click', () => {
+          popup.remove();
+          removeOverlay();
+          activePopup = null;
+        });
+        
+        overlay.addEventListener('click', () => {
+          popup.remove();
+          removeOverlay();
+          activePopup = null;
+        });
+        
+        return;
+      }
+
 			if (activeWindow && activeWindow !== targetItem.hoverWindow) {
 				removeParkingWindowWithDelay(activeWindow, targetItem)
 				removeOverlay()
 			}
-			if (!targetItem.hoverWindow) {
-				targetItem.hoverWindow = createParkingWindow()
-				updateParkingWindowContent(targetItem, targetItem.hoverWindow)
-				
-				const closeButton = targetItem.hoverWindow.querySelector('.parking-window-close')
-				closeButton.addEventListener('click', () => {
-					removeParkingWindowWithDelay(targetItem.hoverWindow, targetItem)
-					removeOverlay()
-					activeWindow = null
-				})
-	
-				if (isTouch) {
+
+			if (isTouch) {
+				if (!targetItem.hoverWindow) {
+					targetItem.hoverWindow = createParkingWindow()
+					updateParkingWindowContent(targetItem, targetItem.hoverWindow)
+					
+					const closeButton = targetItem.hoverWindow.querySelector('.parking-window-close')
+					closeButton.addEventListener('click', () => {
+						removeParkingWindowWithDelay(targetItem.hoverWindow, targetItem)
+						removeOverlay()
+						activeWindow = null
+					})
+
 					setTimeout(() => {
 						targetItem.hoverWindow.classList.add('is-show')
 					}, 200);
@@ -242,13 +310,44 @@ function setupParkingInteractions(element) {
 					targetItem.hoverWindow.addEventListener('click', (e) => {
 						e.stopPropagation()
 					})
-				}
+
+					const bookingButton = targetItem.hoverWindow.querySelector('.parking-window-button')
+					if (bookingButton) {
+						bookingButton.addEventListener('click', () => {
+							removeParkingWindowWithDelay(targetItem.hoverWindow, targetItem)
+							removeOverlay()
+							activeWindow = null
 	
-				activeWindow = targetItem.hoverWindow
-			} else {
-				removeParkingWindowWithDelay(targetItem.hoverWindow, targetItem)
-				removeOverlay()
-				activeWindow = null
+							if (activePopup) {
+								activePopup.remove();
+								removeOverlay();
+							}
+							
+							const popup = createParkingPopup(targetItem);
+							const newOverlay = createOverlay();
+							
+							activePopup = popup;
+							
+							popup.querySelector('.parking-popup-close').addEventListener('click', () => {
+								popup.remove();
+								removeOverlay();
+								activePopup = null;
+							});
+							
+							newOverlay.addEventListener('click', () => {
+								popup.remove();
+								removeOverlay();
+								activePopup = null;
+							});
+						})
+					}
+
+					activeWindow = targetItem.hoverWindow
+				} else {
+					removeParkingWindowWithDelay(targetItem.hoverWindow, targetItem)
+					removeOverlay()
+					activeWindow = null
+				}
 			}
 		}
 	}
@@ -271,6 +370,7 @@ function setupParkingInteractions(element) {
 		parkingUnscale.disabled = scale <= 100
 	}
 
+	
 	if (isTouch) {
 		element.addEventListener('click', handleClick)
 		document.addEventListener('click', (event) => {
@@ -282,6 +382,7 @@ function setupParkingInteractions(element) {
 	} else {
 		element.addEventListener('mouseover', handleMouseOver)
 		element.addEventListener('mouseout', handleMouseOut)
+		element.addEventListener('click', handleClick)
 	}
 
 	const parkingScale = element.querySelector('[data-parking-scale]')

@@ -52,14 +52,15 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   gap: 20px;
   margin-block: 32px 64px;
+}
+.parking-view-title {
+  font-size: 20px;
+  line-height: normal;
 }
 .parking-view-hint {
   display: -webkit-box;
@@ -145,30 +146,14 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 16px;
-}
-.parking-view-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #60bf26;
 }
 .parking-view-value {
   font-size: 18px;
   color: #000;
-}
-.parking-view-pdf {
-  width: 100%;
-  height: 40px;
-  padding: 8px 20px;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .parking-view-pdf {
-    width: auto;
-  }
 }
 .parking-view-body {
   font-size: 18px;
@@ -238,7 +223,7 @@
   opacity: 0.5;
 }
 .parking-window-price {
-  color: #cc1228;
+  color: #60bf26;
 }
 .parking-window-close {
   width: 24px;
@@ -251,6 +236,89 @@
 .parking-window-button {
   height: 40px;
   margin-top: 16px;
+}
+.parking-popup {
+  max-width: 480px;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1060;
+}
+.parking-popup-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.parking-popup-title {
+  font-size: inherit;
+  line-height: 1;
+}
+.parking-popup-close {
+  padding: 0;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+.parking-popup-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.parking-popup-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #60bf26;
+}
+.parking-popup-form {
+  margin-top: 1rem;
+}
+.parking-popup-book {
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.parking-popup .labelInput__input_formQuestion,
+.parking-popup .labelInput__input:focus ~ .labelInput__label_formQuestion,
+.parking-popup .labelInput__input:not(:focus):valid ~ .labelInput__label_formQuestion,
+.parking-popup .labelInput__label_formQuestion {
+  color: inherit;
+}
+.parking-popup .labelInput__input_formQuestion {
+  width: 100%;
+  border-color: #000;
 }
 
 [data-parking-item] {
