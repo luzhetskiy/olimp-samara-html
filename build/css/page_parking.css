@@ -59,8 +59,14 @@
   margin-block: 32px 64px;
 }
 .parking-view-title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: normal;
+  color: #6667ac;
+}
+@media (min-width: 992px) {
+  .parking-view-title {
+    font-size: 40px;
+  }
 }
 .parking-view-hint {
   display: -webkit-box;

@@ -114,6 +114,16 @@
     grid-template-columns: 1.845vw repeat(7, 1fr);
   }
 }
+@media (min-width: 600px) {
+  .listFlats__contFlats--7 .listFlats__flatText {
+    font-size: 0.9375vw;
+  }
+}
+@media (min-width: 1500px) {
+  .listFlats__contFlats--7 .listFlats__flatText {
+    font-size: 12px;
+  }
+}
 .listFlats__contFlats--8 .listFlats__row {
   grid-template-columns: 2em repeat(8, 1fr);
 }
