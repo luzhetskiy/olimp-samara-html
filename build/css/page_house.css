@@ -23,6 +23,22 @@
   height: 45.146vw;
   margin-bottom: 42px;
 }
+.main__contImgHouse--new {
+  height: 58.375vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouse--new {
+    height: 354px !important;
+  }
+}
+.main__contImgHouse--new .main__contImg {
+  height: 58.375vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouse--new .main__contImg {
+    height: 373px;
+  }
+}
 
 .main__contImg {
   position: absolute;
@@ -53,7 +69,99 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  opacity: 0;
+}
+@media (hover: hover) {
+  .main__contImgHouseClick {
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in-out;
+    -o-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
+  }
+}
+
+.main__contImgHouseClickNew {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2rem;
+}
+@media (max-width: 600px) {
+  .main__contImgHouseClickNew {
+    padding: 1rem;
+  }
+}
+.main__contImgHouseClickNew .main__imgHouseClick {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.main__contImgHouseClickNew .main__imgHouseDate {
+  margin-top: unset;
+}
+.main__contImgHouseClickNew.main__contImgHouseClick_1, .main__contImgHouseClickNew.main__contImgHouseClick_2, .main__contImgHouseClickNew.main__contImgHouseClick_3 {
+  z-index: 1;
+}
+.main__contImgHouseClickNew.main__contImgHouseClick_1 {
+  width: 16.6vw;
+  height: 22vw;
+  top: 7.7vw;
+  left: 10.1vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouseClickNew.main__contImgHouseClick_1 {
+    width: 88px;
+    height: 134px;
+    top: 47px;
+    left: 69px;
+  }
+}
+.main__contImgHouseClickNew.main__contImgHouseClick_2 {
+  width: 26.4vw;
+  height: 13vw;
+  top: 29vw;
+  left: 11.5vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouseClickNew.main__contImgHouseClick_2 {
+    width: 164px;
+    height: 81px;
+    top: 176px;
+    left: 69px;
+  }
+}
+.main__contImgHouseClickNew.main__contImgHouseClick_3 {
+  width: 21.5vw;
+  height: 13.3vw;
+  top: 29vw;
+  left: 37.8vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouseClickNew.main__contImgHouseClick_3 {
+    width: 130px;
+    height: 81px;
+    top: 177px;
+    left: 231px;
+  }
+}
+.main__contImgHouseClickNew.main__contImgHouseClick_parking {
+  width: 72vw;
+  height: 17vw;
+  top: 31.1vw;
+  left: 11.6vw;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 55vw;
+}
+@media (max-width: 600px) {
+  .main__contImgHouseClickNew.main__contImgHouseClick_parking {
+    width: 440px;
+    height: 104px;
+    top: 190px;
+    left: 70px;
+    padding-left: 342px;
+  }
 }
 
 .main__imgHouseDate {
