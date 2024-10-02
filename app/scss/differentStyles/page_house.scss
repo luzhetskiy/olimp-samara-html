@@ -85,61 +85,64 @@
 	}
 
 	&.main__contImgHouseClick_1 {
-		width: 16.6vw;
-    height: 22vw;
-		top: 7.7vw;
-		left: 10.1vw;
+		width: 13.1vw;
+    height: 20.1vw;
+    top: 10.6vw;
+    left: 11.9vw;
 
 		@media (max-width: 600px) {
-			width: 88px;
+			width: 80px;
 			height: 134px;
-			top: 47px;
-			left: 69px;
+			top: 59px;
+			left: 72px;
 		}
 	}
 
 	&.main__contImgHouseClick_2 {
-		width: 26.4vw;
-    height: 13vw;
-    top: 29vw;
-    left: 11.5vw;
+		width: 24.2vw;
+    height: 12vw;
+    top: 29.9vw;
+    left: 12.3vw;
+    transform: rotate(-1deg);
 
 		@media (max-width: 600px) {
-			width: 164px;
-			height: 81px;
-			top: 176px;
-			left: 69px;
+			width: 147px;
+			height: 75px;
+			top: 181px;
+			left: 75px;
 		}
 	}
 
 	&.main__contImgHouseClick_3 {
-    width: 21.5vw;
-    height: 13.3vw;
-    top: 29vw;
-    left: 37.8vw;
+		width: 19.8vw;
+    height: 12.1vw;
+    top: 29.5vw;
+    left: 36.3vw;
+    transform: rotate(-1deg);
 		
 		@media (max-width: 600px) {
-			width: 130px;
-			height: 81px;
-			top: 177px;
-			left: 231px;
+			width: 122px;
+			height: 75px;
+			top: 179px;
+			left: 221px;
 		}
 	}
 
 	&.main__contImgHouseClick_parking {
-		width: 72vw;
-    height: 17vw;
-    top: 31.1vw;
-    left: 11.6vw;
+		width: 66vw;
+    height: 16vw;
+    top: 31.2vw;
+    left: 12.3vw;
+    transform: rotate(-1deg);
 		align-items: center;
-		padding-left: 55vw;
+		padding-left: 52vw;
 		
 		@media (max-width: 600px) {
-			width: 440px;
-			height: 104px;
+			width: 404px;
+			height: 96px;
 			top: 190px;
-			left: 70px;
-			padding-left: 342px;
+			left: 75px;
+			padding-left: 312px;
 		}
 	}
 }
