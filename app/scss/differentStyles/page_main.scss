@@ -13,37 +13,46 @@
 }
 // elements
 .main__foto {
+	width: 100%;
 	position: absolute;
 	top: 0;
-	width: 100%;
-	height: calc(180px + 30vw);
-	object-fit: cover;
 	left: 0;
 	z-index: -1;
-	clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+	// height: calc(180px + 30vw);
+	// object-fit: cover;
+	// clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
 
-	@media (max-width: 1000px) {
-		height: calc(320px + 20vw);
-		clip-path: polygon(0% 0%, 100% 0, 100% 88%, 50% 100%, 0 88%);
-	}
+	// @media (max-width: 1000px) {
+	// 	height: calc(320px + 20vw);
+	// 	clip-path: polygon(0% 0%, 100% 0, 100% 88%, 50% 100%, 0 88%);
+	// }
 
 	@media (max-width: 750px) {
-		height: calc(160px + 70vw);
+		display: none;
+		// height: calc(160px + 70vw);
 	}
 
-	@media (max-width: 650px) {
-		height: calc(130px + 70vw);
-	}
+	// @media (max-width: 650px) {
+	// 	height: calc(130px + 70vw);
+	// }
 
-	@media (max-width: 550px) {
-		height: calc(120px + 70vw);
-	}
+	// @media (max-width: 550px) {
+	// 	height: calc(120px + 70vw);
+	// }
 
-	@media (max-width: 460px) {
-		height: calc(100px + 70vw);
-	}
-	@media (max-width: 390px) {
-		height: calc(80px + 70vw);
+	// @media (max-width: 460px) {
+	// 	height: calc(100px + 70vw);
+	// }
+	// @media (max-width: 390px) {
+	// 	height: calc(80px + 70vw);
+	// }
+
+	&_mobile {
+		display: none;
+
+		@media (max-width: 750px) {
+			display: block;
+		}
 	}
 }
 // modificators

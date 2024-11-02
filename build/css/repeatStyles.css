@@ -7838,11 +7838,6 @@ table:not([class]) td {
     display: block;
   }
 }
-.listFlats {
-  max-width: 830px;
-  width: 70%;
-}
-
 .listFlats__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8433,6 +8428,7 @@ table:not([class]) td {
 }
 
 .layout__imgClick_4 {
+  display: none;
   width: 17vw;
   height: 12.8vw;
   top: 31.7vw;
@@ -8441,6 +8437,7 @@ table:not([class]) td {
 }
 
 .layout__imgClick_5 {
+  display: none;
   width: 27vw;
   height: 5.6vw;
   top: 40.2vw;
