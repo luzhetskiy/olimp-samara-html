@@ -78,10 +78,6 @@
   height: auto;
   margin: 0;
 }
-.listFlats__contFlats--6 .listFlats__flatQuantityRooms, .listFlats__contFlats--7 .listFlats__flatQuantityRooms, .listFlats__contFlats--8 .listFlats__flatQuantityRooms {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
 @media (max-width: 1500px) {
   .listFlats__contFlats--6 .listFlats__flat, .listFlats__contFlats--7 .listFlats__flat, .listFlats__contFlats--8 .listFlats__flat {
     width: 100%;
@@ -90,6 +86,25 @@
 @media (max-width: 600px) {
   .listFlats__contFlats--6 .listFlats__flat, .listFlats__contFlats--7 .listFlats__flat, .listFlats__contFlats--8 .listFlats__flat {
     width: 100%;
+  }
+}
+.listFlats__contFlats--6 .listFlats__flatQuantityRooms, .listFlats__contFlats--7 .listFlats__flatQuantityRooms, .listFlats__contFlats--8 .listFlats__flatQuantityRooms {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.listFlats__contFlats--6 .listFlats__flatText, .listFlats__contFlats--7 .listFlats__flatText, .listFlats__contFlats--8 .listFlats__flatText {
+  font-size: 10px;
+  margin-left: 6px;
+}
+@media (max-width: 1500px) {
+  .listFlats__contFlats--6 .listFlats__flatText, .listFlats__contFlats--7 .listFlats__flatText, .listFlats__contFlats--8 .listFlats__flatText {
+    font-size: 0.625vw;
+  }
+}
+@media (max-width: 600px) {
+  .listFlats__contFlats--6 .listFlats__flatText, .listFlats__contFlats--7 .listFlats__flatText, .listFlats__contFlats--8 .listFlats__flatText {
+    font-size: 1vw;
+    margin-left: 0.5vw;
   }
 }
 .listFlats__contFlats--6 .listFlats__row {
@@ -118,16 +133,6 @@
     grid-template-columns: 1.845vw repeat(7, 1fr);
   }
 }
-@media (min-width: 600px) {
-  .listFlats__contFlats--7 .listFlats__flatText {
-    font-size: 0.9375vw;
-  }
-}
-@media (min-width: 1500px) {
-  .listFlats__contFlats--7 .listFlats__flatText {
-    font-size: 12px;
-  }
-}
 .listFlats__contFlats--8 .listFlats__row {
   grid-template-columns: 2em repeat(8, 1fr);
 }
@@ -139,21 +144,6 @@
 @media (max-width: 600px) {
   .listFlats__contFlats--8 .listFlats__row {
     grid-template-columns: 1.845vw repeat(8, 1fr);
-  }
-}
-.listFlats__contFlats--8 .listFlats__flatText {
-  font-size: 10px;
-  margin-left: 6px;
-}
-@media (max-width: 1500px) {
-  .listFlats__contFlats--8 .listFlats__flatText {
-    font-size: 0.625vw;
-  }
-}
-@media (max-width: 600px) {
-  .listFlats__contFlats--8 .listFlats__flatText {
-    font-size: 1vw;
-    margin-left: 0.5vw;
   }
 }
 

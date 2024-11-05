@@ -75,16 +75,34 @@
 			height: auto;
 			margin: 0;
 
-			&QuantityRooms {
-				flex-shrink: 0;
-			}
-
 			@media (max-width: 1500px) {
 				width: 100%;
 			}
 
 			@media (max-width: 600px) {
 				width: 100%;
+			}
+
+			&QuantityRooms {
+				flex-shrink: 0;
+			}
+
+			&Text {
+				font-size: 10px;
+				margin-left: 6px;
+
+				// white-space: nowrap;
+				// overflow: hidden;
+				// text-overflow: ellipsis;
+
+				@media (max-width: 1500px) {
+					font-size: .625vw;
+				}
+
+				@media (max-width: 600px) {
+					font-size: 1vw;
+					margin-left: .5vw;
+				}
 			}
 		}
 	}
@@ -117,16 +135,6 @@
 				grid-template-columns: 1.845vw repeat(7, 1fr);
 			}
 		}
-
-		.listFlats__flatText {
-			@media (min-width: 600px) {
-				font-size: .9375vw;
-			}
-
-			@media (min-width: 1500px) {
-				font-size: 12px;
-			}
-		}
 	}
 
 	&--8 {
@@ -140,27 +148,6 @@
 
 			@media (max-width: 600px) {
 				grid-template-columns: 1.845vw repeat(8, 1fr);
-			}
-		}
-
-		.listFlats__flat {
-
-			&Text {
-				font-size: 10px;
-				margin-left: 6px;
-
-				// white-space: nowrap;
-				// overflow: hidden;
-				// text-overflow: ellipsis;
-
-				@media (max-width: 1500px) {
-					font-size: .625vw;
-				}
-
-				@media (max-width: 600px) {
-					font-size: 1vw;
-					margin-left: .5vw;
-				}
 			}
 		}
 	}
