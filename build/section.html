@@ -69,18 +69,26 @@
               </div>
             </nav>
           </div>
-          <div class="orderCallForm">
+          <div class="orderCallForm" data-form>
             <div class="orderCallForm__cont">
               <div class="orderCallForm__miniCont">
                 <h3 class="orderCallForm__h3">Заявка по квартире: двухкомнатная, № 132* </h3>
-                <div class="labelInput labelInput_orderCallForm">
+                <div class="labelInput labelInput_orderCallForm" data-validate="required" data-error="Введите имя">
                   <input class="labelInput__input labelInput__input_orderCallForm" type="text" required>
                   <label class="labelInput__label labelInput__label_orderCallForm">Имя</label>
+                  <div class="labelInput__error labelInput__invalidFormat"></div>
                 </div>
-                <div class="labelInput labelInput_orderCallForm labelInput_margin">
+                <div class="labelInput labelInput_orderCallForm labelInput_margin" data-validate="phone" data-error="Неправильный формат">
                   <input class="labelInput__input labelInput__input_orderCallForm" type="text" name="phone" required>
                   <label class="labelInput__label labelInput__label_orderCallForm">Телефон</label>
-                  <div class="labelInput__invalidFormat">Неправильный формат</div>
+                  <div class="labelInput__error labelInput__invalidFormat"> </div>
+                </div>
+                <div class="labelCheckbox" data-validate="checkbox" data-error="Необходимо дать согласие">
+                  <label class="labelCheckbox__wrapper">
+                    <input class="labelCheckbox__input" type="checkbox" name="agree" required><span class="labelCheckbox__box"></span>
+                    <div class="labelCheckbox__text">Я даю согласие на обработку&nbsp;<a href="/privacy-policy" target="_blank">персональных данных</a></div>
+                  </label>
+                  <div class="labelCheckbox__error"></div>
                 </div>
                 <button class="orderCallForm__submit">Отправить</button>
                 <div class="orderCallForm__text">*Все поля обязательны для заполнения. Нажимая кнопкку “Отправить”, вы даете согласие на обработку ваших персональных данных.</div>
@@ -344,22 +352,32 @@
           </div>
         </div>
       </main>
-      <div class="formQuestion"> <img class="formQuestion__img" src="images/repeatImages/formQuestionImg.jpg" alt="">
+      <div class="formQuestion" data-form>
+        <div class="formQuestion__picture"><img class="formQuestion__img" src="images/repeatImages/formQuestionImg.jpg" alt=""></div>
         <div class="formQuestion__cont"> 
           <h3 class="formQuestion__h3">Остались вопросы ?</h3>
           <div class="formQuestion__subH3">Напишите нам*. Мы помогаем на всём пути к вашему новому дому.</div>
-          <div class="labelInput labelInput_formQuestion">
+          <div class="labelInput labelInput_formQuestion" data-validate="required" data-error="Введите имя">
             <input class="labelInput__input labelInput__input_formQuestion labelInput_valueFormQuestion" type="text" required>
             <label class="labelInput__label labelInput__label_formQuestion">Имя</label>
+            <div class="labelInput__error labelInput__invalidFormat"></div>
           </div>
-          <div class="labelInput labelInput_formQuestion">
+          <div class="labelInput labelInput_formQuestion" data-validate="phone" data-error="Неправильный формат">
             <input class="labelInput__input labelInput__input_formQuestion labelInput_valueFormQuestion" type="text" name="phone" required>
             <label class="labelInput__label labelInput__label_formQuestion">Телефон</label>
-            <div class="labelInput__invalidFormat">Неправильный формат</div>
+            <div class="labelInput__error labelInput__invalidFormat"></div>
           </div>
-          <div class="labelInput labelInput_formQuestion">
+          <div class="labelInput labelInput_formQuestion" data-validate="required" data-error="Введите ваш вопрос">
             <textarea class="labelInput__textArea labelInput__textArea_formQuestion labelInput_valueFormQuestion" name="" cols="30" required></textarea>
             <label class="labelInput__label labelInput__label_formQuestion">Ваш вопрос</label>
+            <div class="labelInput__error labelInput__invalidFormat"></div>
+          </div>
+          <div class="labelCheckbox labelCheckbox--light" data-validate="checkbox" data-error="Необходимо дать согласие">
+            <label class="labelCheckbox__wrapper">
+              <input class="labelCheckbox__input" type="checkbox" name="agree" required><span class="labelCheckbox__box"></span>
+              <div class="labelCheckbox__text">Я даю согласие на обработку&nbsp;<a href="/privacy-policy" target="_blank">персональных данных</a></div>
+            </label>
+            <div class="labelCheckbox__error"></div>
           </div>
           <button class="formQuestion__submit">Отправить</button>
           <div class="formQuestion__text">*Все поля обязательны для заполнения</div>

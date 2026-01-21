@@ -106,9 +106,35 @@ main.main
 				h2.catalog__h2 СКАЧАЙТЕ КАТАЛОГ С ПРИМЕРАМИ ОТДЕЛКИ
 				.catalog__text Оставьте свой номер телефона, чтобы отправить каталог в месседжерыи ответить на все интересующие вас вопросы.
 				.catalog__form
-					input(type="text" placeholder="Ваше имя").catalog__input
-					input(type="text" name="phone" placeholder="Номер телефона").catalog__input
-					button.catalog__btn Получить каталог
+					.catalog__form_wrapper
+						.labelInput(
+							data-validate="required"
+							data-error="Введите имя"
+						)
+							input(type="text" placeholder="Ваше имя").catalog__input
+							.labelInput__error.labelInput__invalidFormat 
+						.labelInput(
+							data-validate="phone"
+							data-error="Неправильный формат"
+						)
+							input(type="text" name="phone" placeholder="Номер телефона").catalog__input
+							.labelInput__error.labelInput__invalidFormat 
+						button.catalog__btn Получить каталог
+						.labelCheckbox.labelCheckbox--light(
+							data-validate="checkbox"
+							data-error="Необходимо дать согласие"
+						)
+					label.labelCheckbox__wrapper
+						input.labelCheckbox__input(
+							type="checkbox"
+							name="agree"
+							required
+						)
+						span.labelCheckbox__box
+						.labelCheckbox__text
+							| Я даю согласие на обработку&nbsp;
+							a(href="/privacy-policy" target="_blank") персональных данных
+					.labelCheckbox__error
 				img(src="images/repeatImages/catalog__backgroundImg.png", alt="").catalog__backgroundImg
 				img(src="images/repeatImages/catalog__img-2.png", alt="").catalog__img
 		.comeAndLivePopup(style="display: none;")

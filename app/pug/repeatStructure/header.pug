@@ -67,17 +67,41 @@ header.header
 						a(href="")
 							img.block-1__imgIcon(src="images/repeatImages/whatsappIcon.svg", alt="")
 					.block-1__location г.Самара, ул. Советской Армии, д. 181
-		.orderCallForm
+		.orderCallForm(
+			data-form
+		)
 			.orderCallForm__cont
 				.orderCallForm__miniCont
 					h3.orderCallForm__h3 Заявка по квартире: двухкомнатная, № 132* 
-					.labelInput.labelInput_orderCallForm
+					.labelInput.labelInput_orderCallForm(
+						data-validate="required"
+						data-error="Введите имя"
+					)
 						input(type="text" required).labelInput__input.labelInput__input_orderCallForm 
 						label.labelInput__label.labelInput__label_orderCallForm Имя
-					.labelInput.labelInput_orderCallForm.labelInput_margin
+						.labelInput__error.labelInput__invalidFormat
+					.labelInput.labelInput_orderCallForm.labelInput_margin(
+						data-validate="phone"
+						data-error="Неправильный формат"
+					)
 						input(type="text" name="phone" required).labelInput__input.labelInput__input_orderCallForm 
 						label.labelInput__label.labelInput__label_orderCallForm Телефон
-						.labelInput__invalidFormat Неправильный формат
+						.labelInput__error.labelInput__invalidFormat 
+					.labelCheckbox(
+						data-validate="checkbox"
+						data-error="Необходимо дать согласие"
+					)
+						label.labelCheckbox__wrapper
+							input.labelCheckbox__input(
+								type="checkbox"
+								name="agree"
+								required
+							)
+							span.labelCheckbox__box
+							.labelCheckbox__text
+								| Я даю согласие на обработку&nbsp;
+								a(href="/privacy-policy" target="_blank") персональных данных
+						.labelCheckbox__error
 					button.orderCallForm__submit Отправить
 					.orderCallForm__text *Все поля обязательны для заполнения. Нажимая кнопкку “Отправить”, вы даете согласие на обработку ваших персональных данных.
 				.orderCallForm__miniCont.df-fld-aic(style="display:none;")
